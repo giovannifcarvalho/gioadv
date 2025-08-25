@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanni de Carvalho - Advocacia Empresarial para Startups</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Configuração de cores do Tailwind para corresponder à identidade visual
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#1e392a',
+                        'brand-gold': '#c2a56c',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ===== Header / Navegação ===== -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-xl font-bold text-brand-green">
+                GIOVANNI DE CARVALHO
+            </a>
+            <!-- Navegação para Desktop -->
+            <nav class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="#services" class="text-gray-600 hover:text-brand-gold transition duration-300">Serviços</a>
+                <a href="#about" class="text-gray-600 hover:text-brand-gold transition duration-300">Sobre</a>
+                <a href="#blog" class="text-gray-600 hover:text-brand-gold transition duration-300">Blog</a>
+                <a href="#contact" class="bg-brand-gold text-white px-5 py-2 rounded-md hover:opacity-90 transition duration-300">Contato</a>
+            </nav>
+            <!-- Botão de Menu para Mobile -->
+            <button class="md:hidden text-brand-green">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Seção Principal (Hero) ===== -->
+        <section class="py-20 md:py-32" style="background-color: #1e392a;">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+                    Segurança Jurídica para sua <span style="color: #c2a56c;">Startup Decolar</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    Assessoria jurídica especializada para o ecossistema de tecnologia e inovação. Proteja seu negócio, desde a fundação até a rodada de investimentos.
+                </p>
+                <a href="#contact" class="bg-brand-gold text-white px-8 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300 transform hover:scale-105">
+                    Agende uma Consulta
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== Seção de Serviços ===== -->
+        <section id="services" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-brand-green">Nossas Áreas de Atuação</h2>
+                    <p class="text-lg text-gray-600 mt-2">Soluções jurídicas sob medida para o ciclo de vida da sua empresa.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Serviço 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Estruturação Societária</h3>
+                        <p class="text-gray-600">Elaboração de Contrato Social, Acordo de Sócios, MOU e Vesting para uma base societária sólida e alinhada.</p>
+                    </div>
+                    <!-- Serviço 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Contratos de Tecnologia</h3>
+                        <p class="text-gray-600">Desenvolvimento de Termos de Uso, Políticas de Privacidade, Contratos de SaaS e Licenciamento de Software.</p>
+                    </div>
+                    <!-- Serviço 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Propriedade Intelectual</h3>
+                        <p class="text-gray-600">Proteção estratégica da sua marca, software e outros ativos intangíveis que são o core do seu negócio.</p>
+                    </div>
+                    <!-- Serviço 4 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+                        <h3 class="text-2xl font-semibold text-brand-green mb-3">LGPD e Proteção de Dados</h3>
+                        <p class="text-gray-600">Consultoria para adequação à Lei Geral de Proteção de Dados, minimizando riscos e gerando confiança.</p>
+                    </div>
+                    <!-- Serviço 5 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Investimentos e M&A</h3>
+                        <p class="text-gray-600">Assessoria em rodadas de investimento (Venture Capital), contratos de mútuo e operações de fusão e aquisição.</p>
+                    </div>
+                    <!-- Serviço 6 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Direito Trabalhista Tech</h3>
+                        <p class="text-gray-600">Estruturação de contratos de trabalho, planos de stock options e políticas internas para equipes de alta performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Seção Sobre Nós ===== -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3 text-center">
+                        <img class="w-64 h-64 rounded-full mx-auto shadow-2xl object-cover" src="assets/foto-giovanni.jpg" alt="Foto de Giovanni de Carvalho">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h2 class="text-4xl md:text-5xl font-bold text-brand-green mb-4">Giovanni de Carvalho</h2>
+                        <h3 class="text-2xl font-semibold text-brand-gold mb-6">Advogado Especialista em Direito para Startups</h3>
+                        <p class="text-gray-700 text-lg mb-4">
+                            Com vasta experiência no ecossistema de inovação, meu objetivo é ir além da advocacia tradicional. Atuo como um parceiro estratégico para fundadores e empresas de tecnologia, traduzindo a complexidade jurídica em soluções práticas que viabilizam o crescimento e protegem o negócio.
+                        </p>
+                        <p class="text-gray-700 text-lg">
+                            Entendo os desafios únicos enfrentados por startups, desde a validação da ideia até a escala global, e estou preparado para oferecer a segurança jurídica necessária em cada etapa dessa jornada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== Seção do Blog ===== -->
+        <section id="blog" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-brand-green">Blog & Insights</h2>
+                    <p class="text-lg text-gray-600 mt-2">Artigos e análises sobre o universo jurídico para startups.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Post 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-2">SOCIETÁRIO</p>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">Acordo de Sócios: Por que sua startup precisa de um antes mesmo do primeiro cliente?</h3>
+                            <a href="#" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-2">PROPRIEDADE INTELECTUAL</p>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">Registro de Marca vs. Razão Social: Entenda a diferença e proteja seu ativo mais valioso.</h3>
+                            <a href="#" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-2">INVESTIMENTOS</p>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">Contrato de Mútuo Conversível: Como captar seu primeiro investimento anjo com segurança.</h3>
+                            <a href="#" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Seção de Call to Action (CTA) Final ===== -->
+        <section id="contact" class="py-20" style="background-color: #1e392a;">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Vamos conversar sobre o futuro do seu negócio?</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+                    Estou pronto para entender seus desafios e oferecer soluções jurídicas que impulsionam sua inovação.
+                </p>
+                <a href="mailto:contato@giovannicarvalho.adv.br" class="bg-brand-gold text-white px-8 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300 transform hover:scale-105">
+                    Entre em Contato
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Rodapé ===== -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h4 class="text-2xl font-semibold mb-4">Giovanni de Carvalho | Advocacia Empresarial</h4>
+            <p class="text-gray-400 mb-2">E-mail: contato@giovannicarvalho.adv.br</p>
+            <p class="text-gray-400 mb-6">Atendimento online para todo o Brasil.</p>
+            <div class="mt-8 border-t border-gray-800 pt-8 text-gray-500">
+                <p>&copy; 2024 Giovanni de Carvalho. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
