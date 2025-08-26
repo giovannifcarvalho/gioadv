@@ -1,0 +1,175 @@
+code_block title=Arquivo blog.html (Nova Página do Blog)
+```html
+!DOCTYPE html
+html lang=pt-BR class=scroll-smooth
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleBlog - Giovanni de Carvalho Advocaciatitle
+    
+    !-- Tailwind CSS CDN --
+    script src=httpscdn.tailwindcss.comscript
+    
+    !-- Google Fonts --
+    link rel=preconnect href=httpsfonts.googleapis.com
+    link rel=preconnect href=httpsfonts.gstatic.com crossorigin
+    link href=httpsfonts.googleapis.comcss2family=Cormorant+Garamondwght@600;700&family=Latowght@400;700&display=swap rel=stylesheet
+    
+    script
+         Configuração de cores do Tailwind
+        tailwind.config = {
+            theme {
+                extend {
+                    colors {
+                        'brand-green' '#1e392a',
+                        'brand-gold' '#c2a56c',
+                    },
+                    fontFamily {
+                        'serif' ['Cormorant Garamond', 'serif'],
+                        'sans' ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    script
+    
+    style
+        body {
+            font-family 'Lato', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family 'Cormorant Garamond', serif;
+        }
+    style
+head
+body class=bg-white text-gray-800
+
+    !-- ===== Header  Navegação (Idêntico ao da home) ===== --
+    header class=bg-white90 backdrop-blur-md sticky top-0 z-50 shadow-sm
+        div class=container mx-auto px-6 py-3 flex justify-between items-center
+            a href=index.html class=shrink-0
+                img src=assetslogo.png alt=Logo Giovanni de Carvalho Advocacia class=h-12 mdh-14
+            a
+            nav class=hidden mdflex space-x-8 items-center text-sm font-medium
+                a href=index.html#services class=text-gray-600 hovertext-brand-gold transition duration-300Serviçosa
+                a href=index.html#about class=text-gray-600 hovertext-brand-gold transition duration-300Sobrea
+                a href=blog.html class=text-brand-gold font-bold transition duration-300Bloga
+                a href=index.html#contact class=bg-brand-gold text-white px-5 py-2 rounded-md hoveropacity-90 transition duration-300Contatoa
+            nav
+            button id=mobile-menu-button class=mdhidden text-brand-green p-2
+                svg xmlns=httpwww.w3.org2000svg class=h-6 w-6 fill=none viewBox=0 0 24 24 stroke=currentColor
+                    path stroke-linecap=round stroke-linejoin=round stroke-width=2 d=M4 6h16M4 12h16m-7 6h7 
+                svg
+            button
+        div
+        div id=mobile-menu class=hidden mdhidden bg-white border-t border-gray-200
+            a href=index.html#services class=block text-center text-gray-700 py-3 px-4 hoverbg-gray-50Serviçosa
+            a href=index.html#about class=block text-center text-gray-700 py-3 px-4 hoverbg-gray-50Sobrea
+            a href=blog.html class=block text-center text-gray-700 py-3 px-4 hoverbg-gray-50Bloga
+            a href=index.html#contact class=block text-center text-gray-700 py-3 px-4 hoverbg-gray-50Contatoa
+        div
+    header
+
+    main
+        !-- ===== Cabeçalho da Página do Blog ===== --
+        section class=py-20 bg-gray-50
+            div class=container mx-auto px-6 text-center
+                h1 class=text-4xl mdtext-6xl font-bold text-brand-green leading-tightBlog & Insightsh1
+                p class=text-lg mdtext-xl text-gray-600 max-w-3xl mx-auto mt-4
+                    Artigos, notícias e análises sobre o universo jurídico para startups, tecnologia e inovação.
+                p
+            div
+        section
+
+        !-- ===== Grade de Artigos ===== --
+        section class=py-20
+            div class=container mx-auto px-6
+                div class=grid grid-cols-1 mdgrid-cols-2 lggrid-cols-3 gap-8
+                    !-- Post 1 --
+                    div class=bg-white rounded-lg shadow-md overflow-hidden transform hover-translate-y-2 transition duration-300
+                        img src=httpsplacehold.co600x4001e392ac2a56ctext=ARTIGO class=w-full h-48 object-cover alt=Imagem do post
+                        div class=p-6
+                            p class=text-sm text-gray-500 mb-2SOCIETÁRIOp
+                            h3 class=text-xl font-semibold text-brand-green mb-3Acordo de Sócios Por que sua startup precisa de umh3
+                            a href=# class=font-bold text-brand-gold hoverunderlineLeia Mais &rarr;a
+                        div
+                    div
+                    !-- Post 2 --
+                    div class=bg-white rounded-lg shadow-md overflow-hidden transform hover-translate-y-2 transition duration-300
+                        img src=httpsplacehold.co600x4001e392ac2a56ctext=ARTIGO class=w-full h-48 object-cover alt=Imagem do post
+                        div class=p-6
+                            p class=text-sm text-gray-500 mb-2PROPRIEDADE INTELECTUALp
+                            h3 class=text-xl font-semibold text-brand-green mb-3Registro de Marca vs. Razão Social Entenda a diferença.h3
+                            a href=# class=font-bold text-brand-gold hoverunderlineLeia Mais &rarr;a
+                        div
+                    div
+                    !-- Post 3 --
+                    div class=bg-white rounded-lg shadow-md overflow-hidden transform hover-translate-y-2 transition duration-300
+                        img src=httpsplacehold.co600x4001e392ac2a56ctext=ARTIGO class=w-full h-48 object-cover alt=Imagem do post
+                        div class=p-6
+                            p class=text-sm text-gray-500 mb-2INVESTIMENTOSp
+                            h3 class=text-xl font-semibold text-brand-green mb-3Mútuo Conversível Como captar seu primeiro investimento.h3
+                            a href=# class=font-bold text-brand-gold hoverunderlineLeia Mais &rarr;a
+                        div
+                    div
+                    !-- Post 4 (Exemplo adicional) --
+                    div class=bg-white rounded-lg shadow-md overflow-hidden transform hover-translate-y-2 transition duration-300
+                        img src=httpsplacehold.co600x4001e392ac2a56ctext=ARTIGO class=w-full h-48 object-cover alt=Imagem do post
+                        div class=p-6
+                            p class=text-sm text-gray-500 mb-2LGPDp
+                            h3 class=text-xl font-semibold text-brand-green mb-35 Passos essenciais para adequar sua startup à LGPD.h3
+                            a href=# class=font-bold text-brand-gold hoverunderlineLeia Mais &rarr;a
+                        div
+                    div
+                    !-- Post 5 (Exemplo adicional) --
+                    div class=bg-white rounded-lg shadow-md overflow-hidden transform hover-translate-y-2 transition duration-300
+                        img src=httpsplacehold.co600x4001e392ac2a56ctext=ARTIGO class=w-full h-48 object-cover alt=Imagem do post
+                        div class=p-6
+                            p class=text-sm text-gray-500 mb-2CONTRATOSp
+                            h3 class=text-xl font-semibold text-brand-green mb-3Contrato de SaaS Cláusulas que não podem faltar para proteger sua empresa.h3
+                            a href=# class=font-bold text-brand-gold hoverunderlineLeia Mais &rarr;a
+                        div
+                    div
+                    !-- Post 6 (Exemplo adicional) --
+                    div class=bg-white rounded-lg shadow-md overflow-hidden transform hover-translate-y-2 transition duration-300
+                        img src=httpsplacehold.co600x4001e392ac2a56ctext=ARTIGO class=w-full h-48 object-cover alt=Imagem do post
+                        div class=p-6
+                            p class=text-sm text-gray-500 mb-2TRABALHISTA TECHp
+                            h3 class=text-xl font-semibold text-brand-green mb-3Contratar como PJ ou CLT Riscos e benefícios para startups.h3
+                            a href=# class=font-bold text-brand-gold hoverunderlineLeia Mais &rarr;a
+                        div
+                    div
+                div
+            div
+        section
+    main
+
+    !-- ===== Rodapé (Idêntico ao da home) ===== --
+    footer class=bg-gray-900 text-white
+        div class=container mx-auto px-6 py-12 text-center
+            h4 class=text-2xl font-semibold mb-4Giovanni de Carvalho  Advocacia Empresarialh4
+            p class=text-gray-400 mb-2E-mail contato@giovannicarvalho.adv.brp
+            p class=text-gray-400 mb-6Atendimento online para todo o Brasil.p
+            div class=mt-8 border-t border-gray-800 pt-8 text-gray-500
+                p&copy; 2025 Giovanni de Carvalho. Todos os direitos reservados.p
+            div
+        div
+    footer
+
+    !-- JavaScript para o menu mobile --
+    script
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () = {
+            mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.addEventListener('click', (event) = {
+            if (event.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    script
+body
+html
+```
+code_block
