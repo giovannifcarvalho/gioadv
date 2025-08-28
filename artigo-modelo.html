@@ -1,4 +1,5 @@
 <code_block title="Arquivo: artigo-modelo.html (NOVO - Template para Artigos)">
+```html
 <!-- ARQUIVO MODELO PARA ARTIGOS -->
 <!-- 1. Duplique este arquivo para cada novo post. -->
 <!-- 2. Renomeie o arquivo (ex: artigo-novo-titulo.html). -->
@@ -15,11 +16,12 @@
 
     <link rel="icon" type="image/png" href="assets/logo.png">
     
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <!-- CORRIGIDO: Links para scripts e fontes -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap)" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -82,7 +84,7 @@
                 <a href="index.html#contact" class="bg-brand-gold text-white px-5 py-2 rounded-md hover:opacity-90 transition duration-300">Contato</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-brand-green p-2">
-                <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
@@ -104,7 +106,7 @@
                 <p class="text-gray-600">Publicado em 28 de Agosto de 2025</p>
                 
                 <!-- PASSO 3: Altere a imagem principal do artigo -->
-                <img src="[https://placehold.co/1200x600/1e392a/c2a56c?text=IMAGEM+DO+ARTIGO](https://placehold.co/1200x600/1e392a/c2a56c?text=IMAGEM+DO+ARTIGO)" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Descrição da imagem do artigo">
+                <img src="https://placehold.co/1200x600/1e392a/c2a56c?text=IMAGEM+DO+ARTIGO" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Descrição da imagem do artigo">
 
                 <!-- PASSO 4: Adicione o conteúdo do seu artigo aqui -->
                 <div class="article-content text-lg text-gray-800">
