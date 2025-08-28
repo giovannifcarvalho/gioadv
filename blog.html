@@ -1,5 +1,5 @@
-</code_block>
-<code_block title="Arquivo: blog.html (Nova Página do Blog)">
+<code_block title="Arquivo: blog.html (Página do Blog Refinada)">
+```html
 <!-- ARQUIVO COMPLETO: blog.html -->
 <!-- Copie TODO o conteúdo abaixo e cole no seu arquivo blog.html -->
 
@@ -8,7 +8,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Giovanni de Carvalho Advocacia</title>
+    <!-- ALTERADO: Título do site -->
+    <title>Blog | Giovanni de Carvalho - Advocacia Empresarial</title>
+
+    <!-- NOVO: Favicon (ícone da aba do navegador) -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -47,11 +51,11 @@
 </head>
 <body class="bg-white text-gray-800">
 
-    <!-- ===== Header / Navegação (Idêntico ao da home) ===== -->
+    <!-- ===== Header / Navegação ===== -->
     <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="shrink-0">
-                <img src="assets/logo.jpg" alt="Logo Giovanni de Carvalho Advocacia" class="h-12 md:h-14">
+                <img src="assets/logo.png" alt="Logo Giovanni de Carvalho Advocacia" class="h-12 md:h-14">
             </a>
             <nav class="hidden md:flex space-x-8 items-center text-sm font-medium">
                 <a href="index.html#services" class="text-gray-600 hover:text-brand-gold transition duration-300">Serviços</a>
@@ -78,8 +82,9 @@
         <section class="py-20 bg-gray-50">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight">Blog & Insights</h1>
+                <!-- REESCRITO: Parágrafo da seção -->
                 <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mt-4">
-                    Artigos, notícias e análises sobre o universo jurídico para startups, tecnologia e inovação.
+                    Artigos e análises sobre o universo jurídico para empresas de tecnologia, negócios digitais e o ecossistema de inovação.
                 </p>
             </div>
         </section>
@@ -88,57 +93,51 @@
         <section class="py-20">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Post 1 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
                         <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
                         <div class="p-6">
                             <p class="text-sm text-gray-500 mb-2">SOCIETÁRIO</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Acordo de Sócios: Por que sua startup precisa de um?</h3>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">Acordo de Sócios: Por que sua empresa precisa de um?</h3>
                             <a href="#" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
                         </div>
                     </div>
-                    <!-- Post 2 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
                         <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
                         <div class="p-6">
                             <p class="text-sm text-gray-500 mb-2">PROPRIEDADE INTELECTUAL</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Registro de Marca vs. Razão Social: Entenda a diferença.</h3>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">Registro de Marca: O ativo mais valioso do seu negócio.</h3>
                             <a href="#" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
                         </div>
                     </div>
-                    <!-- Post 3 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
                         <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
                         <div class="p-6">
                             <p class="text-sm text-gray-500 mb-2">INVESTIMENTOS</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Mútuo Conversível: Como captar seu primeiro investimento.</h3>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">Mútuo Conversível: Como captar investimento com segurança.</h3>
                             <a href="#" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
                         </div>
                     </div>
-                    <!-- Post 4 (Exemplo adicional) -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
                         <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
                         <div class="p-6">
                             <p class="text-sm text-gray-500 mb-2">LGPD</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">5 Passos essenciais para adequar sua startup à LGPD.</h3>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">5 Passos essenciais para adequar sua empresa à LGPD.</h3>
                             <a href="#" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
                         </div>
                     </div>
-                    <!-- Post 5 (Exemplo adicional) -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
                         <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
                         <div class="p-6">
                             <p class="text-sm text-gray-500 mb-2">CONTRATOS</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Contrato de SaaS: Cláusulas que não podem faltar para proteger sua empresa.</h3>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">Contrato de SaaS: Cláusulas que não podem faltar.</h3>
                             <a href="#" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
                         </div>
                     </div>
-                    <!-- Post 6 (Exemplo adicional) -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
                         <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
                         <div class="p-6">
                             <p class="text-sm text-gray-500 mb-2">TRABALHISTA TECH</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Contratar como PJ ou CLT? Riscos e benefícios para startups.</h3>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">Contratar como PJ ou CLT? Riscos e benefícios.</h3>
                             <a href="#" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
                         </div>
                     </div>
@@ -147,7 +146,7 @@
         </section>
     </main>
 
-    <!-- ===== Rodapé (Idêntico ao da home) ===== -->
+    <!-- ===== Rodapé ===== -->
     <footer class="bg-gray-900 text-white">
         <div class="container mx-auto px-6 py-12 text-center">
             <h4 class="text-2xl font-semibold mb-4">Giovanni de Carvalho | Advocacia Empresarial</h4>
@@ -176,5 +175,3 @@
 </html>
 ```
 </code_block>
-
-
