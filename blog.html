@@ -1,47 +1,31 @@
-<code_block title="Arquivo: blog.html (Página do Blog Corrigida)">
+</code_block>
+<code_block title="Arquivo: blog.html (Página do Blog Atualizada)">
+```html
 <!-- ARQUIVO COMPLETO: blog.html -->
-<!-- Copie TODO o conteúdo abaixo e cole no seu arquivo blog.html -->
-
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Giovanni de Carvalho - Advocacia Empresarial</title>
-
     <link rel="icon" type="image/png" href="assets/logo.png">
-    
-    <!-- CORRIGIDO: Links para scripts e fontes -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'brand-green': '#1e392a',
-                        'brand-gold': '#c2a56c',
-                    },
-                    fontFamily: {
-                        'serif': ['Cormorant Garamond', 'serif'],
-                        'sans': ['Lato', 'sans-serif'],
-                    }
+                    colors: { 'brand-green': '#1e392a', 'brand-gold': '#c2a56c' },
+                    fontFamily: { 'serif': ['Cormorant Garamond', 'serif'], 'sans': ['Lato', 'sans-serif'] }
                 }
             }
         }
     </script>
-    
     <style>
-        body {
-            font-family: 'Lato', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cormorant Garamond', serif;
-        }
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -49,9 +33,7 @@
     <!-- ===== Header / Navegação ===== -->
     <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="shrink-0">
-                <img src="assets/logo.png" alt="Logo Giovanni de Carvalho Advocacia" class="h-12 md:h-14">
-            </a>
+            <a href="index.html" class="shrink-0"><img src="assets/logo.png" alt="Logo Giovanni de Carvalho Advocacia" class="h-12 md:h-14"></a>
             <nav class="hidden md:flex space-x-8 items-center text-sm font-medium">
                 <a href="index.html#services" class="text-gray-600 hover:text-brand-gold transition duration-300">Serviços</a>
                 <a href="index.html#about" class="text-gray-600 hover:text-brand-gold transition duration-300">Sobre</a>
@@ -59,9 +41,7 @@
                 <a href="index.html#contact" class="bg-brand-gold text-white px-5 py-2 rounded-md hover:opacity-90 transition duration-300">Contato</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-brand-green p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
@@ -77,102 +57,108 @@
         <section class="py-20 bg-gray-50">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight">Blog & Insights</h1>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mt-4">
-                    Artigos e análises sobre o universo jurídico para empresas de tecnologia, negócios digitais e o ecossistema de inovação.
-                </p>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mt-4">Artigos e análises sobre o universo jurídico para empresas de tecnologia, negócios digitais e o ecossistema de inovação.</p>
             </div>
         </section>
 
         <!-- ===== Grade de Artigos ===== -->
         <section class="py-20">
             <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Post 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2">SOCIETÁRIO</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Acordo de Sócios: Por que sua empresa precisa de um?</h3>
-                            <a href="artigo-acordo-de-socios.html" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Post 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2">PROPRIEDADE INTELECTUAL</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Registro de Marca: O ativo mais valioso do seu negócio.</h3>
-                            <a href="artigo-registro-de-marca.html" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Post 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2">INVESTIMENTOS</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Mútuo Conversível: Como captar investimento com segurança.</h3>
-                            <a href="artigo-mutuo-conversivel.html" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Post 4 (Exemplo adicional) -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2">LGPD</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">5 Passos essenciais para adequar sua empresa à LGPD.</h3>
-                            <a href="artigo-modelo.html" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Post 5 (Exemplo adicional) -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2">CONTRATOS</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Contrato de SaaS: Cláusulas que não podem faltar.</h3>
-                            <a href="artigo-modelo.html" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Post 6 (Exemplo adicional) -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2">TRABALHISTA TECH</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Contratar como PJ ou CLT? Riscos e benefícios.</h3>
-                            <a href="artigo-modelo.html" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
-                        </div>
-                    </div>
+                <!-- Container para os posts dinâmicos -->
+                <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Artigos serão inseridos aqui -->
+                </div>
+
+                <!-- NOVO: Container para a paginação -->
+                <div id="pagination-container" class="flex justify-center items-center space-x-4 mt-16">
+                    <!-- Botões de paginação serão inseridos aqui -->
                 </div>
             </div>
         </section>
     </main>
 
     <!-- ===== Rodapé ===== -->
-    <footer class="bg-gray-900 text-white">
-        <div class="container mx-auto px-6 py-12 text-center">
-            <h4 class="text-2xl font-semibold mb-4">Giovanni de Carvalho | Advocacia Empresarial</h4>
-            <p class="text-gray-400 mb-2">E-mail: contato@giovannicarvalho.adv.br</p>
-            <p class="text-gray-400 mb-6">Atendimento online para todo o Brasil.</p>
-            <div class="mt-8 border-t border-gray-800 pt-8 text-gray-500">
-                <p>&copy; 2025 Giovanni de Carvalho. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <footer class="bg-gray-900 text-white"><div class="container mx-auto px-6 py-12 text-center"><h4 class="text-2xl font-semibold mb-4">Giovanni de Carvalho | Advocacia Empresarial</h4><p class="text-gray-400 mb-2">E-mail: contato@giovannicarvalho.adv.br</p><p class="text-gray-400 mb-6">Atendimento online para todo o Brasil.</p><div class="mt-8 border-t border-gray-800 pt-8 text-gray-500"><p>&copy; 2025 Giovanni de Carvalho. Todos os direitos reservados.</p></div></div></footer>
 
-    <!-- JavaScript para o menu mobile -->
+    <!-- Scripts -->
+    <script src="js/blog-data.js"></script>
     <script>
+        // Script do Menu Mobile
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        mobileMenu.addEventListener('click', (event) => {
-            if (event.target.tagName === 'A') {
-                mobileMenu.classList.add('hidden');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        mobileMenu.addEventListener('click', (event) => { if (event.target.tagName === 'A') { mobileMenu.classList.add('hidden'); } });
+
+        // NOVO: Script de Paginação
+        document.addEventListener('DOMContentLoaded', () => {
+            const postsContainer = document.getElementById('posts-container');
+            const paginationContainer = document.getElementById('pagination-container');
+            const postsPerPage = 6;
+            let currentPage = 1;
+
+            // Ordena os posts pela data, do mais novo para o mais antigo
+            const sortedPosts = blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            function displayPosts(page) {
+                postsContainer.innerHTML = '';
+                page--; // Ajusta para o índice do array (base 0)
+
+                const start = postsPerPage * page;
+                const end = start + postsPerPage;
+                const paginatedPosts = sortedPosts.slice(start, end);
+
+                paginatedPosts.forEach(post => {
+                    const postElement = `
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                            <img src="${post.image}" class="w-full h-48 object-cover" alt="Imagem do post">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-500 mb-2">${post.category}</p>
+                                <h3 class="text-xl font-semibold text-brand-green mb-3">${post.title}</h3>
+                                <a href="${post.link}" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
+                            </div>
+                        </div>
+                    `;
+                    postsContainer.innerHTML += postElement;
+                });
             }
+
+            function setupPagination() {
+                const pageCount = Math.ceil(sortedPosts.length / postsPerPage);
+                for (let i = 1; i <= pageCount; i++) {
+                    const btn = paginationButton(i);
+                    paginationContainer.appendChild(btn);
+                }
+            }
+
+            function paginationButton(page) {
+                const button = document.createElement('button');
+                button.innerText = page;
+                button.className = 'px-4 py-2 rounded-md text-gray-700 bg-gray-200 hover:bg-brand-gold hover:text-white transition-colors';
+                if (currentPage === page) {
+                    button.classList.remove('bg-gray-200', 'text-gray-700');
+                    button.classList.add('bg-brand-green', 'text-white');
+                }
+                
+                button.addEventListener('click', () => {
+                    currentPage = page;
+                    displayPosts(currentPage);
+
+                    // Atualiza o estilo do botão ativo
+                    let currentActive = document.querySelector('#pagination-container .bg-brand-green');
+                    currentActive.classList.remove('bg-brand-green', 'text-white');
+                    currentActive.classList.add('bg-gray-200', 'text-gray-700');
+                    button.classList.remove('bg-gray-200', 'text-gray-700');
+                    button.classList.add('bg-brand-green', 'text-white');
+                });
+
+                return button;
+            }
+
+            displayPosts(currentPage);
+            setupPagination();
         });
     </script>
 </body>
 </html>
 ```
 </code_block>
-
