@@ -1,47 +1,30 @@
-<code_block title="Arquivo: index.html (Página Principal Corrigida)">
+</code_block>
+<code_block title="Arquivo: index.html (Página Principal Atualizada)">
 <!-- ARQUIVO COMPLETO: index.html -->
-<!-- Copie TODO o conteúdo abaixo e cole no seu arquivo index.html -->
-
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giovanni de Carvalho - Advocacia Empresarial</title>
-    
     <link rel="icon" type="image/png" href="assets/logo.png">
-    
-    <!-- CORRIGIDO: Links para scripts e fontes -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'brand-green': '#1e392a',
-                        'brand-gold': '#c2a56c',
-                    },
-                    fontFamily: {
-                        'serif': ['Cormorant Garamond', 'serif'],
-                        'sans': ['Lato', 'sans-serif'],
-                    }
+                    colors: { 'brand-green': '#1e392a', 'brand-gold': '#c2a56c' },
+                    fontFamily: { 'serif': ['Cormorant Garamond', 'serif'], 'sans': ['Lato', 'sans-serif'] }
                 }
             }
         }
     </script>
-    
     <style>
-        body {
-            font-family: 'Lato', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cormorant Garamond', serif;
-        }
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -49,9 +32,7 @@
     <!-- ===== Header / Navegação ===== -->
     <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="shrink-0">
-                <img src="assets/logo.png" alt="Logo Giovanni de Carvalho Advocacia" class="h-12 md:h-14">
-            </a>
+            <a href="index.html" class="shrink-0"><img src="assets/logo.png" alt="Logo Giovanni de Carvalho Advocacia" class="h-12 md:h-14"></a>
             <nav class="hidden md:flex space-x-8 items-center text-sm font-medium">
                 <a href="#services" class="text-gray-600 hover:text-brand-gold transition duration-300">Serviços</a>
                 <a href="#about" class="text-gray-600 hover:text-brand-gold transition duration-300">Sobre</a>
@@ -59,9 +40,7 @@
                 <a href="#contact" class="bg-brand-gold text-white px-5 py-2 rounded-md hover:opacity-90 transition duration-300">Contato</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-brand-green p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
@@ -76,15 +55,9 @@
         <!-- ===== Seção Principal (Hero) ===== -->
         <section class="py-20 md:py-32" style="background-color: #1e392a;">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
-                    Direito Empresarial para a <span style="color: #c2a56c;">Economia Inovadora</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                    Assessoria jurídica estratégica para empresas de tecnologia, negócios digitais e startups. Protegemos sua operação para que você possa focar no crescimento.
-                </p>
-                <a href="#contact" class="bg-brand-gold text-white px-8 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300 transform hover:scale-105">
-                    Agende uma Consulta
-                </a>
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">Direito Empresarial para a <span style="color: #c2a56c;">Economia Inovadora</span></h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">Assessoria jurídica estratégica para empresas de tecnologia, negócios digitais e startups. Protegemos sua operação para que você possa focar no crescimento.</p>
+                <a href="#contact" class="bg-brand-gold text-white px-8 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300 transform hover:scale-105">Agende uma Consulta</a>
             </div>
         </section>
 
@@ -96,53 +69,19 @@
                     <p class="text-lg text-gray-600 mt-2">Soluções jurídicas que impulsionam e protegem negócios na vanguarda do mercado.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Estruturação Societária</h3>
-                        <p class="text-gray-600">Elaboração de Contratos Sociais, Acordos de Sócios, MOU e Vesting para uma base societária sólida e alinhada.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Contratos de Tecnologia</h3>
-                        <p class="text-gray-600">Desenvolvimento de Termos de Uso, Políticas de Privacidade, Contratos de SaaS e Licenciamento de Software.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Propriedade Intelectual</h3>
-                        <p class="text-gray-600">Proteção estratégica da sua marca, software e outros ativos intangíveis que são o core do seu negócio.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                        <h3 class="text-2xl font-semibold text-brand-green mb-3">LGPD e Proteção de Dados</h3>
-                        <p class="text-gray-600">Consultoria para adequação à Lei Geral de Proteção de Dados, minimizando riscos e gerando confiança.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Investimentos e M&A</h3>
-                        <p class="text-gray-600">Assessoria em rodadas de investimento (Venture Capital), contratos de mútuo e operações de fusão e aquisição.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                        <h3 class="text-2xl font-semibold text-brand-green mb-3">Consultoria Empresarial</h3>
-                        <p class="text-gray-600">Suporte jurídico contínuo para as demandas do dia a dia da sua empresa, dos contratos à gestão de riscos.</p>
-                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold"><h3 class="text-2xl font-semibold text-brand-green mb-3">Estruturação Societária</h3><p class="text-gray-600">Elaboração de Contratos Sociais, Acordos de Sócios, MOU e Vesting para uma base societária sólida e alinhada.</p></div>
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold"><h3 class="text-2xl font-semibold text-brand-green mb-3">Contratos de Tecnologia</h3><p class="text-gray-600">Desenvolvimento de Termos de Uso, Políticas de Privacidade, Contratos de SaaS e Licenciamento de Software.</p></div>
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold"><h3 class="text-2xl font-semibold text-brand-green mb-3">Propriedade Intelectual</h3><p class="text-gray-600">Proteção estratégica da sua marca, software e outros ativos intangíveis que são o core do seu negócio.</p></div>
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold"><h3 class="text-2xl font-semibold text-brand-green mb-3">LGPD e Proteção de Dados</h3><p class="text-gray-600">Consultoria para adequação à Lei Geral de Proteção de Dados, minimizando riscos e gerando confiança.</p></div>
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold"><h3 class="text-2xl font-semibold text-brand-green mb-3">Investimentos e M&A</h3><p class="text-gray-600">Assessoria em rodadas de investimento (Venture Capital), contratos de mútuo e operações de fusão e aquisição.</p></div>
+                    <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold"><h3 class="text-2xl font-semibold text-brand-green mb-3">Consultoria Empresarial</h3><!-- ALTERADO: Adicionado "secondment advocatício" --><p class="text-gray-600">Suporte jurídico contínuo, incluindo secondment advocatício, para as demandas do dia a dia da sua empresa.</p></div>
                 </div>
             </div>
         </section>
 
         <!-- ===== Seção Sobre Nós ===== -->
         <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/3 text-center">
-                        <img class="w-64 h-64 rounded-full mx-auto shadow-2xl object-cover" src="assets/foto-giovanni.jpg" alt="Foto de Giovanni de Carvalho">
-                    </div>
-                    <div class="md:w-2/3">
-                        <h2 class="text-4xl md:text-5xl font-bold text-brand-green mb-4">Giovanni de Carvalho</h2>
-                        <h3 class="text-2xl font-semibold text-brand-gold mb-6">Advogado Especialista em Direito Empresarial, Tecnologia e Inovação</h3>
-                        <p class="text-gray-700 text-lg mb-4">
-                            Com foco na intersecção entre direito e tecnologia, atuo como um parceiro estratégico para empresas que estão definindo o futuro dos mercados. Minha missão é traduzir a complexidade jurídica em soluções práticas que viabilizam o crescimento e protegem negócios inovadores.
-                        </p>
-                        <p class="text-gray-700 text-lg">
-                            Seja em uma grande empresa de tecnologia, um negócio digital em expansão ou uma startup promissora, compreendo os desafios únicos do seu setor. Ofereço a segurança jurídica necessária para cada etapa da jornada, estendendo essa expertise também a empresas de segmentos mais tradicionais que buscam modernizar suas operações.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <div class="container mx-auto px-6"><div class="flex flex-col md:flex-row items-center gap-12"><div class="md:w-1/3 text-center"><img class="w-64 h-64 rounded-full mx-auto shadow-2xl object-cover" src="assets/foto-giovanni.jpg" alt="Foto de Giovanni de Carvalho"></div><div class="md:w-2/3"><h2 class="text-4xl md:text-5xl font-bold text-brand-green mb-4">Giovanni de Carvalho</h2><h3 class="text-2xl font-semibold text-brand-gold mb-6">Advogado Especialista em Direito Empresarial, Tecnologia e Inovação</h3><p class="text-gray-700 text-lg mb-4">Com foco na intersecção entre direito e tecnologia, atuo como um parceiro estratégico para empresas que estão definindo o futuro dos mercados. Minha missão é traduzir a complexidade jurídica em soluções práticas que viabilizam o crescimento e protegem negócios inovadores.</p><p class="text-gray-700 text-lg">Seja em uma grande empresa de tecnologia, um negócio digital em expansão ou uma startup promissora, compreendo os desafios únicos do seu setor. Ofereço a segurança jurídica necessária para cada etapa da jornada, estendendo essa expertise também a empresas de segmentos mais tradicionais que buscam modernizar suas operações.</p></div></div></div>
         </section>
         
         <!-- ===== Seção do Blog ===== -->
@@ -152,84 +91,57 @@
                     <h2 class="text-4xl md:text-5xl font-bold text-brand-green">Últimos Artigos</h2>
                     <p class="text-lg text-gray-600 mt-2">Análises e insights sobre o universo jurídico para negócios inovadores.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Post 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2">SOCIETÁRIO</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Acordo de Sócios: Por que sua empresa precisa de um?</h3>
-                            <a href="artigo-acordo-de-socios.html" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Post 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2">PROPRIEDADE INTELECTUAL</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Registro de Marca: O ativo mais valioso do seu negócio.</h3>
-                            <a href="artigo-registro-de-marca.html" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Post 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO" class="w-full h-48 object-cover" alt="Imagem do post">
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2">INVESTIMENTOS</p>
-                            <h3 class="text-xl font-semibold text-brand-green mb-3">Mútuo Conversível: Como captar investimento com segurança.</h3>
-                            <a href="artigo-mutuo-conversivel.html" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
-                        </div>
-                    </div>
+                <!-- NOVO: Container para os posts dinâmicos -->
+                <div id="latest-posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Os posts serão inseridos aqui pelo JavaScript -->
                 </div>
                 <div class="text-center mt-12">
-                    <a href="blog.html" class="bg-brand-gold text-white px-8 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300">
-                        Ver todos os artigos
-                    </a>
+                    <a href="blog.html" class="bg-brand-gold text-white px-8 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300">Ver todos os artigos</a>
                 </div>
             </div>
         </section>
 
         <!-- ===== Seção de Call to Action (CTA) Final ===== -->
         <section id="contact" class="py-20" style="background-color: #1e392a;">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Vamos conversar sobre o futuro do seu negócio?</h2>
-                <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-                    Estou pronto para entender seus desafios e oferecer soluções jurídicas que impulsionam o seu crescimento.
-                </p>
-                <a href="https://wa.me/5531991466737" target="_blank" rel="noopener noreferrer" class="bg-brand-gold text-white px-8 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300 transform hover:scale-105">
-                    Entre em Contato por WhatsApp
-                </a>
-            </div>
+            <div class="container mx-auto px-6 text-center"><h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Vamos conversar sobre o futuro do seu negócio?</h2><p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">Estou pronto para entender seus desafios e oferecer soluções jurídicas que impulsionam o seu crescimento.</p><a href="https://wa.me/5531991466737" target="_blank" rel="noopener noreferrer" class="bg-brand-gold text-white px-8 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300 transform hover:scale-105">Entre em Contato por WhatsApp</a></div>
         </section>
     </main>
 
     <!-- ===== Rodapé ===== -->
-    <footer class="bg-gray-900 text-white">
-        <div class="container mx-auto px-6 py-12 text-center">
-            <h4 class="text-2xl font-semibold mb-4">Giovanni de Carvalho | Advocacia Empresarial</h4>
-            <p class="text-gray-400 mb-2">E-mail: contato@giovannicarvalho.adv.br</p>
-            <p class="text-gray-400 mb-6">Atendimento online para todo o Brasil.</p>
-            <div class="mt-8 border-t border-gray-800 pt-8 text-gray-500">
-                <p>&copy; 2025 Giovanni de Carvalho. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <footer class="bg-gray-900 text-white"><div class="container mx-auto px-6 py-12 text-center"><h4 class="text-2xl font-semibold mb-4">Giovanni de Carvalho | Advocacia Empresarial</h4><p class="text-gray-400 mb-2">E-mail: contato@giovannicarvalho.adv.br</p><p class="text-gray-400 mb-6">Atendimento online para todo o Brasil.</p><div class="mt-8 border-t border-gray-800 pt-8 text-gray-500"><p>&copy; 2025 Giovanni de Carvalho. Todos os direitos reservados.</p></div></div></footer>
 
-    <!-- JavaScript para o menu mobile -->
+    <!-- Scripts -->
+    <script src="js/blog-data.js"></script>
     <script>
+        // Script do Menu Mobile
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        mobileMenu.addEventListener('click', (event) => {
-            if (event.target.tagName === 'A') {
-                mobileMenu.classList.add('hidden');
-            }
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        mobileMenu.addEventListener('click', (event) => { if (event.target.tagName === 'A') { mobileMenu.classList.add('hidden'); } });
+
+        // NOVO: Script para carregar os últimos posts
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('latest-posts-container');
+            // Ordena os posts pela data, do mais novo para o mais antigo
+            const sortedPosts = blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            // Pega apenas os 3 primeiros
+            const latestPosts = sortedPosts.slice(0, 3);
+
+            latestPosts.forEach(post => {
+                const postElement = `
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="${post.image}" class="w-full h-48 object-cover" alt="Imagem do post">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-2">${post.category}</p>
+                            <h3 class="text-xl font-semibold text-brand-green mb-3">${post.title}</h3>
+                            <a href="${post.link}" class="font-bold text-brand-gold hover:underline">Leia Mais &rarr;</a>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += postElement;
+            });
         });
     </script>
 </body>
 </html>
 ```
-</code_block>
-
