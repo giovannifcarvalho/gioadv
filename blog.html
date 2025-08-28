@@ -1,4 +1,3 @@
-</code_block>
 <code_block title="Arquivo: blog.html (Página do Blog Atualizada)">
 <!-- ARQUIVO COMPLETO: blog.html -->
 <!DOCTYPE html>
@@ -63,12 +62,10 @@
         <!-- ===== Grade de Artigos ===== -->
         <section class="py-20">
             <div class="container mx-auto px-6">
-                <!-- Container para os posts dinâmicos -->
                 <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Artigos serão inseridos aqui -->
                 </div>
 
-                <!-- NOVO: Container para a paginação -->
                 <div id="pagination-container" class="flex justify-center items-center space-x-4 mt-16">
                     <!-- Botões de paginação serão inseridos aqui -->
                 </div>
@@ -80,27 +77,36 @@
     <footer class="bg-gray-900 text-white"><div class="container mx-auto px-6 py-12 text-center"><h4 class="text-2xl font-semibold mb-4">Giovanni de Carvalho | Advocacia Empresarial</h4><p class="text-gray-400 mb-2">E-mail: contato@giovannicarvalho.adv.br</p><p class="text-gray-400 mb-6">Atendimento online para todo o Brasil.</p><div class="mt-8 border-t border-gray-800 pt-8 text-gray-500"><p>&copy; 2025 Giovanni de Carvalho. Todos os direitos reservados.</p></div></div></footer>
 
     <!-- Scripts -->
-    <script src="js/blog-data.js"></script>
     <script>
+        // SCRIPT DE DADOS DO BLOG (ANTERIORMENTE EM js/blog-data.js)
+        const blogPosts = [
+            { title: "Contratar como PJ ou CLT? Riscos e benefícios.", category: "TRABALHISTA TECH", date: "2025-08-28", image: "https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO", link: "artigo-modelo.html" },
+            { title: "Contrato de SaaS: Cláusulas que não podem faltar.", category: "CONTRATOS", date: "2025-08-25", image: "https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO", link: "artigo-modelo.html" },
+            { title: "5 Passos essenciais para adequar sua empresa à LGPD.", category: "LGPD", date: "2025-08-22", image: "https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO", link: "artigo-modelo.html" },
+            { title: "Mútuo Conversível: Como captar investimento com segurança.", category: "INVESTIMENTOS", date: "2025-08-19", image: "https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO", link: "artigo-mutuo-conversivel.html" },
+            { title: "Registro de Marca: O ativo mais valioso do seu negócio.", category: "PROPRIEDADE INTELECTUAL", date: "2025-08-15", image: "https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO", link: "artigo-registro-de-marca.html" },
+            { title: "Acordo de Sócios: Por que sua empresa precisa de um?", category: "SOCIETÁRIO", date: "2025-08-11", image: "https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO", link: "artigo-acordo-de-socios.html" },
+            { title: "Vesting Contratual: Alinhando interesses de longo prazo.", category: "SOCIETÁRIO", date: "2025-08-05", image: "https://placehold.co/600x400/1e392a/c2a56c?text=ARTIGO", link: "artigo-modelo.html" },
+        ];
+
         // Script do Menu Mobile
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         mobileMenu.addEventListener('click', (event) => { if (event.target.tagName === 'A') { mobileMenu.classList.add('hidden'); } });
 
-        // NOVO: Script de Paginação
+        // Script de Paginação
         document.addEventListener('DOMContentLoaded', () => {
             const postsContainer = document.getElementById('posts-container');
             const paginationContainer = document.getElementById('pagination-container');
             const postsPerPage = 6;
             let currentPage = 1;
 
-            // Ordena os posts pela data, do mais novo para o mais antigo
             const sortedPosts = blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
             function displayPosts(page) {
                 postsContainer.innerHTML = '';
-                page--; // Ajusta para o índice do array (base 0)
+                page--; 
 
                 const start = postsPerPage * page;
                 const end = start + postsPerPage;
@@ -142,7 +148,6 @@
                     currentPage = page;
                     displayPosts(currentPage);
 
-                    // Atualiza o estilo do botão ativo
                     let currentActive = document.querySelector('#pagination-container .bg-brand-green');
                     currentActive.classList.remove('bg-brand-green', 'text-white');
                     currentActive.classList.add('bg-gray-200', 'text-gray-700');
@@ -161,4 +166,4 @@
 </html>
 ```
 </code_block>
-
+```
