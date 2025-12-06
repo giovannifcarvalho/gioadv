@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- PASSO 1: Altere o título do artigo aqui -->
-    <title>Título do Artigo | Giovanni de Carvalho - Advocacia Empresarial</title>
+    <title>PJ ou CLT? | GdC - Advocacia Empresarial</title>
 
     <link rel="icon" type="image/png" href="assets/logo.png">
     
@@ -100,12 +100,12 @@
         <article class="py-20">
             <div class="container mx-auto px-6 max-w-4xl">
                 <!-- PASSO 2: Altere o título, categoria e data aqui -->
-                <p class="text-sm text-gray-500 mb-2">CATEGORIA DO ARTIGO</p>
-                <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight mb-4">Título do Artigo Aparece Aqui</h1>
-                <p class="text-gray-600">Publicado em 28 de Agosto de 2025</p>
+                <p class="text-sm text-gray-500 mb-2">TRABALHISTA TECH</p>
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight mb-4">Contratar como PJ ou CLT? Riscos e benefícios.</h1>
+                <p class="text-gray-600">Publicado em 24 de novembro de 2025</p>
                 
                 <!-- PASSO 3: Altere a imagem principal do artigo -->
-                <img src="https://placehold.co/1200x600/1e392a/c2a56c?text=IMAGEM+DO+ARTIGO" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Descrição da imagem do artigo">
+                <img src="https://placehold.co/1200x600/1e392a/c2a56c?text=PJ+ou+CLT?" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Descrição da imagem do artigo">
 
                 <!-- PASSO 4: Adicione o conteúdo do seu artigo aqui -->
                 <div class="article-content text-lg text-gray-800">
