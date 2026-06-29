@@ -1,3 +1,9 @@
+<code_block title="Arquivo: artigo-modelo.html (NOVO - Template para Artigos)">
+<!-- ARQUIVO MODELO PARA ARTIGOS -->
+<!-- 1. Duplique este arquivo para cada novo post. -->
+<!-- 2. Renomeie o arquivo (ex: artigo-novo-titulo.html). -->
+<!-- 3. Altere o TÍTULO, IMAGEM e CONTEÚDO abaixo. -->
+
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
