@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- PASSO 1: Altere o título do artigo aqui -->
+    <title>A Pressão dos Juros Altos e a Recuperação Extrajudicial: Casas Bahia, Chilli Beans e Habib’s | Giovanni de Carvalho - Advocacia Empresarial</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <!-- CORRIGIDO: Links para scripts e fontes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#1e392a',
+                        'brand-gold': '#c2a56c',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Estilos para o conteúdo do artigo */
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+        }
+        .article-content h2 {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .article-content h3 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        .article-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ===== Header / Navegação (Idêntico aos outros) ===== -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="shrink-0">
+                <img src="assets/logo.png" alt="Logo Giovanni de Carvalho Advocacia" class="h-12 md:h-14">
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="index.html#services" class="text-gray-600 hover:text-brand-gold transition duration-300">Serviços</a>
+                <a href="index.html#about" class="text-gray-600 hover:text-brand-gold transition duration-300">Sobre</a>
+                <a href="blog.html" class="text-brand-gold font-bold transition duration-300">Blog</a>
+                <a href="index.html#contact" class="bg-brand-gold text-white px-5 py-2 rounded-md hover:opacity-90 transition duration-300">Contato</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-brand-green p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="index.html#services" class="block text-center text-gray-700 py-3 px-4 hover:bg-gray-50">Serviços</a>
+            <a href="index.html#about" class="block text-center text-gray-700 py-3 px-4 hover:bg-gray-50">Sobre</a>
+            <a href="blog.html" class="block text-center text-gray-700 py-3 px-4 hover:bg-gray-50">Blog</a>
+            <a href="index.html#contact" class="block text-center text-gray-700 py-3 px-4 hover:bg-gray-50">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <article class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <!-- PASSO 2: Altere o título, categoria e data aqui -->
+                <p class="text-sm text-gray-500 mb-2">DIREITO EMPRESARIAL & REESTRUTURAÇÃO DE CRISE</p>
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight mb-4">A Pressão dos Juros Altos e o Recurso à Recuperação Extrajudicial: Os Casos Casas Bahia, Chilli Beans e Habib’s</h1>
+                <p class="text-gray-600">Publicado em 10 de Setembro de 2026</p>
+                
+                <!-- PASSO 3: Altere a imagem principal do artigo -->
+                <img src="https://placehold.co/1200x600/1e392a/c2a56c?text=RECUPERA%C3%87%C3%83O+EXTRAJUDICIAL+NO+VAREJO" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Imagem ilustrativa sobre recuperação extrajudicial e reestruturação corporativa no varejo">
+
+                <!-- PASSO 4: Adicione o conteúdo do seu artigo aqui -->
+                <div class="article-content text-lg text-gray-800">
+                    <p>A manutenção da taxa Selic em patamares elevados ao longo dos últimos anos remodelou a gestão financeira do varejo brasileiro. Estruturas de capital ancoradas em endividamento a taxas flutuantes viram suas despesas financeiras escalarem rapidamente, consumindo margens operacionais e sufocando o caixa de grandes redes. Como consequência, empresas tradicionais como Casas Bahia, Chilli Beans e Habib’s recorreram à reestruturação de dívidas, utilizando o instituto da recuperação extrajudicial.</p>
+                    
+                    <p>A escolha por essa via preventiva sinaliza uma mudança de postura do mercado frente à crise: em vez de aguardar o colapso do caixa para ingressar com uma recuperação judicial completa, os devedores buscam negociações diretas com credores financeiros para reprogramar passivos e preservar as operações.</p>
+                    
+                    <h2>O Impacto Macroeconômico no Varejo e na Cadeia de Suprimentos</h2>
+                    <p>O ambiente de juros altos atua de forma ambígua e severa sobre o setor varejista:</p>
+                    
+                    <ul>
+                        <li><strong>Elevação do custo de capital:</strong> Linhas de crédito bancário, emissões de debêntures e operações de desconto de recebíveis passam a exigir taxas de juros inviáveis no longo prazo.</li>
+                        <li><strong>Encaminhamento da inadimplência do consumidor:</strong> A restrição de crédito ao consumidor final reduz o volume de vendas parceladas e aumenta o provisionamento para devedores duvidosos.</li>
+                        <li><strong>Compressão da margem líquida:</strong> O resultado operacional (EBITDA), ainda que positivo em diversas unidades, acaba sendo totalmente absorvido pelos pagamentos do serviço da dívida.</li>
+                    </ul>
+
+                    <p>Nesse cenário, companhias com alto endividamento bancário ou que dependem de capital de giro intensivo tornam-se vulneráveis, tornando a renegociação de prazos e taxas um passo imperativo para a continuidade das atividades.</p>
+
+                    <h2>Recuperação Extrajudicial x Recuperação Judicial: Aspectos Estratégicos</h2>
+                    <p>Prevista nos artigos 161 a 167 da Lei nº 11.101/2005, a recuperação extrajudicial destaca-se como instrumento célere e flexível para reestruturação societária e passiva. Diferente do processo judicial ordinário, a via extrajudicial baseia-se em um plano previamente negociado pelo devedor com parcela relevante de seus credores.</p>
+
+                    <p>A ferramenta apresenta vantagens decisivas para empresas com crise focada em credores financeiros:</p>
+                    <ul>
+                        <li><strong>Preservação da reputação corporativa:</strong> Evita o estigma de concordata ou falência, mantendo a confiança de fornecedores estratégicos, franqueados e clientes.</li>
+                        <li><strong>Flexibilidade na adesão e quórum legal:</strong> O plano homologado em juízo vincula inclusive os credores discordantes da mesma classe, desde que atingido o quórum de aprovação de mais de metade do valor dos créditos.</li>
+                        <li><strong>Segurança jurídica temporária:</strong> Com as alterações legislativas da Lei nº 14.112/2020, o juiz pode conceder a suspensão de execuções (<em>stay period</em>) já no momento da citação do pedido de homologação do plano extrajudicial, garantindo espaço para o desfecho favorável da homologação.</li>
+                        <li><strong>Eficiência e custos reduzidos:</strong> O custo com honorários e despesas processuais é significativamente inferior em comparação com uma recuperação judicial completa.</li>
+                    </ul>
+
+                    <h2>O Exemplo Prático: Casas Bahia, Chilli Beans e Habib’s</h2>
+                    <p>Analisando a movimentação de mercado dessas três gigantes do varejo e alimentício, observam-se padrões claros de engenharia financeira preventiva:</p>
+
+                    <h3>Casas Bahia (Grupo Casas Bahia S.A.)</h3>
+                    <p>A reestruturação do grupo envolveu o reperfilamento de dívidas expressivas vinculadas a emissões de debêntures e empréstimos bancários. A utilização da recuperação extrajudicial permitiu alongar o perfil de vencimento desses débitos e adequar as taxas de juros à nova realidade de caixa da empresa, sem interromper as operações das lojas físicas e do e-commerce.</p>
+
+                    <h3>Chilli Beans</h3>
+                    <p>Com ampla rede de franquias e necessidade constante de renovação de estoque por importação, a pressão dos custos de capital demandou negociações estruturadas com instituições financeiras e credores estratégicos. A renegociação previne o alastramento da crise para a rede de franqueados, resguardando a higidez da marca no mercado.</p>
+
+                    <h3>Habib’s</h3>
+                    <p>Operando no segmento de <em>food service</em>, onde os custos operacionais com insumos e mão de obra subiram expressivamente, a dívida bancária tornou-se insustentável no ritmo original de amortização. O arranjo extrajudicial viabilizou prazos adicionais e carência para repactuação das parcelas, preservando o fluxo de caixa para a manutenção das lojas e investimentos operacionais essenciais.</p>
+
+                    <h2>Recomendações e Visão de Negócios para Tomadores de Decisão</h2>
+                    <p>A reestruturação de dívidas não deve ser vista como a última medida antes da falência, mas sim como um instrumento preventivo de proteção de valor e continuidade da empresa. A análise dos casos recentes traz lições valiosas para gestores e assessores jurídicos:</p>
+
+                    <ul>
+                        <li><strong>Mapeamento e diagnóstico precoce:</strong> Identificar o descasamento entre geração de caixa e serviço da dívida antes de entrar em situação de inadimplência crônica.</li>
+                        <li><strong>Categorização dos credores:</strong> Isolar débitos financeiros e debêntures do passivo operacional (fornecedores de insumos essenciais e trabalhistas), permitindo uma negociação cirúrgica e preservando a operação diária.</li>
+                        <li><strong>Governança e transparência:</strong> Apresentar aos credores um plano de negócios crível (<em>turnaround plan</em>), fundamentado em projeções reais de fluxo de caixa e redução de despesas operacionais.</li>
+                        <li><strong>Utilização correta dos mecanismos legais:</strong> Avaliar o momento oportuno de acionar o Judiciário para obter o efeito suspensivo das execuções e validar formalmente o plano perante a minoria dissidente.</li>
+                    </ul>
+
+                    <p>O cenário macroeconômico exige adaptabilidade. A recuperação extrajudicial consolida-se como a ferramenta mais ágil e eficiente para adequar o passivo de médias e grandes empresas ao ciclo econômico atual, assegurando solidez institucional e longevidade aos negócios.</p>
+                </div>
+
+                <div class="mt-12 border-t pt-8">
+                    <a href="blog.html" class="font-bold text-brand-gold hover:underline">&larr; Voltar para todos os artigos</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- ===== Rodapé ===== -->
+    <footer class="bg-gray-900 text-white"><div class="container mx-auto px-6 py-12 text-center"><h4 class="text-2xl font-semibold mb-4">Giovanni de Carvalho | Advocacia Empresarial</h4><p class="text-gray-400 mb-2">E-mail: giovannifcarvalho@outlook.com</p><p class="text-gray-400 mb-6">Atendimento online para todo o Brasil.</p>
+        <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.linkedin.com/in/giovannidecarvalhoadv/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-gold transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.5-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                
+                <a href="https://www.instagram.com/giovannidecarvalho.adv/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-gold transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.203-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.251-.148-4.771-1.691-4.919-4.919-.058-1.265-.068-1.644-.068-4.849 0-3.204.012-3.584.069-4.849.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.21-6.78 2.618-6.99 6.985-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.947.21 4.358 2.618 6.78 6.985 6.989 1.28.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.947-.072 4.354-.21 6.782-2.618 6.989-6.985.058-1.281.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.21-4.359-2.627-6.78-6.989-6.989-1.28-.058-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4c0 2.21-1.791 4-4 4zm6.47-11.272c0-.528.43-1.078 1.078-1.078.601 0 1.079.516 1.079 1.078 0 .522-.445 1.078-1.079 1.078-.648 0-1.078-.555-1.078-1.078z"/></svg>
+                </a>
+            </div>
+        <div class="mt-8 border-t border-gray-800 pt-8 text-gray-500"><p>&copy; 2026 Giovanni de Carvalho. Todos os direitos reservados.</p></div></div></footer>
+
+    <!-- JavaScript para o menu mobile -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
