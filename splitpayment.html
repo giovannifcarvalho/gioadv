@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>O Split Payment Pode Ser Cancelado? Impactos e Perspectivas | Giovanni de Carvalho - Advocacia Empresarial</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#1e392a',
+                        'brand-gold': '#c2a56c',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+        }
+        .article-content h2 {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .article-content h3 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        .article-content ul, .article-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .article-content ul {
+            list-style-type: disc;
+        }
+        .article-content ol {
+            list-style-type: decimal;
+        }
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .article-content th, .article-content td {
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+        .article-content th {
+            background-color: #f9fafb;
+            font-weight: 700;
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD para SEO (FAQPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O split payment já está valendo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não de forma integral. A implementação segue o cronograma de transição da Reforma Tributária, com testes operacionais e fase piloto iniciando nas transações eletrônicas antes da exigibilidade plena dos novos tributos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Uma empresa pode optar por não utilizar o split payment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A regra geral é de observância obrigatória para operações processadas via sistema financeiro e de pagamentos. Exceções e regimes simplificados dependem da regulamentação específica expedida pelo Comitê Gestor do IBS e pela Receita Federal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como fica a apuração de créditos tributários na ponta do comprador?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O crédito tributário vinculado ao CBS/IBS é reconhecido e vinculado à operação, mantendo a não cumulatividade plena. A eficiência do sistema depende, contudo, do alinhamento em tempo real entre a emissão da nota fiscal e o arranjo de pagamento."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ===== Header / Navegação ===== -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="shrink-0">
+                <img src="assets/logo.png" alt="Logo Giovanni de Carvalho Advocacia" class="h-12 md:h-14">
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="index.html#services" class="text-gray-600 hover:text-brand-gold transition duration-300">Serviços</a>
+                <a href="index.html#about" class="text-gray-600 hover:text-brand-gold transition duration-300">Sobre</a>
+                <a href="blog.html" class="text-brand-gold font-bold transition duration-300">Blog</a>
+                <a href="index.html#contact" class="bg-brand-gold text-white px-5 py-2 rounded-md hover:opacity-90 transition duration-300">Contato</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-brand-green p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="index.html#services" class="block text-center text-gray-700 py-3 px-4 hover:bg-gray-50">Serviços</a>
+            <a href="index.html#about" class="block text-center text-gray-700 py-3 px-4 hover:bg-gray-50">Sobre</a>
+            <a href="blog.html" class="block text-center text-gray-700 py-3 px-4 hover:bg-gray-50">Blog</a>
+            <a href="index.html#contact" class="block text-center text-gray-700 py-3 px-4 hover:bg-gray-50">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <article class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <p class="text-sm text-gray-500 mb-2">DIREITO TRIBUTÁRIO & EMPRESARIAL</p>
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight mb-4">O Split Payment da Reforma Tributária Pode Ser Cancelado ou Alterado?</h1>
+                <p class="text-gray-600">Publicado em 8 de Outubro de 2026</p>
+                
+                <img src="https://placehold.co/1200x600/1e392a/c2a56c?text=SPLIT+PAYMENT+E+REFORMA+TRIBUTARIA" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Ilustração sobre Split Payment e Reforma Tributária Empresarial">
+
+                <div class="article-content text-lg text-gray-800">
+                    <p>O <em>split payment</em> é o mecanismo de recolhimento automático de tributos no momento da liquidação financeira do pagamento, instituído pela Reforma Tributária (Lei Complementar nº 215/2025). Seu cancelamento total é juridicamente improvável por ser a espinha dorsal da fiscalização do CBS e do IBS. Contudo, alterações operacionais, flexibilizações e adaptações normativas para resguardar o fluxo de caixa das empresas estão no centro dos debates do Congresso e do Poder Executivo.</p>
+
+                    <h2>Como Funciona o Split Payment e Quais São os Riscos de Fluxo de Caixa?</h2>
+                    <p>O modelo segrega o valor da operação comercial no instante exato da transação financeira. Quando o comprador efetua o pagamento via PIX, cartão ou boleto, a instituição financeira retém automaticamente a parcela devida ao Fisco (CBS e IBS) e repassa ao vendedor apenas o valor líquido.</p>
+                    
+                    <ol>
+                        <li><strong>Retenção na Fonte em Tempo Real:</strong> A liquidação financeira e a apuração tributária passam a ocorrer em ato único.</li>
+                        <li><strong>Eliminação do Diferimento:</strong> A empresa deixa de gerir o montante bruto do faturamento durante o mês para recolher o imposto no mês subsequente.</li>
+                        <li><strong>Impacto Severo no Capital de Giro:</strong> Negócios com ciclo financeiro longo ou dependentes do prazo entre faturamento e recolhimento perdem margem de manobra financeira.</li>
+                        <li><strong>Acúmulo Desproporcional de Créditos:</strong> Empresas com elevados créditos presumidos ou saldos credores podem enfrentar morosidade no ressarcimento automático, gerando asfixia financeira.</li>
+                    </ol>
+
+                    <p><em>Fundamentação Legal:</em> O mecanismo está previsto no artigo 48 e seguintes da Lei Complementar nº 215/2025, integrando o sistema de arrecadação do Comitê Gestor do IBS e da Receita Federal do Brasil.</p>
+
+                    <h2>Quais São as Perspectivas de Mudança ou Mitigação do Mecanismo?</h2>
+                    <p>Diante da pressão de setores do varejo, serviços e tecnologia, o debate legislativo e regulatório concentra-se em três vias de adequação pragmática:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hipótese de Revisão</th>
+                                <th>Mecanismo de Impacto</th>
+                                <th>Viabilidade Jurídica</th>
+                                <th>Impacto na Operação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Ajuste de Alíquotas de Retenção</strong></td>
+                                <td>Redução da retenção simplificada para evitar retenção a maior</td>
+                                <td>Alta (via regulamentação infralegal)</td>
+                                <td>Preserva parcela do caixa operacional</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ressarcimento Automatizado em 24h</strong></td>
+                                <td>Devolução célere de saldos credores e retenções indevidas</td>
+                                <td>Média (depende da tecnologia do Fisco)</td>
+                                <td>Reduz o efeito asfixia de capital de giro</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Exceções por Setor ou Porte</strong></td>
+                                <td>Tratamento diferenciado para regimes especiais ou PMEs</td>
+                                <td>Baixa (exige alteração legislativa)</td>
+                                <td>Protege empresas com menor capacidade de caixa</td>
+                            </tr>
