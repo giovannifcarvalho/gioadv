@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://giovannidecarvalho.adv.br/sitemap.xml
