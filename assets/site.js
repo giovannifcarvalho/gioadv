@@ -4,22 +4,22 @@
    Cada página carrega este script logo depois de abrir o <body>:
        <body class="bg-white text-gray-800" data-page="article">
            <script src="assets/site.js"></script>
-   data-page pode ser "home", "blog" ou "article". */
+   data-page pode ser "home", "blog", "article", "servicos" ou "sobre". */
 
 (function () {
     'use strict';
 
     var page = document.body.getAttribute('data-page') || 'article';
     var onHome = page === 'home';
-    var base = onHome ? '' : 'index.html';   // na home, os links de seção não recarregam a página
+    var base = onHome ? '' : 'index.html';   // na home, o link de Contato não recarrega a página
 
     var EMAIL = 'giovannifcarvalho@outlook.com';
     var LINKEDIN = 'https://www.linkedin.com/in/giovannidecarvalhoadv/';
     var INSTAGRAM = 'https://www.instagram.com/giovannidecarvalho.adv/';
 
     var NAV = [
-        { label: 'Serviços', href: base + '#services' },
-        { label: 'Sobre', href: base + '#about' },
+        { label: 'Serviços', href: 'servicos.html', active: page === 'servicos' },
+        { label: 'Sobre', href: 'sobre.html', active: page === 'sobre' },
         { label: 'Blog', href: 'blog.html', active: page === 'blog' || page === 'article' }
     ];
     var CONTATO = base + '#contact';
@@ -116,6 +116,17 @@
         });
     }
 
+    // Artigos relacionados nas páginas de serviço: <div id="related-posts" data-links="a.html,b.html">
+    function renderRelated(container) {
+        var links = (container.getAttribute('data-links') || '').split(',').map(function (l) { return l.trim(); });
+        var section = container.closest('section') || container;
+        loadPosts().then(function (posts) {
+            var related = posts.filter(function (p) { return links.indexOf(p.link) !== -1; }).slice(0, 3);
+            if (!related.length) { section.style.display = 'none'; return; }
+            container.innerHTML = related.map(cardHtml).join('');
+        }).catch(function () { section.style.display = 'none'; });
+    }
+
     function renderBlog(container, pagination) {
         var perPage = 6;
         loadPosts().then(function (posts) {
@@ -153,6 +164,9 @@
 
         var latest = document.getElementById('latest-posts-container');
         if (latest) renderLatest(latest);
+
+        var related = document.getElementById('related-posts');
+        if (related) renderRelated(related);
 
         var all = document.getElementById('posts-container');
         if (all) renderBlog(all, document.getElementById('pagination-container'));
