@@ -3,8 +3,12 @@
 
    Cada página carrega este script logo depois de abrir o <body>:
        <body class="bg-white text-gray-800" data-page="article">
-           <script src="assets/site.js"></script>
-   data-page pode ser "home", "blog", "article", "servicos" ou "sobre". */
+           <script src="assets/site.js?v=2026-10-15"></script>
+   data-page pode ser "home", "blog", "article", "servicos" ou "sobre".
+
+   IMPORTANTE: o "?v=..." força o navegador a baixar a versão nova do arquivo.
+   Sempre que este arquivo, head.js ou site.css mudarem, troque o valor de v
+   em TODAS as páginas (é o mesmo texto em todas, dá para usar localizar e substituir). */
 
 (function () {
     'use strict';
@@ -45,7 +49,8 @@
                     '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>' +
                 '</button>' +
             '</div>' +
-            '<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">' + mobileLinks + '</div>' +
+            // posicionado sobre o conteúdo (absolute), para não empurrar a página para baixo ao abrir
+            '<div id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-lg">' + mobileLinks + '</div>' +
         '</header>';
 
     document.body.insertAdjacentHTML('afterbegin', header);
@@ -58,6 +63,11 @@
     }
     menuButton.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
     menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setMenu(false); });
+    // fecha o menu ao tocar fora dele ou apertar Esc
+    document.addEventListener('click', function (e) {
+        if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !menuButton.contains(e.target)) setMenu(false);
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
     // ---------- Rodapé ----------
     var footer =
