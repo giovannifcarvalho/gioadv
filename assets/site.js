@@ -3,7 +3,7 @@
 
    Cada página carrega este script logo depois de abrir o <body>:
        <body class="bg-white text-gray-800" data-page="article">
-           <script src="assets/site.js?v=2026-10-15f"></script>
+           <script src="assets/site.js?v=2026-10-15g"></script>
    data-page pode ser "home", "blog", "article", "servicos", "sobre" ou "landing".
 
    Landing pages (data-page="landing"): cabeçalho só com o logo e um botão de contato,
