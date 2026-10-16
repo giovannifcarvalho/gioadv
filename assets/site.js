@@ -3,8 +3,12 @@
 
    Cada página carrega este script logo depois de abrir o <body>:
        <body class="bg-white text-gray-800" data-page="article">
-           <script src="assets/site.js?v=2026-10-15d"></script>
-   data-page pode ser "home", "blog", "article", "servicos" ou "sobre".
+           <script src="assets/site.js?v=2026-10-15e"></script>
+   data-page pode ser "home", "blog", "article", "servicos", "sobre" ou "landing".
+
+   Landing pages (data-page="landing"): cabeçalho só com o logo e um botão de contato,
+   sem menu, e rodapé enxuto, para o visitante não sair da página.
+   data-wa-message no <body> define a mensagem do WhatsApp daquela página.
 
    IMPORTANTE: o "?v=..." força o navegador a baixar a versão nova do arquivo.
    Sempre que este arquivo, head.js ou site.css mudarem, troque o valor de v
@@ -20,9 +24,13 @@
     var EMAIL = 'giovannifcarvalho@outlook.com';
     var LINKEDIN = 'https://www.linkedin.com/in/giovannidecarvalhoadv/';
     var INSTAGRAM = 'https://www.instagram.com/giovannidecarvalho.adv/';
-    // Mesmo destino e mensagem do botão "Conversar sobre a minha empresa" da home
-    var WHATSAPP = 'https://wa.me/5531991466737?text=' +
-        encodeURIComponent('Olá, Giovanni! Vi o seu site e gostaria de conversar sobre a minha empresa.');
+    // Mesmo destino e mensagem do botão "Conversar sobre a minha empresa" da home.
+    // Uma página pode trocar a mensagem com data-wa-message no <body>.
+    var WA_NUMBER = '5531991466737';
+    function whatsappLink(message) { return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(message); }
+    var WHATSAPP = whatsappLink(document.body.getAttribute('data-wa-message') ||
+        'Olá, Giovanni! Vi o seu site e gostaria de conversar sobre a minha empresa.');
+    var onLanding = page === 'landing';
 
     var NAV = [
         { label: 'Serviços', href: 'servicos.html', active: page === 'servicos' },
@@ -56,8 +64,18 @@
             '<div id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-lg">' + mobileLinks + '</div>' +
         '</header>';
 
-    document.body.insertAdjacentHTML('afterbegin', header);
+    // Landing page: sem menu, só o logo (sem link) e um botão de contato
+    var landingHeader =
+        '<header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">' +
+            '<div class="container mx-auto px-5 md:px-6 py-2.5 flex justify-between items-center gap-4">' +
+                '<img src="assets/logo.png" alt="Giovanni de Carvalho Advocacia" class="h-10 md:h-12">' +
+                '<a href="' + WHATSAPP + '" target="_blank" rel="noopener noreferrer" class="bg-brand-gold text-white text-sm md:text-base font-semibold px-4 md:px-5 py-2 rounded-md hover:opacity-90 transition duration-300">Fale comigo</a>' +
+            '</div>' +
+        '</header>';
 
+    document.body.insertAdjacentHTML('afterbegin', onLanding ? landingHeader : header);
+
+    if (!onLanding) {
     var menuButton = document.getElementById('mobile-menu-button');
     var menu = document.getElementById('mobile-menu');
     function setMenu(open) {
@@ -71,6 +89,7 @@
         if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !menuButton.contains(e.target)) setMenu(false);
     });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+    }
 
     // ---------- Botão flutuante do WhatsApp (canto inferior direito, fixo ao rolar) ----------
     // O estilo fica em assets/site.css (.whatsapp-float).
@@ -95,6 +114,44 @@
             '</div>' +
             '<div class="mt-8 border-t border-gray-800 pt-8 text-gray-500"><p>&copy; ' + new Date().getFullYear() + ' Giovanni de Carvalho. Todos os direitos reservados.</p></div>' +
         '</div></footer>';
+
+    // Rodapé das landing pages: identificação e contato, sem links para outras páginas
+    var landingFooter =
+        '<footer class="bg-gray-900 text-white"><div class="container mx-auto px-6 py-10 text-center text-sm">' +
+            '<p class="text-xl font-semibold mb-2" style="font-family: \'Cormorant Garamond\', serif;">Giovanni de Carvalho | Advocacia Empresarial</p>' +
+            '<p class="text-gray-400">OAB/MG 243.837 · ' + EMAIL + ' · Atendimento online para todo o Brasil</p>' +
+            '<p class="text-gray-500 mt-4">&copy; ' + new Date().getFullYear() + ' Giovanni de Carvalho. Todos os direitos reservados.</p>' +
+        '</div></footer>';
+
+    // ---------- Formulários que enviam para o WhatsApp ----------
+    // <form data-wa-form data-wa-intro="Texto inicial"> com campos que têm data-label.
+    // Ao enviar, monta a mensagem com as respostas e abre o WhatsApp.
+    function setupWhatsappForms() {
+        Array.prototype.forEach.call(document.querySelectorAll('form[data-wa-form]'), function (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var lines = [form.getAttribute('data-wa-intro') || 'Olá, Giovanni!'];
+                var groups = {};
+                Array.prototype.forEach.call(form.querySelectorAll('[data-label]'), function (field) {
+                    var label = field.getAttribute('data-label');
+                    if (field.type === 'checkbox') {
+                        groups[label] = groups[label] || { sim: [], nao: [] };
+                        groups[label][field.checked ? 'sim' : 'nao'].push(field.value);
+                    } else if (field.value.trim()) {
+                        lines.push(label + ': ' + field.value.trim());
+                    }
+                });
+                Object.keys(groups).forEach(function (label) {
+                    var g = groups[label];
+                    lines.push(label + ': ' + (g.sim.length ? g.sim.join(', ') : 'nenhum dos itens'));
+                    if (g.nao.length) lines.push('Ainda não tem: ' + g.nao.join(', '));
+                });
+                var url = whatsappLink(lines.join('\n'));
+                var win = window.open(url, '_blank', 'noopener');
+                if (!win) window.location.href = url;
+            });
+        });
+    }
 
     // ---------- Listagem de artigos (home e blog) ----------
     // Os artigos vêm de artigos.json: para publicar um novo, basta adicionar um item lá.
@@ -180,7 +237,8 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        document.body.insertAdjacentHTML('beforeend', footer);
+        document.body.insertAdjacentHTML('beforeend', onLanding ? landingFooter : footer);
+        setupWhatsappForms();
 
         var latest = document.getElementById('latest-posts-container');
         if (latest) renderLatest(latest);
