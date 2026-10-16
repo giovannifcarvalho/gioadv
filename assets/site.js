@@ -3,7 +3,7 @@
 
    Cada página carrega este script logo depois de abrir o <body>:
        <body class="bg-white text-gray-800" data-page="article">
-           <script src="assets/site.js?v=2026-10-15e"></script>
+           <script src="assets/site.js?v=2026-10-15f"></script>
    data-page pode ser "home", "blog", "article", "servicos", "sobre" ou "landing".
 
    Landing pages (data-page="landing"): cabeçalho só com o logo e um botão de contato,
@@ -64,11 +64,11 @@
             '<div id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-lg">' + mobileLinks + '</div>' +
         '</header>';
 
-    // Landing page: sem menu, só o logo (sem link) e um botão de contato
+    // Landing page: sem menu, só o logo (que leva à home) e um botão de contato
     var landingHeader =
         '<header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">' +
             '<div class="container mx-auto px-5 md:px-6 py-2.5 flex justify-between items-center gap-4">' +
-                '<img src="assets/logo.png" alt="Giovanni de Carvalho Advocacia" class="h-10 md:h-12">' +
+                '<a href="index.html" class="shrink-0" aria-label="Ir para a página inicial"><img src="assets/logo.png" alt="Giovanni de Carvalho Advocacia" class="h-10 md:h-12"></a>' +
                 '<a href="' + WHATSAPP + '" target="_blank" rel="noopener noreferrer" class="bg-brand-gold text-white text-sm md:text-base font-semibold px-4 md:px-5 py-2 rounded-md hover:opacity-90 transition duration-300">Fale comigo</a>' +
             '</div>' +
         '</header>';
