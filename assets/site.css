@@ -38,3 +38,18 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
 .whatsapp-float:focus-visible { outline: 3px solid #c2a56c; outline-offset: 3px; }
 .whatsapp-float svg { width: 30px; height: 30px; }
 @media print { .whatsapp-float { display: none; } }
+
+/* Topo da home com a foto do Giovanni: brilho suave atrás da foto,
+   que já vem com fundo transparente e borda inferior em degradê */
+.hero-owner {
+    background-image: radial-gradient(ellipse at 78% 45%, rgba(194, 165, 108, 0.14) 0%, rgba(30, 57, 42, 0) 55%);
+}
+.hero-owner-photo {
+    display: block;
+    width: 100%;
+    max-width: 280px;      /* celular: foto menor, acima do texto */
+    height: auto;
+}
+@media (min-width: 768px) {
+    .hero-owner-photo { max-width: 520px; }
+}
