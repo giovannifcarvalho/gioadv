@@ -3,7 +3,7 @@
 
    Cada página carrega este script logo depois de abrir o <body>:
        <body class="bg-white text-gray-800" data-page="article">
-           <script src="assets/site.js?v=2026-10-15c"></script>
+           <script src="assets/site.js?v=2026-10-15d"></script>
    data-page pode ser "home", "blog", "article", "servicos" ou "sobre".
 
    IMPORTANTE: o "?v=..." força o navegador a baixar a versão nova do arquivo.

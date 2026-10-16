@@ -39,17 +39,73 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
 .whatsapp-float svg { width: 30px; height: 30px; }
 @media print { .whatsapp-float { display: none; } }
 
-/* Topo da home com a foto do Giovanni: brilho suave atrás da foto,
-   que já vem com fundo transparente e borda inferior em degradê */
-.hero-owner {
-    background-image: radial-gradient(ellipse at 78% 45%, rgba(194, 165, 108, 0.14) 0%, rgba(30, 57, 42, 0) 55%);
+/* ===== Topo da home (hero shot) =====
+   O retrato (assets/giovanni-retrato.*) já vem com fundo transparente e degradê na base.
+   Celular: retrato recortado até os ombros, acima do texto.
+   Computador: retrato encostado na base da seção e na borda direita da tela. */
+.hero-shot {
+    background-image: radial-gradient(ellipse 60% 70% at 82% 30%, rgba(194, 165, 108, 0.16) 0%, rgba(30, 57, 42, 0) 70%);
 }
-.hero-owner-photo {
-    display: block;
-    width: 100%;
-    max-width: 280px;      /* celular: foto menor, acima do texto */
+.hero-shot-photo {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+}
+.hero-shot-photo img {
+    width: 190px;
     height: auto;
+    display: block;
+    filter: drop-shadow(0 0 28px rgba(194, 165, 108, 0.22));
 }
+.hero-shot-tag { display: none; }
+.hero-shot-text { padding: 8px 0 48px; }
+
 @media (min-width: 768px) {
-    .hero-owner-photo { max-width: 520px; }
+    .hero-shot { min-height: 560px; display: flex; align-items: center; }
+    .hero-shot > .container { width: 100%; }
+    .hero-shot-photo {
+        position: absolute;
+        bottom: 0;
+        right: max(0px, calc((100vw - 1280px) / 2 - 120px));
+        height: 520px;
+        padding-top: 0;
+        overflow: visible;
+        -webkit-mask-image: none;
+                mask-image: none;
+    }
+    .hero-shot-photo img { width: auto; height: 100%; }
+    .hero-shot-text { max-width: 54%; padding: 80px 0; }
+    .hero-shot-tag {
+        display: block;
+        position: absolute;
+        left: -56px;
+        bottom: 56px;
+        padding: 12px 18px;
+        background: rgba(30, 57, 42, 0.82);
+        border-left: 3px solid #c2a56c;
+        -webkit-backdrop-filter: blur(4px);
+                backdrop-filter: blur(4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+    .hero-shot-tag-name { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.35rem; color: #fff; line-height: 1.2; }
+    .hero-shot-tag-role { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #c2a56c; margin-top: 2px; }
 }
+@media (min-width: 1024px) {
+    .hero-shot { min-height: 640px; }
+    .hero-shot-photo { height: 620px; }
+    .hero-shot-text { max-width: 56%; }
+}
+@media (min-width: 1280px) {
+    .hero-shot { min-height: 700px; }
+    .hero-shot-photo { height: 690px; }
+    .hero-shot-text { max-width: 60%; }
+}
+
+/* Foto do relógio na seção "Como eu trabalho" (fundo verde) */
+.como-trabalho-photo { display: block; width: 100%; max-width: 300px; height: auto; }
+@media (min-width: 768px) { .como-trabalho-photo { max-width: 480px; } }
