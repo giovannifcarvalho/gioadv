@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="assets/giovanni-hero.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/giovanni-hero.webp?v=2" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="assets/site.css?v=2026-10-15c">
 </head>
 <body class="bg-white text-gray-800" data-page="home">
@@ -41,7 +41,10 @@
                     <p class="text-sm text-gray-400 mt-6">Atendimento online para empresas de todo o Brasil.</p>
                 </div>
                 <div class="md:col-span-5 lg:col-span-5 order-1 md:order-2 flex justify-center md:justify-end self-end pt-10 md:pt-16">
-                    <img src="assets/giovanni-hero.webp" width="858" height="900" class="hero-owner-photo" alt="Giovanni de Carvalho, advogado, de terno escuro, conferindo o relógio" fetchpriority="high">
+                    <picture>
+                        <source srcset="assets/giovanni-hero.webp?v=2" type="image/webp">
+                        <img src="assets/giovanni-hero.png?v=2" width="858" height="900" class="hero-owner-photo" alt="Giovanni de Carvalho, advogado, de terno escuro, conferindo o relógio" fetchpriority="high">
+                    </picture>
                 </div>
             </div>
         </section>
