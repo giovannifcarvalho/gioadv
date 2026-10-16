@@ -10,7 +10,7 @@
         2. Troque, aqui no <head>: o título, a descrição (até ~155 caracteres) e, nas linhas
            canonical e og:url, "artigo-modelo.html" pelo nome do novo arquivo.
            Se o artigo tiver capa própria em assets/, troque também o og:image.
-        3. Troque, no <main>: categoria, título, data, imagem e o texto (passos 3 a 5 abaixo).
+        3. Troque, no <main>: categoria, título, data, capa, texto e a chamada final (passos 3 a 6 abaixo).
         4. Adicione o artigo em artigos.json (é dali que a home e o blog listam os posts)
            e em sitemap.xml.
         Cabeçalho, rodapé, menu, cores, fontes e Google Analytics vêm de assets/ e NÃO
@@ -29,14 +29,14 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/head.js?v=2026-10-15h"></script>
+    <script src="assets/head.js?v=2026-10-15i"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css?v=2026-10-15h">
+    <link rel="stylesheet" href="assets/site.css?v=2026-10-15i">
 </head>
 <body class="bg-white text-gray-800" data-page="article">
-    <script src="assets/site.js?v=2026-10-15h"></script>
+    <script src="assets/site.js?v=2026-10-15i"></script>
 
     <main>
         <article class="py-20">
@@ -46,7 +46,7 @@
                 <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight mb-4">Título do Artigo Aparece Aqui</h1>
                 <p class="text-gray-600">Publicado em 28 de Agosto de 2025</p>
                 
-                <!-- PASSO 4: Altere a imagem principal e a descrição dela (alt) -->
+                <!-- PASSO 4: Use a capa do artigo (assets/capas/nome-do-artigo.png, 1200x600, no padrão das demais) e descreva-a no alt -->
                 <img src="https://placehold.co/1200x600/1e392a/c2a56c?text=IMAGEM+DO+ARTIGO" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Descrição da imagem do artigo">
 
                 <!-- PASSO 5: Adicione o conteúdo do artigo -->
@@ -67,6 +67,24 @@
                     <p>Aqui você pode escrever a conclusão do seu artigo, resumindo os pontos principais e talvez oferecendo uma chamada para ação, como convidar o leitor a entrar em contato para mais informações.</p>
                 </div>
 
+                <!-- PASSO 6: Chamada para a área de atuação mais ligada ao tema do artigo.
+                     Troque o link (href), a área, a pergunta, o texto e o botão. Páginas disponíveis:
+                     servicos-estruturacao-societaria.html · servicos-contratos-de-tecnologia.html
+                     servicos-propriedade-intelectual.html · servicos-lgpd-e-protecao-de-dados.html
+                     servicos-investimentos-e-ma.html · servicos-consultoria-empresarial.html -->
+                <aside class="artigo-cta">
+                    <picture>
+                        <source srcset="assets/giovanni-retrato.webp?v=1" type="image/webp">
+                        <img src="assets/giovanni-retrato.png?v=1" alt="Giovanni de Carvalho" loading="lazy" class="artigo-cta-foto">
+                    </picture>
+                    <div>
+                        <p class="artigo-cta-area">Consultoria Empresarial</p>
+                        <h2 class="artigo-cta-titulo">Quer um advogado por perto em decisões como essa?</h2>
+                        <p class="artigo-cta-texto">Suporte jurídico recorrente para contratos, relações de trabalho e mudanças regulatórias.</p>
+                        <a href="servicos-consultoria-empresarial.html" class="artigo-cta-botao">Conhecer a consultoria empresarial &rarr;</a>
+                        <p class="artigo-cta-autor">Giovanni de Carvalho · Advogado · OAB/MG 243.837</p>
+                    </div>
+                </aside>
                 <div class="mt-12 border-t pt-8">
                     <a href="blog.html" class="font-bold text-brand-gold hover:underline">&larr; Voltar para todos os artigos</a>
                 </div>
