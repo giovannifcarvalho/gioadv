@@ -258,3 +258,100 @@ select.lp-input {
     .artigo-cta-foto { width: 104px; height: 104px; }
     .artigo-cta-titulo { font-size: 2rem; }
 }
+
+/* ===== Raio-X Jurídico da Startup (raio-x.html) ===== */
+.rx-progresso { height: 6px; background: #e5e7eb; border-radius: 9999px; overflow: hidden; }
+.rx-progresso span { display: block; height: 100%; width: 0; background: #c2a56c; border-radius: 9999px; transition: width 0.35s ease; }
+
+.rx-opcao {
+    display: flex; align-items: center; gap: 14px; width: 100%; text-align: left;
+    padding: 16px 18px; background: #fff; border: 1px solid #d1d5db; border-radius: 10px;
+    font-size: 1.05rem; line-height: 1.45; color: #1f2937;
+    transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.rx-opcao:hover { border-color: #c2a56c; box-shadow: 0 4px 14px rgba(30, 57, 42, 0.08); }
+.rx-opcao:focus-visible { outline: 3px solid rgba(194, 165, 108, 0.6); outline-offset: 2px; }
+.rx-opcao-marca {
+    position: relative; width: 22px; height: 22px; flex-shrink: 0;
+    border: 2px solid #c2a56c; border-radius: 9999px; transition: background-color 0.15s ease;
+}
+.rx-opcao-escolhida { border-color: #1e392a; background: #f6f2e8; }
+.rx-opcao-escolhida .rx-opcao-marca { background: #1e392a; border-color: #1e392a; }
+.rx-opcao-escolhida .rx-opcao-marca::after {
+    content: ''; position: absolute; left: 6px; top: 2px; width: 6px; height: 11px;
+    border: solid #c2a56c; border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+
+/* faixas: cor do texto/selo (--rx), fundo claro (--rx-fundo) e cor no fundo verde (--rx-claro) */
+.rx-risco   { --rx: #b4432f; --rx-fundo: #fbeae6; --rx-claro: #e98d7a; }
+.rx-atencao { --rx: #9a640b; --rx-fundo: #fdf3df; --rx-claro: #ecc06e; }
+.rx-ok      { --rx: #2f7a4b; --rx-fundo: #e6f4ea; --rx-claro: #8fd3a6; }
+.rx-na      { --rx: #6b7280; --rx-fundo: #f3f4f6; --rx-claro: #d1d5db; }
+
+.rx-chip {
+    display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #f1e9d8; font-size: 0.95rem;
+}
+.rx-ponto { width: 10px; height: 10px; border-radius: 9999px; background: var(--rx-claro); }
+
+.rx-cartao {
+    display: flex; flex-direction: column; background: #fff; border: 1px solid #e5e7eb;
+    border-top: 4px solid var(--rx); border-radius: 12px; padding: 24px; box-shadow: 0 4px 18px rgba(30, 57, 42, 0.06);
+}
+.rx-selo {
+    flex-shrink: 0; padding: 4px 10px; border-radius: 9999px; background: var(--rx-fundo); color: var(--rx);
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
+}
+.rx-termometro { display: flex; gap: 6px; }
+.rx-termometro span { flex: 1; height: 8px; border-radius: 9999px; background: #e5e7eb; }
+.rx-termometro .rx-aceso { background: var(--rx); }
+.rx-nao-sei { margin-top: 10px; font-size: 0.92rem; font-style: italic; color: #9a640b; }
+.rx-link { margin-top: auto; padding-top: 16px; font-weight: 700; color: #c2a56c; }
+.rx-link:hover { text-decoration: underline; }
+.rx-pdf-caixa { border-top: 1px solid rgba(255, 255, 255, 0.15); }
+
+/* Só no PDF */
+.rx-pdf-cabecalho, .rx-pdf-contato { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    .rx-progresso span, .rx-opcao { transition: none; }
+}
+
+@media print {
+    @page { size: A4; margin: 12mm 14mm; }
+    body { background: #fff !important; }
+    body > header, body > footer, .whatsapp-float, #aviso-cookies,
+    #rx-intro, #rx-perguntas, .rx-sem-pdf, .rx-link { display: none !important; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    .rx-pdf-cabecalho {
+        display: flex; align-items: center; gap: 12px;
+        padding-bottom: 10px; margin-bottom: 4px; border-bottom: 1px solid #c2a56c;
+    }
+    .rx-pdf-titulo { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 20pt; color: #1e392a; line-height: 1.1; }
+    .rx-pdf-sub { font-size: 9.5pt; color: #6b7280; }
+
+    #rx-resultado .container { max-width: none !important; padding: 0 !important; }
+    .rx-resultado-topo { background: none !important; }
+    .rx-resultado-topo .container { padding-top: 10px !important; padding-bottom: 6px !important; }
+    #rx-titulo { color: #1e392a !important; font-size: 20pt !important; margin-bottom: 4px !important; }
+    #rx-subtitulo { color: #4b5563 !important; font-size: 11pt !important; }
+    #rx-resumo { margin-top: 10px !important; }
+    .rx-chip { background: #f9fafb; border-color: #e5e7eb; color: #1f2937; font-size: 9.5pt; padding: 3px 10px; }
+    .rx-ponto { background: var(--rx); }
+
+    #rx-cartoes { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px !important; margin-top: 10px; }
+    .rx-cartao { padding: 12px 14px; box-shadow: none; break-inside: avoid; }
+    .rx-cartao h3 { font-size: 14pt !important; }
+    .rx-cartao p { font-size: 9.5pt; line-height: 1.45 !important; margin-top: 8px !important; }
+    .rx-cartao .mb-3 { margin-bottom: 8px !important; }
+    .rx-selo { font-size: 7pt; }
+    .rx-termometro span { height: 6px; }
+
+    .rx-fechamento { background: none !important; border: 1px solid #c2a56c; padding: 12px 16px !important; margin-top: 12px !important; break-inside: avoid; }
+    .rx-fechamento h2 { color: #1e392a !important; font-size: 15pt !important; margin-bottom: 4px !important; }
+    .rx-fechamento p { color: #4b5563 !important; font-size: 10pt !important; margin: 2px auto !important; }
+    .rx-pdf-contato { display: block; font-weight: 700; color: #1e392a !important; }
+    #rx-resultado > .container > p { font-size: 8.5pt !important; margin-top: 8px !important; }
+}
