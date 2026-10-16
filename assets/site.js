@@ -34,6 +34,7 @@
 
     var NAV = [
         { label: 'Serviços', href: 'servicos.html', active: page === 'servicos' },
+        { label: 'Raio-X', href: 'raio-x.html', active: false },
         { label: 'Sobre', href: 'sobre.html', active: page === 'sobre' },
         { label: 'Blog', href: 'blog.html', active: page === 'blog' || page === 'article' }
     ];

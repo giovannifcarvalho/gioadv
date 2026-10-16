@@ -1,0 +1,221 @@
+{
+  "_instrucoes": "Conteúdo do Raio-X Jurídico da Startup (raio-x.html). Pode editar textos e pontos aqui sem mexer no código. Pontos: 2 = em ordem, 1 = atenção, 0 = risco, null = não se aplica (não entra na conta). \"naoSei\": true faz o resultado lembrar que não saber já é um ponto de atenção. Faixas por área (média das respostas): 1,75 ou mais = em ordem; de 1 a 1,74 = atenção; abaixo de 1 = risco.",
+
+  "perfil": [
+    {
+      "id": "fase",
+      "pergunta": "Em que fase está a sua empresa?",
+      "opcoes": [
+        "Validando a ideia ou construindo o produto",
+        "Já vendendo para clientes",
+        "Crescendo ou buscando investimento"
+      ]
+    },
+    {
+      "id": "socios",
+      "pergunta": "Quantos sócios a empresa tem?",
+      "opcoes": ["Só eu", "Dois ou mais"]
+    }
+  ],
+
+  "eixos": [
+    {
+      "id": "sociedade",
+      "nome": "Sociedade",
+      "area": "Estruturação Societária",
+      "landing": "servicos-estruturacao-societaria.html",
+      "pularSe": { "pergunta": "socios", "opcao": 0 },
+      "perguntas": [
+        {
+          "pergunta": "Os sócios têm um acordo de sócios assinado?",
+          "opcoes": [
+            { "texto": "Sim, e ele reflete como a empresa funciona hoje", "pontos": 2 },
+            { "texto": "Sim, mas foi feito há tempos e a empresa mudou", "pontos": 1 },
+            { "texto": "Não, temos só o contrato social", "pontos": 0 },
+            { "texto": "Não sei / somos sócios \"de palavra\"", "pontos": 0, "naoSei": true }
+          ]
+        },
+        {
+          "pergunta": "Se um sócio decidir sair amanhã, já está definido quanto valem as quotas dele e como ele será pago?",
+          "opcoes": [
+            { "texto": "Sim, está escrito", "pontos": 2 },
+            { "texto": "Conversamos, mas não está no papel", "pontos": 0 },
+            { "texto": "Nunca pensamos nisso", "pontos": 0 }
+          ]
+        }
+      ],
+      "resultados": {
+        "ok": "As regras entre os sócios estão escritas. Revise o acordo sempre que entrar sócio, investidor ou mudar a divisão de funções.",
+        "atencao": "Existe acordo, mas a empresa mudou depois dele. Cláusulas desatualizadas costumam falhar justamente na hora de uma saída ou de uma rodada.",
+        "risco": "Sem regras escritas, a saída de um sócio vira negociação no pior momento, com a empresa no meio. Acordo de sócios, vesting e regra de saída se resolvem em semanas; uma briga societária pode durar anos.",
+        "naoSeAplica": "Hoje a empresa é só sua. Quando entrar o primeiro sócio ou investidor, as regras de entrada, dedicação e saída devem ser escritas antes da assinatura."
+      }
+    },
+    {
+      "id": "contratos",
+      "nome": "Contratos",
+      "area": "Contratos de Tecnologia",
+      "landing": "servicos-contratos-de-tecnologia.html",
+      "perguntas": [
+        {
+          "pergunta": "Como são formalizadas as vendas para os seus clientes?",
+          "opcoes": [
+            { "texto": "Contrato ou termos de uso feitos para o nosso produto", "pontos": 2 },
+            { "texto": "Modelo da internet, adaptado por nós", "pontos": 1 },
+            { "texto": "Proposta comercial, e-mail ou WhatsApp", "pontos": 0 }
+          ]
+        },
+        {
+          "pergunta": "O contrato com clientes define o que acontece se o sistema falhar ou ficar fora do ar, e até quanto a empresa responde?",
+          "opcoes": [
+            { "texto": "Sim, com limite de valor definido", "pontos": 2 },
+            { "texto": "Fala do assunto, mas sem limite claro", "pontos": 1 },
+            { "texto": "Não / não sei", "pontos": 0, "naoSei": true }
+          ]
+        }
+      ],
+      "resultados": {
+        "ok": "Suas vendas estão amparadas por contrato próprio. Vale revisá-lo a cada nova funcionalidade ou novo modelo de cobrança.",
+        "atencao": "O modelo adaptado cobre o básico, mas raramente descreve o seu produto, o seu nível de serviço e o seu limite de responsabilidade.",
+        "risco": "Sem contrato, uma falha do sistema pode gerar indenização sem teto, e uma inadimplência vira discussão sobre \"o que foi combinado\". O contrato faz parte do produto."
+      }
+    },
+    {
+      "id": "marca",
+      "nome": "Marca e criações",
+      "area": "Propriedade Intelectual",
+      "landing": "servicos-propriedade-intelectual.html",
+      "perguntas": [
+        {
+          "pergunta": "A marca da empresa (nome e logo) está registrada no INPI?",
+          "opcoes": [
+            { "texto": "Sim, registro concedido", "pontos": 2 },
+            { "texto": "Pedido feito, aguardando análise", "pontos": 1 },
+            { "texto": "Não, mas temos CNPJ e domínio com esse nome", "pontos": 0 },
+            { "texto": "Não sei", "pontos": 0, "naoSei": true }
+          ]
+        },
+        {
+          "pergunta": "Quem criou o código, o design e os conteúdos da empresa?",
+          "opcoes": [
+            { "texto": "Sócios ou equipe, com contrato que transfere os direitos à empresa", "pontos": 2 },
+            { "texto": "Freelancers ou agência, sem cláusula de cessão de direitos", "pontos": 0 },
+            { "texto": "Os sócios, antes de a empresa existir, sem transferência formal", "pontos": 0 },
+            { "texto": "Não sei como isso foi formalizado", "pontos": 0, "naoSei": true }
+          ]
+        }
+      ],
+      "resultados": {
+        "ok": "Marca registrada e criações em nome da empresa: o principal patrimônio intangível está protegido.",
+        "atencao": "O pedido no INPI está em andamento. Acompanhe os prazos e as oposições, porque um prazo perdido pode arquivar o pedido.",
+        "risco": "CNPJ e domínio não dão direito sobre a marca, e código feito por terceiros sem cessão pode não pertencer à empresa. Isso costuma aparecer na pior hora: numa notificação ou numa due diligence."
+      }
+    },
+    {
+      "id": "dados",
+      "nome": "Dados pessoais",
+      "area": "LGPD e Proteção de Dados",
+      "landing": "servicos-lgpd-e-protecao-de-dados.html",
+      "perguntas": [
+        {
+          "pergunta": "A empresa tem política de privacidade que descreve os dados que ela realmente coleta?",
+          "opcoes": [
+            { "texto": "Sim, escrita para a nossa operação", "pontos": 2 },
+            { "texto": "Temos uma, mas é genérica ou copiada", "pontos": 1 },
+            { "texto": "Não temos", "pontos": 0 }
+          ]
+        },
+        {
+          "pergunta": "Se um cliente pedisse hoje para saber quais dados vocês têm dele, e depois pedisse para apagá-los, vocês conseguiriam responder no prazo da lei?",
+          "opcoes": [
+            { "texto": "Sim, temos processo e responsável definidos", "pontos": 2 },
+            { "texto": "Daria trabalho, mas conseguiríamos", "pontos": 1 },
+            { "texto": "Não saberíamos por onde começar", "pontos": 0 }
+          ]
+        }
+      ],
+      "resultados": {
+        "ok": "Política própria e processo para atender titulares: a empresa consegue provar que trata dados corretamente.",
+        "atencao": "Uma política genérica descreve uma empresa que não é a sua, e a LGPD cobra justamente a coerência entre o que está escrito e o que se faz.",
+        "risco": "Sem política nem processo, um único pedido de cliente, um incidente ou uma exigência de um cliente maior já expõe a empresa a sanções e à perda de contratos."
+      }
+    },
+    {
+      "id": "investimento",
+      "nome": "Investimento",
+      "area": "Investimentos e M&A",
+      "landing": "servicos-investimentos-e-ma.html",
+      "perguntas": [
+        {
+          "pergunta": "A empresa já recebeu ou está negociando dinheiro de investidor (anjo, mútuo conversível, aceleradora, fundo)?",
+          "opcoes": [
+            { "texto": "Já recebemos, com os documentos revisados por advogado nosso", "pontos": 2 },
+            { "texto": "Já recebemos, assinando o modelo enviado pelo investidor", "pontos": 0 },
+            { "texto": "Estamos negociando agora", "pontos": 1 },
+            { "texto": "Não pretendemos captar nos próximos 12 meses", "pontos": null }
+          ]
+        },
+        {
+          "pergunta": "Se um investidor ou comprador pedisse hoje para analisar a empresa, vocês teriam em mãos o contrato social atualizado, o acordo de sócios, os contratos com clientes e os registros de marca?",
+          "opcoes": [
+            { "texto": "Sim, tudo organizado", "pontos": 2 },
+            { "texto": "Parte disso, espalhado", "pontos": 1 },
+            { "texto": "Não", "pontos": 0 }
+          ]
+        }
+      ],
+      "resultados": {
+        "ok": "Documentos revisados e empresa organizada: vocês negociam com informação, não às pressas.",
+        "atencao": "Captar com a casa parcialmente arrumada alonga a due diligence e enfraquece a sua posição na negociação.",
+        "risco": "O modelo enviado pelo investidor protege o investidor. Diluição, controle e direito de veto definidos ali valem por muito mais tempo do que o dinheiro dura."
+      }
+    },
+    {
+      "id": "equipe",
+      "nome": "Equipe e rotina",
+      "area": "Consultoria Empresarial",
+      "landing": "servicos-consultoria-empresarial.html",
+      "perguntas": [
+        {
+          "pergunta": "Como está formada a equipe, além dos sócios?",
+          "opcoes": [
+            { "texto": "CLT, ou PJ com autonomia real (sem horário fixo nem chefe direto)", "pontos": 2 },
+            { "texto": "Uma mistura das duas situações", "pontos": 1 },
+            { "texto": "PJ que trabalha como empregado: horário, chefe, exclusividade", "pontos": 0 },
+            { "texto": "Ainda não temos equipe", "pontos": null }
+          ]
+        },
+        {
+          "pergunta": "Antes de assinar um contrato importante (fornecedor, parceria, aluguel), alguém avalia os riscos?",
+          "opcoes": [
+            { "texto": "Sempre, com advogado", "pontos": 2 },
+            { "texto": "Só nos maiores", "pontos": 1 },
+            { "texto": "Assinamos e resolvemos depois, se der problema", "pontos": 0 }
+          ]
+        }
+      ],
+      "resultados": {
+        "ok": "Equipe bem enquadrada e contratos avaliados antes da assinatura: a rotina jurídica está sob controle.",
+        "atencao": "Revisar só os maiores contratos, ou ter uma equipe mista, deixa brechas. O risco costuma estar no contrato \"pequeno\" ou no PJ que virou empregado com o tempo.",
+        "risco": "PJ com horário, chefe e exclusividade é vínculo de emprego aos olhos da Justiça do Trabalho, e contratos assinados sem análise acumulam passivo sem ninguém perceber."
+      }
+    }
+  ],
+
+  "titulos": {
+    "bom": {
+      "titulo": "A base jurídica da sua startup está bem cuidada.",
+      "texto": "Os pontos abaixo são o próximo passo para manter assim enquanto a empresa cresce."
+    },
+    "medio": {
+      "titulo": "Há riscos na sua startup que valem atenção agora, antes que virem problema.",
+      "texto": "Nenhum deles é raro, e todos ficam mais caros de resolver com o tempo."
+    },
+    "fragil": {
+      "titulo": "Sua startup está crescendo sobre uma base jurídica frágil.",
+      "texto": "A boa notícia: quase tudo abaixo tem solução simples se for tratado agora."
+    }
+  },
+
+  "naoSei": "Não saber a resposta já é um ponto de atenção."
+}
