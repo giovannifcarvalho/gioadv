@@ -176,3 +176,55 @@ select.lp-input {
     color: #c2a56c;
 }
 @media (min-width: 768px) { .sobre-citacao { font-size: 2.5rem; margin: 4.5rem auto; } }
+
+/* ===== Aviso de cookies (inserido por site.js até o visitante escolher) ===== */
+.aviso-cookies {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    z-index: 45;                     /* acima do botão do WhatsApp, abaixo do cabeçalho */
+    background: #1e392a;
+    color: #e5e7eb;
+    border: 1px solid rgba(194, 165, 108, 0.45);
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    padding: 16px 18px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+.aviso-cookies-texto a { color: #c2a56c; text-decoration: underline; }
+.aviso-cookies-botoes { display: flex; gap: 10px; margin-top: 12px; }
+.aviso-cookies-botao {
+    flex: 1;                         /* "Recusar" e "Aceitar" com o mesmo tamanho e destaque */
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 1px solid #c2a56c;
+    transition: opacity 0.2s ease;
+}
+.aviso-cookies-recusar { background: transparent; color: #c2a56c; }
+.aviso-cookies-aceitar { background: #c2a56c; color: #fff; }
+.aviso-cookies-botao:hover { opacity: 0.85; }
+.aviso-cookies-botao:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+/* enquanto o aviso está aberto, o botão do WhatsApp sobe para não ficar por baixo */
+.com-aviso-cookies .whatsapp-float { bottom: calc(var(--aviso-cookies-altura, 140px) + 24px + env(safe-area-inset-bottom, 0px)); }
+@media (min-width: 768px) {
+    .aviso-cookies { right: auto; left: 20px; bottom: 20px; max-width: 460px; }
+    .com-aviso-cookies .whatsapp-float { bottom: 20px; }   /* no computador o aviso fica à esquerda */
+}
+@media print { .aviso-cookies { display: none; } }
+
+/* ===== Página de política de privacidade ===== */
+.texto-legal h2 { font-size: 1.75rem; line-height: 1.25; color: #1e392a; font-weight: 700; margin: 2.5rem 0 1rem; }
+.texto-legal h3 { font-size: 1.3rem; color: #1e392a; font-weight: 700; margin: 1.75rem 0 0.75rem; }
+.texto-legal p, .texto-legal li { color: #374151; font-size: 1.05rem; line-height: 1.75; }
+.texto-legal p { margin-bottom: 1rem; }
+.texto-legal ul { list-style: disc; margin: 0 0 1rem 1.5rem; }
+.texto-legal li { margin-bottom: 0.4rem; }
+.texto-legal a { color: #9a7b3f; text-decoration: underline; }
+.texto-legal table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.95rem; }
+.texto-legal th, .texto-legal td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; color: #374151; }
+.texto-legal th { color: #1e392a; font-weight: 700; background: #f9fafb; }

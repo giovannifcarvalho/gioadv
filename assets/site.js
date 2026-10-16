@@ -3,8 +3,8 @@
 
    Cada página carrega este script logo depois de abrir o <body>:
        <body class="bg-white text-gray-800" data-page="article">
-           <script src="assets/site.js?v=2026-10-15g"></script>
-   data-page pode ser "home", "blog", "article", "servicos", "sobre" ou "landing".
+           <script src="assets/site.js?v=2026-10-15h"></script>
+   data-page pode ser "home", "blog", "article", "servicos", "sobre", "legal" ou "landing".
 
    Landing pages (data-page="landing"): cabeçalho só com o logo e um botão de contato,
    sem menu, e rodapé enxuto, para o visitante não sair da página.
@@ -99,6 +99,13 @@
         '</a>');
 
     // ---------- Rodapé ----------
+    // Links legais (aparecem também nas landing pages; lá a política abre em outra aba)
+    var LINKS_LEGAIS =
+        '<p class="mt-3 text-sm text-gray-500">' +
+            '<a href="politica-de-privacidade.html"' + (onLanding ? ' target="_blank" rel="noopener"' : '') + ' class="hover:text-brand-gold underline-offset-2 hover:underline">Política de privacidade</a>' +
+            ' · <button type="button" data-abrir-cookies class="hover:text-brand-gold underline-offset-2 hover:underline">Preferências de cookies</button>' +
+        '</p>';
+
     var footer =
         '<footer class="bg-gray-900 text-white"><div class="container mx-auto px-6 py-12 text-center">' +
             '<h4 class="text-2xl font-semibold mb-4">Giovanni de Carvalho | Advocacia Empresarial</h4>' +
@@ -112,7 +119,7 @@
                     '<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.203-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.251-.148-4.771-1.691-4.919-4.919-.058-1.265-.068-1.644-.068-4.849 0-3.204.012-3.584.069-4.849.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.21-6.78 2.618-6.99 6.985-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.947.21 4.358 2.618 6.78 6.985 6.989 1.28.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.947-.072 4.354-.21 6.782-2.618 6.989-6.985.058-1.281.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.21-4.359-2.627-6.78-6.989-6.989-1.28-.058-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4c0 2.21-1.791 4-4 4zm6.47-11.272c0-.528.43-1.078 1.078-1.078.601 0 1.079.516 1.079 1.078 0 .522-.445 1.078-1.079 1.078-.648 0-1.078-.555-1.078-1.078z"/></svg>' +
                 '</a>' +
             '</div>' +
-            '<div class="mt-8 border-t border-gray-800 pt-8 text-gray-500"><p>&copy; ' + new Date().getFullYear() + ' Giovanni de Carvalho. Todos os direitos reservados.</p></div>' +
+            '<div class="mt-8 border-t border-gray-800 pt-8 text-gray-500"><p>&copy; ' + new Date().getFullYear() + ' Giovanni de Carvalho. Todos os direitos reservados.</p>' + LINKS_LEGAIS + '</div>' +
         '</div></footer>';
 
     // Rodapé das landing pages: identificação e contato, sem links para outras páginas
@@ -120,7 +127,7 @@
         '<footer class="bg-gray-900 text-white"><div class="container mx-auto px-6 py-10 text-center text-sm">' +
             '<p class="text-xl font-semibold mb-2" style="font-family: \'Cormorant Garamond\', serif;">Giovanni de Carvalho | Advocacia Empresarial</p>' +
             '<p class="text-gray-400">OAB/MG 243.837 · ' + EMAIL + ' · Atendimento online para todo o Brasil</p>' +
-            '<p class="text-gray-500 mt-4">&copy; ' + new Date().getFullYear() + ' Giovanni de Carvalho. Todos os direitos reservados.</p>' +
+            '<p class="text-gray-500 mt-4">&copy; ' + new Date().getFullYear() + ' Giovanni de Carvalho. Todos os direitos reservados.</p>' + LINKS_LEGAIS +
         '</div></footer>';
 
     // ---------- Formulários que enviam para o WhatsApp ----------
@@ -152,6 +159,102 @@
             });
         });
     }
+
+    // ---------- Aviso de cookies ----------
+    // Aceitar e recusar têm o mesmo destaque. O Analytics só carrega depois de "Aceitar" (ver head.js).
+    function fecharAvisoCookies() {
+        var aviso = document.getElementById('aviso-cookies');
+        if (aviso) aviso.remove();
+        document.body.classList.remove('com-aviso-cookies');
+        document.body.style.removeProperty('--aviso-cookies-altura');
+    }
+    function ajustarAlturaAviso() {
+        var aviso = document.getElementById('aviso-cookies');
+        if (aviso) document.body.style.setProperty('--aviso-cookies-altura', aviso.offsetHeight + 'px');
+    }
+    function abrirAvisoCookies() {
+        if (!window.gcConsentimento || document.getElementById('aviso-cookies')) return;
+        document.body.insertAdjacentHTML('beforeend',
+            '<div id="aviso-cookies" class="aviso-cookies" role="dialog" aria-live="polite" aria-label="Aviso de cookies">' +
+                '<p class="aviso-cookies-texto">Usamos cookies de análise (Google Analytics) para entender como o site é usado e melhorá-lo. ' +
+                'Eles só são ativados se você aceitar. Saiba mais na <a href="politica-de-privacidade.html"' + (onLanding ? ' target="_blank" rel="noopener"' : '') + '>Política de privacidade</a>.</p>' +
+                '<div class="aviso-cookies-botoes">' +
+                    '<button type="button" data-cookies="recusar" class="aviso-cookies-botao aviso-cookies-recusar">Recusar</button>' +
+                    '<button type="button" data-cookies="aceitar" class="aviso-cookies-botao aviso-cookies-aceitar">Aceitar</button>' +
+                '</div>' +
+            '</div>');
+        document.body.classList.add('com-aviso-cookies');
+        ajustarAlturaAviso();
+        document.getElementById('aviso-cookies').addEventListener('click', function (e) {
+            var acao = e.target.getAttribute('data-cookies');
+            if (!acao) return;
+            if (acao === 'aceitar') window.gcConsentimento.aceitar(); else window.gcConsentimento.recusar();
+            fecharAvisoCookies();
+        });
+    }
+    window.addEventListener('resize', ajustarAlturaAviso);
+    document.addEventListener('click', function (e) {
+        if (e.target.closest && e.target.closest('[data-abrir-cookies]')) abrirAvisoCookies();
+    });
+
+    // ---------- Eventos do Google Analytics (só são enviados com consentimento) ----------
+    // clique_whatsapp   : qualquer link para o WhatsApp (cta_local diz onde estava o botão)
+    // envio_formulario  : formulários das landing pages (cta_opcao traz a opção escolhida)
+    // clique_interno    : botões e cards que levam a outra página do site
+    // clique_rede_social: Instagram e LinkedIn
+    // abrir_faq         : pergunta frequente aberta
+    function evento(nome, parametros) { if (window.gcEvento) window.gcEvento(nome, parametros); }
+
+    function localDoElemento(el) {
+        if (el.closest('.whatsapp-float')) return 'botao_flutuante';
+        if (el.closest('header')) return 'cabecalho';
+        if (el.closest('footer')) return 'rodape';
+        var secao = el.closest('section');
+        if (!secao) return 'pagina';
+        var secoes = Array.prototype.slice.call(document.querySelectorAll('main > section'));
+        var i = secoes.indexOf(secao);
+        if (i === 0) return 'topo';
+        if (i === secoes.length - 1) return 'chamada_final';
+        return secao.id ? 'secao_' + secao.id : 'secao_' + (i + 1);
+    }
+    function textoDoElemento(el) {
+        return (el.getAttribute('aria-label') || el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 100);
+    }
+
+    document.addEventListener('click', function (e) {
+        var link = e.target.closest ? e.target.closest('a[href]') : null;
+        if (!link) return;
+        var href = link.getAttribute('href');
+        var base = { cta_local: localDoElemento(link), cta_texto: textoDoElemento(link), pagina: location.pathname };
+        if (href.indexOf('wa.me') !== -1) {
+            evento('clique_whatsapp', base);
+        } else if (/instagram\.com|linkedin\.com/.test(href)) {
+            base.rede = href.indexOf('instagram') !== -1 ? 'instagram' : 'linkedin';
+            evento('clique_rede_social', base);
+        } else if (/\.html(#.*)?$/.test(href) && !link.closest('header nav') && !link.closest('#mobile-menu')) {
+            base.destino = href;
+            evento('clique_interno', base);
+        }
+    }, true);
+
+    document.addEventListener('submit', function (e) {
+        var form = e.target;
+        if (!form.hasAttribute || !form.hasAttribute('data-wa-form')) return;
+        // envia só as opções escolhidas em listas (nunca nome, marca ou outros textos digitados)
+        var opcoes = Array.prototype.map.call(form.querySelectorAll('select'), function (s) { return s.value; }).filter(Boolean);
+        var marcados = form.querySelectorAll('input[type=checkbox]:checked').length;
+        evento('envio_formulario', {
+            cta_local: localDoElemento(form), pagina: location.pathname,
+            cta_opcao: opcoes.join(' | ') || (form.querySelector('input[type=checkbox]') ? marcados + ' itens marcados' : '')
+        });
+    }, true);
+
+    document.addEventListener('toggle', function (e) {
+        if (e.target.tagName === 'DETAILS' && e.target.open) {
+            var resumo = e.target.querySelector('summary');
+            evento('abrir_faq', { pergunta: resumo ? textoDoElemento(resumo) : '', pagina: location.pathname });
+        }
+    }, true);
 
     // ---------- Listagem de artigos (home e blog) ----------
     // Os artigos vêm de artigos.json: para publicar um novo, basta adicionar um item lá.
@@ -239,6 +342,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         document.body.insertAdjacentHTML('beforeend', onLanding ? landingFooter : footer);
         setupWhatsappForms();
+        if (window.gcConsentimento && !window.gcConsentimento.valor()) abrirAvisoCookies();
 
         var latest = document.getElementById('latest-posts-container');
         if (latest) renderLatest(latest);
