@@ -1,0 +1,4 @@
+/* Arquivo de entrada do Tailwind. O resultado vai para assets/tailwind.css (não editar aquele arquivo à mão). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

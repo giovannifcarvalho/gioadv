@@ -11,8 +11,11 @@
            canonical e og:url, "artigo-modelo.html" pelo nome do novo arquivo.
            Se o artigo tiver capa própria em assets/, troque também o og:image.
         3. Troque, no <main>: categoria, título, data, capa, texto e a chamada final (passos 3 a 6 abaixo).
-        4. Adicione o artigo em artigos.json (é dali que a home e o blog listam os posts)
-           e em sitemap.xml.
+        4. Adicione o artigo em artigos.json (é dali que a home e o blog listam os posts).
+           Preencha o campo "tema" com um dos temas já usados (ex.: "Contratos",
+           "Tributário", "LGPD e IA"): é ele que alimenta o filtro do blog. Um tema novo
+           vira um botão novo no filtro automaticamente.
+           O sitemap.xml é atualizado sozinho pelo GitHub depois do envio (não edite à mão).
         Cabeçalho, rodapé, menu, cores, fontes e Google Analytics vêm de assets/ e NÃO
         precisam ser copiados para o artigo.
     -->
@@ -28,15 +31,15 @@
     <meta property="og:image" content="https://giovannidecarvalho.adv.br/assets/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/head.js?v=2026-10-15i"></script>
+    <script src="assets/head.js?v=2026-10-16b"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css?v=2026-10-15i">
+    <link rel="stylesheet" href="assets/site.css?v=2026-10-16b">
+    <link rel="stylesheet" href="assets/tailwind.css?v=5836ad3c63">
 </head>
 <body class="bg-white text-gray-800" data-page="article">
-    <script src="assets/site.js?v=2026-10-15i"></script>
+    <script src="assets/site.js?v=2026-10-16b"></script>
 
     <main>
         <article class="py-20">

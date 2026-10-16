@@ -1,18 +1,9 @@
-/* Carregado no <head> de todas as páginas, logo depois do Tailwind.
-   1. Configuração do Tailwind (cores e fontes da marca).
-   2. Google Analytics SÓ com consentimento: nada é carregado nem enviado ao Google
+/* Carregado no <head> de todas as páginas.
+   (As cores e fontes do Tailwind ficam em tailwind.config.js; o CSS é gerado em assets/tailwind.css.)
+   Google Analytics SÓ com consentimento: nada é carregado nem enviado ao Google
       até o visitante clicar em "Aceitar" no aviso de cookies (exibido por site.js).
       A escolha fica salva no navegador (localStorage) e pode ser alterada a qualquer
       momento pelo link "Preferências de cookies" no rodapé. */
-
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: { 'brand-green': '#1e392a', 'brand-gold': '#c2a56c' },
-            fontFamily: { 'serif': ['Cormorant Garamond', 'serif'], 'sans': ['Lato', 'sans-serif'] }
-        }
-    }
-};
 
 (function () {
     var GA_ID = 'G-VVD6LJLG0H';

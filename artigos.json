@@ -2,6 +2,7 @@
   {
     "title": "Decreto dos Games (13.138/2026): o que muda e quem acessa o fomento",
     "category": "REGULAÇÃO · STARTUPS E TECNOLOGIA",
+    "tema": "Investimentos",
     "date": "2026-10-15",
     "image": "assets/capa-decreto-games-2026.png?v=2",
     "link": "artigo-decreto-marco-legal-games-2026.html"
@@ -9,6 +10,7 @@
   {
     "title": "O split payment da Reforma Tributária será cancelado?",
     "category": "DIREITO TRIBUTÁRIO E EMPRESARIAL",
+    "tema": "Tributário",
     "date": "2026-10-08",
     "image": "assets/capas/splitpayment.png?v=1",
     "link": "splitpayment.html"
@@ -16,6 +18,7 @@
   {
     "title": "A Pressão dos Juros Altos e a Recuperação Extrajudicial: Casas Bahia, Chilli Beans e Habib’s",
     "category": "DIREITO EMPRESARIAL & REESTRUTURAÇÃO DE CRISE",
+    "tema": "Gestão e negócios",
     "date": "2026-09-10",
     "image": "assets/capas/juros.png?v=1",
     "link": "juros.html"
@@ -23,6 +26,7 @@
   {
     "title": "Uma cláusula de votação mal desenhada pode custar € 10 bilhões: o Succession real da família dona da Ray-Ban",
     "category": "DIREITO SOCIETÁRIO E GOVERNANÇA",
+    "tema": "Societário e governança",
     "date": "2026-08-06",
     "image": "assets/capas/artigo-ray-ban.png?v=1",
     "link": "artigo-ray-ban.html"
@@ -30,6 +34,7 @@
   {
     "title": "A caneta brasileira que venceu a dona do Ozempic duas vezes na mesma semana",
     "category": "CONCORRÊNCIA E PROPRIEDADE INDUSTRIAL",
+    "tema": "Propriedade intelectual",
     "date": "2026-07-16",
     "image": "assets/capas/artigo-ozivy-ozempic-inpi.png?v=1",
     "link": "artigo-ozivy-ozempic-inpi.html"
@@ -37,6 +42,7 @@
   {
     "title": "O Custo Oculto do Silêncio: Transparência Como Pilar de Governança",
     "category": "Governança Corporativa & Direito Bancário",
+    "tema": "Societário e governança",
     "date": "2026-07-08",
     "image": "assets/capas/BRB.png?v=1",
     "link": "BRB.html"
@@ -44,6 +50,7 @@
   {
     "title": "Risco de Imagem e Comercial: Os Limites Legais da Publicidade Nativa",
     "category": "DIREITO REGULATÓRIO E CONTRATUAL",
+    "tema": "Contratos",
     "date": "2026-06-29",
     "image": "assets/capas/Risco-de-Imagem-e-Comercial.png?v=1",
     "link": "Risco-de-Imagem-e-Comercial.html"
@@ -51,6 +58,7 @@
   {
     "title": "O Calcanhar de Aquiles do Board: Quando o Presidente do Conselho Preside Sua Própria Destituição",
     "category": "GOVERNANÇA CORPORATIVA",
+    "tema": "Societário e governança",
     "date": "2026-06-23",
     "image": "assets/capas/destituicao.png?v=1",
     "link": "destituicao.html"
@@ -58,6 +66,7 @@
   {
     "title": "Responsabilidade Civil e IA: Como Criar uma Política de Uso de Inteligência Artificial para sua Empresa",
     "category": "Compliance · Tecnologia · Responsabilidade Civil",
+    "tema": "LGPD e IA",
     "date": "2026-05-14",
     "image": "assets/capas/artigo-politica-ia.png?v=1",
     "link": "artigo-politica-ia.html"
@@ -65,6 +74,7 @@
   {
     "title": "Tiradentes e o Empreendedor Brasileiro: a Herança de Quem Ousou Construir",
     "category": "TRIBUTÁRIO",
+    "tema": "Gestão e negócios",
     "date": "2026-04-21",
     "image": "assets/capas/artigo-tiradentes.png?v=1",
     "link": "artigo-tiradentes.html"
@@ -72,6 +82,7 @@
   {
     "title": "Tributação Mínima Global de 15%: O que Muda para a sua Empresa",
     "category": "TRIBUTÁRIO",
+    "tema": "Tributário",
     "date": "2026-04-17",
     "image": "assets/capas/15.png?v=1",
     "link": "15.html"
@@ -79,6 +90,7 @@
   {
     "title": "A nova NR-1.",
     "category": "COMPLIANCE",
+    "tema": "Trabalhista e compliance",
     "date": "2026-04-01",
     "image": "assets/capas/NR1.png?v=1",
     "link": "NR1.html"
@@ -86,6 +98,7 @@
   {
     "title": "O que é o EVTL?",
     "category": "IMOBILIÁRIO EMPRESARIAL",
+    "tema": "Gestão e negócios",
     "date": "2026-03-25",
     "image": "assets/capas/EVTL.png?v=1",
     "link": "EVTL.html"
@@ -93,6 +106,7 @@
   {
     "title": "Contratar como PJ ou CLT? Riscos e benefícios.",
     "category": "TRABALHISTA TECH",
+    "tema": "Trabalhista e compliance",
     "date": "2025-11-24",
     "image": "assets/capas/pj-ou-clt.png?v=1",
     "link": "pj-ou-clt.html"
@@ -100,6 +114,7 @@
   {
     "title": "Contrato de SaaS: Cláusulas que não podem faltar.",
     "category": "CONTRATOS",
+    "tema": "Contratos",
     "date": "2025-11-17",
     "image": "assets/capas/Contrato-de-SaaS.png?v=1",
     "link": "Contrato-de-SaaS.html"
@@ -107,6 +122,7 @@
   {
     "title": "5 Passos essenciais para adequar sua empresa à LGPD.",
     "category": "LGPD",
+    "tema": "LGPD e IA",
     "date": "2025-11-10",
     "image": "assets/capas/5-passos-LGPD.png?v=1",
     "link": "5-passos-LGPD.html"
@@ -114,6 +130,7 @@
   {
     "title": "Registro de Marca: O ativo mais valioso do seu negócio.",
     "category": "PROPRIEDADE INTELECTUAL",
+    "tema": "Propriedade intelectual",
     "date": "2025-11-03",
     "image": "assets/capas/artigo-registro-de-marca.png?v=1",
     "link": "artigo-registro-de-marca.html"
@@ -121,6 +138,7 @@
   {
     "title": "Mútuo Conversível: Como captar investimento com segurança.",
     "category": "INVESTIMENTOS",
+    "tema": "Investimentos",
     "date": "2025-10-27",
     "image": "assets/capas/artigo-mutuo-conversivel.png?v=1",
     "link": "artigo-mutuo-conversivel.html"
@@ -128,6 +146,7 @@
   {
     "title": "Acordo de Sócios: Por que sua empresa precisa de um?",
     "category": "SOCIETÁRIO",
+    "tema": "Societário e governança",
     "date": "2025-10-20",
     "image": "assets/capas/artigo-acordo-de-socios.png?v=1",
     "link": "artigo-acordo-de-socios.html"

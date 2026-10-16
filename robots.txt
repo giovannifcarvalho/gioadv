@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# Modelo interno para escrever artigos (não é conteúdo público)
+Disallow: /artigo-modelo.html
 
 Sitemap: https://giovannidecarvalho.adv.br/sitemap.xml

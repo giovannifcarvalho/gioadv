@@ -3,7 +3,7 @@
 
    Cada página carrega este script logo depois de abrir o <body>:
        <body class="bg-white text-gray-800" data-page="article">
-           <script src="assets/site.js?v=2026-10-15i"></script>
+           <script src="assets/site.js?v=2026-10-16b"></script>
    data-page pode ser "home", "blog", "article", "servicos", "sobre", "legal" ou "landing".
 
    Landing pages (data-page="landing"): cabeçalho só com o logo e um botão de contato,
@@ -307,10 +307,32 @@
         }).catch(function () { section.style.display = 'none'; });
     }
 
+    // Blog: filtro por tema (campo "tema" em artigos.json) + paginação de 6 em 6.
+    // O tema escolhido fica na URL (blog.html?tema=Contratos), para poder ser compartilhado.
     function renderBlog(container, pagination) {
         var perPage = 6;
-        loadPosts().then(function (posts) {
-            var pageCount = Math.ceil(posts.length / perPage);
+        var filtros = document.getElementById('blog-filtros');
+        loadPosts().then(function (todos) {
+            var temas = [];
+            todos.forEach(function (p) { if (p.tema && temas.indexOf(p.tema) === -1) temas.push(p.tema); });
+            temas.sort(function (a, b) { return a.localeCompare(b, 'pt-BR'); });
+
+            var params = new URLSearchParams(location.search);
+            var atual = temas.indexOf(params.get('tema')) !== -1 ? params.get('tema') : '';
+            var posts = [];
+
+            function classeChip(ativo) {
+                return 'shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-sm border transition-colors ' +
+                    (ativo ? 'bg-brand-green text-white border-brand-green' : 'bg-white text-gray-700 border-gray-300 hover:border-brand-gold hover:text-brand-green');
+            }
+
+            function desenharFiltros() {
+                if (!filtros) return;
+                filtros.innerHTML = [''].concat(temas).map(function (t) {
+                    return '<button type="button" data-tema="' + escapeHtml(t) + '" aria-pressed="' + (t === atual) + '" class="' + classeChip(t === atual) + '">' +
+                        escapeHtml(t || 'Todos') + '</button>';
+                }).join('');
+            }
 
             function show(n, scroll) {
                 container.innerHTML = posts.slice((n - 1) * perPage, n * perPage).map(cardHtml).join('');
@@ -323,17 +345,36 @@
                 if (scroll) container.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
 
-            pagination.innerHTML = '';
-            if (pageCount > 1) {
-                for (var i = 1; i <= pageCount; i++) {
-                    var btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.textContent = i;
-                    btn.addEventListener('click', show.bind(null, i, true));
-                    pagination.appendChild(btn);
+            function aplicar(scroll) {
+                posts = atual ? todos.filter(function (p) { return p.tema === atual; }) : todos;
+                var pageCount = Math.ceil(posts.length / perPage);
+                pagination.innerHTML = '';
+                if (pageCount > 1) {
+                    for (var i = 1; i <= pageCount; i++) {
+                        var btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.textContent = i;
+                        btn.addEventListener('click', show.bind(null, i, true));
+                        pagination.appendChild(btn);
+                    }
                 }
+                desenharFiltros();
+                show(1, scroll);
             }
-            show(1, false);
+
+            if (filtros) {
+                filtros.addEventListener('click', function (e) {
+                    var chip = e.target.closest('button[data-tema]');
+                    if (!chip || chip.getAttribute('data-tema') === atual) return;
+                    atual = chip.getAttribute('data-tema');
+                    var url = new URL(location.href);
+                    if (atual) url.searchParams.set('tema', atual); else url.searchParams.delete('tema');
+                    history.replaceState(null, '', url);
+                    if (window.gcEvento) gcEvento('filtro_blog', { tema: atual || 'Todos' });
+                    aplicar(false);
+                });
+            }
+            aplicar(false);
         }).catch(function () {
             container.innerHTML = errorHtml('Tente novamente em instantes.');
         });

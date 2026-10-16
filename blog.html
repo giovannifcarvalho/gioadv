@@ -15,15 +15,15 @@
     <meta property="og:image" content="https://giovannidecarvalho.adv.br/assets/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/head.js?v=2026-10-15i"></script>
+    <script src="assets/head.js?v=2026-10-16b"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css?v=2026-10-15i">
+    <link rel="stylesheet" href="assets/site.css?v=2026-10-16b">
+    <link rel="stylesheet" href="assets/tailwind.css?v=5836ad3c63">
 </head>
 <body class="bg-white text-gray-800" data-page="blog">
-    <script src="assets/site.js?v=2026-10-15i"></script>
+    <script src="assets/site.js?v=2026-10-16b"></script>
 
     <main>
         <!-- ===== Cabeçalho da Página do Blog ===== -->
@@ -37,6 +37,9 @@
         <!-- ===== Grade de Artigos ===== -->
         <section class="py-20">
             <div class="container mx-auto px-6">
+                <!-- Filtro por tema: os botões são gerados por site.js a partir do campo "tema" de artigos.json -->
+                <div id="blog-filtros" class="flex gap-3 mb-12 overflow-x-auto pb-2 -mx-6 px-6 md:mx-0 md:px-0 md:flex-wrap md:justify-center md:overflow-visible" role="group" aria-label="Filtrar artigos por tema"></div>
+
                 <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 </div>
 

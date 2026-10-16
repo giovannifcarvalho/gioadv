@@ -1,0 +1,54 @@
+# Recompila o CSS (assets/tailwind.css) e atualiza o sitemap.xml sempre que o site muda.
+# Roda sozinho a cada alteração na branch main; também pode ser disparado manualmente
+# em Actions → "Build do site" → Run workflow.
+name: Build do site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'artigos.json'
+      - 'assets/*.js'
+      - 'assets/tailwind.src.css'
+      - 'tailwind.config.js'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-do-site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Gerar CSS e sitemap
+        run: npm run build
+
+      - name: Salvar alterações (se houver)
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Atualiza CSS e sitemap automaticamente"
+            git push
+          else
+            echo "Nada mudou: CSS e sitemap já estavam atualizados."
+          fi
