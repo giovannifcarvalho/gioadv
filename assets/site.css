@@ -355,3 +355,90 @@ select.lp-input {
     .rx-pdf-contato { display: block; font-weight: 700; color: #1e392a !important; }
     #rx-resultado > .container > p { font-size: 8.5pt !important; margin-top: 8px !important; }
 }
+
+/* ===== Glossário Jurídico para Startups (glossario.html) ===== */
+.gl-busca { position: relative; }
+.gl-busca input {
+    width: 100%; padding: 16px 18px 16px 52px; border-radius: 10px; border: 1px solid rgba(194, 165, 108, 0.5);
+    background: #fff; color: #1f2937; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+.gl-busca input:focus { outline: 3px solid rgba(194, 165, 108, 0.6); outline-offset: 2px; }
+.gl-busca-icone { position: absolute; left: 18px; top: 50%; width: 22px; height: 22px; transform: translateY(-50%); color: #9ca3af; pointer-events: none; }
+
+/* barra de filtros: fica logo abaixo do cabeçalho ao rolar */
+.gl-barra {
+    position: sticky; top: 72px; z-index: 40;
+    background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e5e7eb;
+}
+@media (min-width: 768px) { .gl-barra { top: 80px; } }
+.gl-filtros { display: flex; gap: 10px; overflow-x: auto; padding: 12px 0; scrollbar-width: none; }
+.gl-filtros::-webkit-scrollbar { display: none; }
+@media (min-width: 1024px) { .gl-filtros { flex-wrap: wrap; justify-content: center; overflow: visible; } }
+.gl-chip {
+    flex-shrink: 0; white-space: nowrap; padding: 8px 16px; border-radius: 9999px; font-size: 0.9rem;
+    border: 1px solid #d1d5db; background: #fff; color: #374151; transition: all 0.15s ease;
+}
+.gl-chip:hover { border-color: #c2a56c; color: #1e392a; }
+.gl-chip[aria-pressed="true"] { background: #1e392a; border-color: #1e392a; color: #fff; }
+
+.gl-indice { margin-bottom: 40px; border: 1px solid #e5e7eb; border-radius: 12px; background: #f9fafb; }
+.gl-indice summary {
+    cursor: pointer; list-style: none; padding: 16px 20px; font-weight: 700; color: #1e392a;
+    display: flex; align-items: center; gap: 8px;
+}
+.gl-indice summary::-webkit-details-marker { display: none; }
+.gl-indice summary::before { content: '+'; color: #c2a56c; font-size: 1.3rem; line-height: 1; width: 16px; }
+.gl-indice[open] summary::before { content: '−'; }
+.gl-indice summary span { font-weight: 400; color: #6b7280; }
+.gl-indice-grade { columns: 2 160px; column-gap: 28px; padding: 4px 20px 20px; }
+@media (min-width: 768px) { .gl-indice-grade { columns: 4; } }
+.gl-indice-bloco { break-inside: avoid; margin-bottom: 14px; }
+.gl-indice-letra { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.4rem; color: #c2a56c; line-height: 1.2; }
+.gl-indice-bloco a { display: inline-block; padding: 2px 0; color: #374151; font-size: 0.95rem; }
+.gl-indice-bloco a:hover { color: #1e392a; text-decoration: underline; }
+
+.gl-status { min-height: 1px; margin-bottom: 16px; color: #6b7280; font-size: 0.95rem; }
+.gl-vazio { text-align: center; padding: 48px 16px; }
+
+.gl-area { margin-bottom: 56px; scroll-margin-top: 150px; }
+.gl-area-cabecalho { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 14px; margin-bottom: 22px; border-bottom: 2px solid #c2a56c; }
+.gl-area-conta { flex-shrink: 0; color: #6b7280; font-size: 0.9rem; }
+.gl-grade { display: grid; grid-template-columns: 1fr; gap: 18px; }
+@media (min-width: 768px) { .gl-grade { grid-template-columns: 1fr 1fr; gap: 22px; } }
+
+.gl-termo {
+    position: relative; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 22px 22px 20px;
+    scroll-margin-top: 160px; transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.gl-termo:hover { box-shadow: 0 6px 20px rgba(30, 57, 42, 0.07); }
+.gl-termo-topo { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.gl-termo-nome { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.6rem; line-height: 1.15; color: #1e392a; }
+.gl-copiar {
+    flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px;
+    border-radius: 8px; color: #9ca3af; transition: color 0.15s ease, background-color 0.15s ease;
+}
+.gl-copiar svg { width: 18px; height: 18px; }
+.gl-copiar:hover, .gl-copiar:focus-visible { color: #1e392a; background: #f6f2e8; }
+.gl-definicao { color: #374151; font-size: 1.05rem; line-height: 1.65; }
+.gl-pratica { margin-top: 12px; padding: 10px 14px; background: #f6f2e8; border-left: 3px solid #c2a56c; border-radius: 0 8px 8px 0; color: #374151; line-height: 1.6; }
+.gl-pratica strong { color: #1e392a; }
+.gl-leia { margin-top: 12px; font-size: 0.95rem; color: #6b7280; line-height: 1.6; }
+.gl-leia a { color: #a8894f; font-weight: 700; }
+.gl-leia a:hover { text-decoration: underline; }
+.gl-area-link { display: inline-block; margin-top: 20px; font-weight: 700; color: #c2a56c; }
+.gl-area-link:hover { text-decoration: underline; }
+
+.gl-destaque { border-color: #c2a56c; box-shadow: 0 0 0 3px rgba(194, 165, 108, 0.35); }
+
+.gl-aviso-copiado {
+    position: fixed; left: 50%; bottom: 28px; z-index: 60; transform: translate(-50%, 20px);
+    padding: 10px 18px; border-radius: 9999px; background: #1e392a; color: #fff; font-weight: 700; font-size: 0.95rem;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.gl-aviso-visivel { opacity: 1; transform: translate(-50%, 0); }
+
+/* Nota no fim dos artigos (inserida por site.js) */
+.artigo-glossario { margin-top: 1.5rem; color: #6b7280; font-size: 1rem; }
+.artigo-glossario a { color: #a8894f; font-weight: 700; }
+.artigo-glossario a:hover { text-decoration: underline; }

@@ -1,0 +1,444 @@
+{
+  "_instrucoes": "Conteúdo do Glossário Jurídico para Startups (glossario.html). Edite aqui: o GitHub gera a página sozinho a cada envio (scripts/gerar-glossario.py). Campos de cada termo: id (endereço do termo: glossario.html#id; só letras minúsculas, números e hífens), termo, definicao, pratica (opcional), outros_nomes (opcional, ajudam na busca), artigos (opcional: lista de {titulo, link}).",
+
+  "areas": [
+    {
+      "id": "sociedade",
+      "nome": "Sociedade e governança",
+      "nome_curto": "Sociedade",
+      "landing": { "titulo": "Estruturação Societária", "link": "servicos-estruturacao-societaria.html" },
+      "termos": [
+        {
+          "id": "acordo-de-socios",
+          "termo": "Acordo de sócios",
+          "definicao": "Contrato entre os sócios que detalha o que o contrato social não trata: entrada e saída, venda de participação, impasse, dedicação e não concorrência.",
+          "pratica": "É o documento que decide a briga antes de ela acontecer.",
+          "outros_nomes": ["acordo de quotistas", "acordo de acionistas"],
+          "artigos": [{ "titulo": "Acordo de Sócios: por que sua empresa precisa de um?", "link": "artigo-acordo-de-socios.html" }]
+        },
+        {
+          "id": "contrato-social",
+          "termo": "Contrato social",
+          "definicao": "Documento de constituição da sociedade limitada, registrado na Junta Comercial. Define sócios, capital, participação de cada um e administração.",
+          "pratica": "É público e costuma ser genérico; as regras sensíveis ficam no acordo de sócios."
+        },
+        {
+          "id": "cap-table",
+          "termo": "Cap table",
+          "definicao": "Tabela que mostra quem detém quanto da empresa, hoje e depois de cada rodada ou conversão.",
+          "pratica": "Um cap table desorganizado é um dos primeiros sinais de alerta numa due diligence.",
+          "outros_nomes": ["quadro societário", "tabela de capitalização"]
+        },
+        {
+          "id": "vesting",
+          "termo": "Vesting",
+          "definicao": "Aquisição gradual da participação societária, conforme o tempo de dedicação ou as metas atingidas.",
+          "pratica": "Protege a sociedade do sócio que sai cedo levando uma fatia que não ajudou a construir."
+        },
+        {
+          "id": "cliff",
+          "termo": "Cliff",
+          "definicao": "Período mínimo de permanência, geralmente de 12 meses, antes de o sócio ou colaborador adquirir o primeiro lote do vesting."
+        },
+        {
+          "id": "good-leaver-bad-leaver",
+          "termo": "Good leaver e bad leaver",
+          "definicao": "Regras que tratam de forma diferente quem sai por motivo legítimo e quem sai por falta grave. A diferença costuma estar no preço pago pela participação."
+        },
+        {
+          "id": "direito-de-preferencia",
+          "termo": "Direito de preferência",
+          "definicao": "Direito dos sócios de comprar primeiro a participação que outro sócio quer vender a terceiros.",
+          "outros_nomes": ["right of first refusal", "ROFR"]
+        },
+        {
+          "id": "tag-along",
+          "termo": "Tag along",
+          "definicao": "Direito do minoritário de vender a sua participação junto com o majoritário, nas mesmas condições, quando este vender a dele.",
+          "outros_nomes": ["direito de venda conjunta"]
+        },
+        {
+          "id": "drag-along",
+          "termo": "Drag along",
+          "definicao": "Direito de quem detém a maioria de obrigar os minoritários a vender junto, nas mesmas condições, quando surge uma proposta pela empresa inteira.",
+          "pratica": "Evita que um sócio com 5% trave a venda da empresa.",
+          "outros_nomes": ["obrigação de venda conjunta"]
+        },
+        {
+          "id": "lock-up",
+          "termo": "Lock-up",
+          "definicao": "Período em que o sócio se compromete a não vender a sua participação."
+        },
+        {
+          "id": "clausula-de-impasse",
+          "termo": "Cláusula de impasse (shotgun)",
+          "definicao": "Mecanismo para destravar a sociedade quando os sócios empatam: um propõe um preço, e o outro escolhe entre comprar ou vender por aquele valor.",
+          "outros_nomes": ["shotgun", "deadlock", "buy or sell"]
+        },
+        {
+          "id": "quorum",
+          "termo": "Quórum",
+          "definicao": "Percentual de votos necessário para aprovar uma decisão.",
+          "pratica": "Um quórum mal desenhado pode dar poder de veto a quem tem uma participação pequena.",
+          "artigos": [{ "titulo": "Uma cláusula de votação mal desenhada pode custar € 10 bilhões", "link": "artigo-ray-ban.html" }]
+        },
+        {
+          "id": "pro-labore",
+          "termo": "Pró-labore",
+          "definicao": "Remuneração do sócio pelo trabalho que ele faz na empresa, com incidência de INSS e Imposto de Renda. É diferente da distribuição de lucros, que remunera o capital investido."
+        },
+        {
+          "id": "holding",
+          "termo": "Holding",
+          "definicao": "Empresa criada para deter participações em outras empresas. É usada para organizar sócios, sucessão e investimentos."
+        },
+        {
+          "id": "slu",
+          "termo": "Sociedade Limitada Unipessoal (SLU)",
+          "definicao": "Sociedade limitada com um único sócio. Separa o patrimônio pessoal do da empresa sem exigir capital mínimo.",
+          "outros_nomes": ["SLU", "sócio único"]
+        }
+      ]
+    },
+    {
+      "id": "investimento",
+      "nome": "Investimento e M&A",
+      "nome_curto": "Investimento",
+      "landing": { "titulo": "Investimentos e M&A", "link": "servicos-investimentos-e-ma.html" },
+      "termos": [
+        {
+          "id": "investidor-anjo",
+          "termo": "Investidor-anjo",
+          "definicao": "Quem investe recursos próprios em empresa em estágio inicial pelo contrato de participação previsto em lei. Ele não se torna sócio, não tem voto na administração e não responde pelas dívidas da empresa.",
+          "outros_nomes": ["anjo", "angel"]
+        },
+        {
+          "id": "mutuo-conversivel",
+          "termo": "Mútuo conversível",
+          "definicao": "Empréstimo do investidor à empresa que pode virar participação societária num evento futuro, como uma rodada, uma venda ou o fim do prazo.",
+          "outros_nomes": ["convertible note", "nota conversível"],
+          "artigos": [{ "titulo": "Mútuo Conversível: como captar investimento com segurança", "link": "artigo-mutuo-conversivel.html" }]
+        },
+        {
+          "id": "valuation",
+          "termo": "Valuation pre-money e post-money",
+          "definicao": "Valor atribuído à empresa antes (pre) e depois (post) do aporte. Esses números definem que percentual o investidor recebe.",
+          "outros_nomes": ["valuation", "avaliação"]
+        },
+        {
+          "id": "valuation-cap",
+          "termo": "Valuation cap",
+          "definicao": "Teto de valuation usado na conversão de um mútuo. Garante a quem investiu cedo um preço máximo pela participação.",
+          "outros_nomes": ["teto de valuation"]
+        },
+        {
+          "id": "desconto-de-conversao",
+          "termo": "Desconto de conversão",
+          "definicao": "Desconto sobre o preço da rodada seguinte, concedido a quem investiu antes por meio de mútuo."
+        },
+        {
+          "id": "diluicao",
+          "termo": "Diluição",
+          "definicao": "Redução do percentual de cada sócio quando a empresa emite novas quotas ou ações para investidores ou planos de opção."
+        },
+        {
+          "id": "antidiluicao",
+          "termo": "Cláusula antidiluição",
+          "definicao": "Proteção do investidor contra rodadas futuras a preço menor (down round), com ajuste da participação dele.",
+          "outros_nomes": ["down round", "full ratchet", "weighted average"]
+        },
+        {
+          "id": "preferencia-na-liquidacao",
+          "termo": "Preferência na liquidação",
+          "definicao": "Direito do investidor de receber o valor investido, ou um múltiplo dele, antes dos sócios numa venda ou liquidação.",
+          "pratica": "Numa venda abaixo do esperado, essa cláusula define quem fica com quanto.",
+          "outros_nomes": ["liquidation preference"]
+        },
+        {
+          "id": "term-sheet",
+          "termo": "Term sheet",
+          "definicao": "Documento que resume as condições principais do investimento antes dos contratos definitivos.",
+          "pratica": "Em geral não obriga a fechar o negócio, mas o que está nele raramente muda depois.",
+          "outros_nomes": ["carta de intenções", "LOI"]
+        },
+        {
+          "id": "due-diligence",
+          "termo": "Due diligence",
+          "definicao": "Auditoria que o investidor ou o comprador faz na empresa, cobrindo societário, contratos, propriedade intelectual, trabalhista, tributário e dados.",
+          "outros_nomes": ["auditoria", "diligência"]
+        },
+        {
+          "id": "data-room",
+          "termo": "Data room",
+          "definicao": "Pasta organizada com os documentos da empresa, preparada para a due diligence."
+        },
+        {
+          "id": "stock-options",
+          "termo": "Stock options",
+          "definicao": "Plano que dá a colaboradores o direito de comprar participação no futuro, por um preço definido hoje.",
+          "pratica": "O desenho do plano define o tratamento trabalhista e tributário, e um plano mal escrito pode virar salário disfarçado.",
+          "outros_nomes": ["plano de opções", "opção de compra", "phantom shares"]
+        },
+        {
+          "id": "earn-out",
+          "termo": "Earn-out",
+          "definicao": "Parte do preço de venda da empresa que é paga depois, condicionada a metas futuras."
+        },
+        {
+          "id": "memorando-de-entendimentos",
+          "termo": "Memorando de entendimentos (MOU)",
+          "definicao": "Documento que registra o que as partes já combinaram antes do contrato final.",
+          "outros_nomes": ["MOU", "memorando"]
+        }
+      ]
+    },
+    {
+      "id": "contratos",
+      "nome": "Contratos de tecnologia",
+      "nome_curto": "Contratos",
+      "landing": { "titulo": "Contratos de Tecnologia", "link": "servicos-contratos-de-tecnologia.html" },
+      "termos": [
+        {
+          "id": "sla",
+          "termo": "SLA (acordo de nível de serviço)",
+          "definicao": "Define a disponibilidade garantida, os prazos de suporte e o que o cliente recebe se o nível prometido não for cumprido.",
+          "outros_nomes": ["SLA", "nível de serviço", "uptime"],
+          "artigos": [{ "titulo": "Contrato de SaaS: cláusulas que não podem faltar", "link": "Contrato-de-SaaS.html" }]
+        },
+        {
+          "id": "limitacao-de-responsabilidade",
+          "termo": "Limitação de responsabilidade",
+          "definicao": "Cláusula que fixa até quanto uma parte responde por danos, normalmente com um teto ligado ao valor pago pelo cliente.",
+          "pratica": "Sem ela, uma falha no sistema pode custar mais do que o contrato inteiro. Com consumidores, essa limitação tem restrições.",
+          "outros_nomes": ["teto de indenização", "cap de responsabilidade"]
+        },
+        {
+          "id": "termos-de-uso",
+          "termo": "Termos de uso",
+          "definicao": "Contrato que rege o uso de uma plataforma ou aplicativo pelos usuários.",
+          "outros_nomes": ["termos de serviço", "EULA"]
+        },
+        {
+          "id": "licenca-e-cessao",
+          "termo": "Licença e cessão",
+          "definicao": "Na licença, o cliente ganha o direito de usar o software; na cessão, a titularidade muda de dono.",
+          "pratica": "Confundir as duas é a forma mais comum de entregar o próprio produto sem perceber.",
+          "outros_nomes": ["licença de software", "licenciamento"]
+        },
+        {
+          "id": "nda",
+          "termo": "NDA (acordo de confidencialidade)",
+          "definicao": "Contrato que obriga as partes a manter em sigilo as informações trocadas numa negociação ou parceria.",
+          "outros_nomes": ["NDA", "confidencialidade", "sigilo"]
+        },
+        {
+          "id": "clausula-penal",
+          "termo": "Cláusula penal",
+          "definicao": "Multa definida no contrato para o caso de descumprimento, sem que seja preciso provar o tamanho do prejuízo.",
+          "outros_nomes": ["multa contratual"]
+        },
+        {
+          "id": "escrow-de-codigo-fonte",
+          "termo": "Escrow de código-fonte",
+          "definicao": "Depósito do código com um terceiro, que o libera ao cliente se o fornecedor encerrar as atividades ou deixar de prestar o serviço.",
+          "outros_nomes": ["escrow", "depósito de código"]
+        },
+        {
+          "id": "arbitragem",
+          "termo": "Cláusula de arbitragem",
+          "definicao": "Leva as disputas do contrato a um tribunal arbitral, em vez do Judiciário. Costuma ser mais rápido e sigiloso, porém mais caro.",
+          "outros_nomes": ["arbitragem", "cláusula compromissória"]
+        }
+      ]
+    },
+    {
+      "id": "marca",
+      "nome": "Marca e criações",
+      "nome_curto": "Marca",
+      "landing": { "titulo": "Propriedade Intelectual", "link": "servicos-propriedade-intelectual.html" },
+      "termos": [
+        {
+          "id": "registro-de-marca",
+          "termo": "Registro de marca",
+          "definicao": "Concedido pelo INPI, garante o uso exclusivo da marca em todo o território nacional, na atividade em que ela foi registrada.",
+          "pratica": "Quem registra primeiro costuma levar a marca, mesmo que outra empresa a use há mais tempo.",
+          "outros_nomes": ["INPI", "marca registrada"],
+          "artigos": [
+            { "titulo": "Registro de Marca: o ativo mais valioso do seu negócio", "link": "artigo-registro-de-marca.html" },
+            { "titulo": "A caneta brasileira que venceu a dona do Ozempic", "link": "artigo-ozivy-ozempic-inpi.html" }
+          ]
+        },
+        {
+          "id": "classe-de-marca",
+          "termo": "Classe de marca",
+          "definicao": "Categoria de produtos ou serviços em que a marca é registrada. A proteção vale para aquela atividade.",
+          "outros_nomes": ["classificação de Nice", "classe"]
+        },
+        {
+          "id": "oposicao",
+          "termo": "Oposição",
+          "definicao": "Manifestação de terceiro contra um pedido de marca publicado pelo INPI, apresentada em até 60 dias da publicação."
+        },
+        {
+          "id": "software",
+          "termo": "Software",
+          "definicao": "Protegido pelo direito autoral independentemente de registro. O registro no INPI é opcional, mas serve como prova de autoria e de data.",
+          "outros_nomes": ["programa de computador", "registro de software", "código"]
+        },
+        {
+          "id": "cessao-de-direitos-autorais",
+          "termo": "Cessão de direitos autorais",
+          "definicao": "Contrato que transfere à empresa os direitos sobre o que foi criado por sócios, freelancers ou agências.",
+          "pratica": "Sem ela, o código pode não pertencer à empresa, e o investidor vai perguntar isso.",
+          "outros_nomes": ["cessão de direitos", "propriedade do código"]
+        },
+        {
+          "id": "nome-de-dominio",
+          "termo": "Nome de domínio",
+          "definicao": "Endereço na internet, registrado no Registro.br por ordem de chegada. Não substitui o registro da marca.",
+          "outros_nomes": ["domínio", "registro.br", "site"]
+        },
+        {
+          "id": "segredo-de-negocio",
+          "termo": "Segredo de negócio",
+          "definicao": "Informação confidencial com valor competitivo, como algoritmos, listas de clientes e processos. É protegida por contratos de confidencialidade e pela lei contra concorrência desleal, não por registro.",
+          "outros_nomes": ["segredo industrial", "know-how", "trade secret"]
+        }
+      ]
+    },
+    {
+      "id": "dados",
+      "nome": "Dados pessoais e LGPD",
+      "nome_curto": "LGPD",
+      "landing": { "titulo": "LGPD e Proteção de Dados", "link": "servicos-lgpd-e-protecao-de-dados.html" },
+      "termos": [
+        {
+          "id": "dado-pessoal",
+          "termo": "Dado pessoal",
+          "definicao": "Qualquer informação que identifique ou possa identificar uma pessoa, como nome, e-mail, CPF, endereço IP e localização.",
+          "outros_nomes": ["LGPD"]
+        },
+        {
+          "id": "dado-pessoal-sensivel",
+          "termo": "Dado pessoal sensível",
+          "definicao": "Dados sobre saúde, biometria, origem racial ou étnica, religião, opinião política e vida sexual, entre outros. Seguem regras mais rígidas."
+        },
+        {
+          "id": "controlador-e-operador",
+          "termo": "Controlador e operador",
+          "definicao": "O controlador decide para que e como os dados são usados; o operador trata os dados em nome do controlador.",
+          "pratica": "Uma startup SaaS costuma ser operadora dos dados dos seus clientes e controladora dos dados dos próprios usuários."
+        },
+        {
+          "id": "base-legal",
+          "termo": "Base legal",
+          "definicao": "Justificativa prevista na LGPD para tratar um dado, como consentimento, execução de contrato, legítimo interesse ou obrigação legal.",
+          "pratica": "O consentimento não é a única base, e nem sempre é a melhor.",
+          "outros_nomes": ["consentimento", "legítimo interesse"]
+        },
+        {
+          "id": "encarregado",
+          "termo": "Encarregado (DPO)",
+          "definicao": "Pessoa indicada como canal de comunicação com os titulares e com a ANPD. Agentes de pequeno porte podem ser dispensados de indicar um, mas precisam manter um canal de atendimento.",
+          "outros_nomes": ["DPO", "data protection officer"]
+        },
+        {
+          "id": "direitos-do-titular",
+          "termo": "Direitos do titular",
+          "definicao": "A pessoa pode pedir acesso, correção e eliminação dos seus dados, entre outros direitos, e a empresa tem prazo legal para responder.",
+          "outros_nomes": ["titular", "exclusão de dados", "acesso aos dados"]
+        },
+        {
+          "id": "incidente-de-seguranca",
+          "termo": "Incidente de segurança",
+          "definicao": "Vazamento ou acesso indevido a dados pessoais. Se puder gerar risco ou dano relevante, deve ser comunicado à ANPD e aos titulares em até 3 dias úteis.",
+          "outros_nomes": ["vazamento", "vazamento de dados"]
+        },
+        {
+          "id": "anpd",
+          "termo": "ANPD",
+          "definicao": "Autoridade Nacional de Proteção de Dados, órgão que fiscaliza a LGPD. A multa pode chegar a 2% do faturamento, limitada a R$ 50 milhões por infração.",
+          "outros_nomes": ["Autoridade Nacional de Proteção de Dados", "multa LGPD"],
+          "artigos": [{ "titulo": "5 passos essenciais para adequar sua empresa à LGPD", "link": "5-passos-LGPD.html" }]
+        },
+        {
+          "id": "politica-de-uso-de-ia",
+          "termo": "Política de uso de IA",
+          "definicao": "Regras internas sobre quais ferramentas de inteligência artificial a equipe pode usar e com quais dados.",
+          "outros_nomes": ["inteligência artificial", "IA", "ChatGPT"],
+          "artigos": [{ "titulo": "Responsabilidade civil e IA: como criar uma política de uso", "link": "artigo-politica-ia.html" }]
+        }
+      ]
+    },
+    {
+      "id": "equipe",
+      "nome": "Equipe e rotina",
+      "nome_curto": "Equipe",
+      "landing": { "titulo": "Consultoria Empresarial", "link": "servicos-consultoria-empresarial.html" },
+      "termos": [
+        {
+          "id": "vinculo-de-emprego",
+          "termo": "Vínculo de emprego",
+          "definicao": "Existe quando há pessoalidade, habitualidade, remuneração e subordinação, independentemente do nome que o contrato recebe.",
+          "outros_nomes": ["vínculo empregatício", "CLT"],
+          "artigos": [{ "titulo": "Contratar como PJ ou CLT? Riscos e benefícios", "link": "pj-ou-clt.html" }]
+        },
+        {
+          "id": "pejotizacao",
+          "termo": "Pejotização",
+          "definicao": "Contratar como PJ quem, na prática, trabalha como empregado.",
+          "pratica": "O risco é o reconhecimento do vínculo, com o pagamento retroativo de férias, 13º salário, FGTS e encargos.",
+          "outros_nomes": ["PJ", "pessoa jurídica"]
+        },
+        {
+          "id": "terceirizacao",
+          "termo": "Terceirização",
+          "definicao": "Contratação de outra empresa para executar parte das atividades, inclusive a atividade principal. É permitida desde que não haja subordinação direta dos terceirizados."
+        },
+        {
+          "id": "nao-concorrencia",
+          "termo": "Cláusula de não concorrência",
+          "definicao": "Proíbe a pessoa de atuar em negócio concorrente por um período. Para valer, precisa ter prazo e alcance limitados e, para empregados, a Justiça costuma exigir uma compensação.",
+          "outros_nomes": ["non-compete", "não concorrência"]
+        },
+        {
+          "id": "nr-1",
+          "termo": "NR-1 e riscos psicossociais",
+          "definicao": "Norma de segurança do trabalho que passou a exigir que as empresas identifiquem e gerenciem riscos como sobrecarga e assédio.",
+          "outros_nomes": ["NR1", "saúde mental", "riscos psicossociais"],
+          "artigos": [{ "titulo": "A nova NR-1", "link": "NR1.html" }]
+        }
+      ]
+    },
+    {
+      "id": "regulacao",
+      "nome": "Regulação e incentivos",
+      "nome_curto": "Regulação",
+      "termos": [
+        {
+          "id": "marco-legal-das-startups",
+          "termo": "Marco Legal das Startups",
+          "definicao": "Lei complementar de 2021 que define o que é startup (receita bruta de até R$ 16 milhões no ano anterior e até 10 anos de CNPJ, entre outros requisitos). Também traz regras para investimento, sandbox regulatório e compras públicas de inovação.",
+          "outros_nomes": ["Lei Complementar 182", "LC 182/2021", "startup"]
+        },
+        {
+          "id": "sandbox-regulatorio",
+          "termo": "Sandbox regulatório",
+          "definicao": "Ambiente experimental, autorizado por um órgão regulador, em que a empresa testa um produto inovador com regras temporariamente flexibilizadas.",
+          "outros_nomes": ["sandbox"]
+        },
+        {
+          "id": "inova-simples",
+          "termo": "Inova Simples",
+          "definicao": "Regime simplificado para abrir e testar empresas de caráter inovador."
+        },
+        {
+          "id": "lei-do-bem",
+          "termo": "Lei do Bem",
+          "definicao": "Incentivos fiscais para empresas que investem em pesquisa e desenvolvimento. Aplica-se apenas a quem está no Lucro Real.",
+          "outros_nomes": ["P&D", "incentivo fiscal", "inovação"]
+        }
+      ]
+    }
+  ]
+}

@@ -16,7 +16,7 @@ os.chdir(RAIZ)
 # Páginas que não entram no sitemap (além das marcadas com noindex)
 FORA_DO_SITEMAP = {'artigo-modelo.html', '404.html'}
 # Ordem de importância no sitemap (o restante vem depois, em ordem alfabética)
-PRIMEIRAS = ['index.html', 'servicos.html', 'raio-x.html', 'sobre.html', 'blog.html']
+PRIMEIRAS = ['index.html', 'servicos.html', 'raio-x.html', 'glossario.html', 'sobre.html', 'blog.html']
 
 
 def carimbar_versao_css():
