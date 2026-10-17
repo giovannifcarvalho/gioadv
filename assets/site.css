@@ -13,8 +13,35 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
     margin-bottom: 1rem;
     font-weight: 700;
 }
+.article-content h2 { color: #1e392a; }
+.article-content h3 { font-size: 1.5rem; line-height: 2rem; margin-top: 1.75rem; margin-bottom: 0.75rem; font-weight: 700; color: #1e392a; }
 .article-content ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; }
-.article-content li { margin-bottom: 0.5rem; }
+.article-content ol { list-style-type: decimal; margin-left: 1.5rem; margin-bottom: 1.5rem; }
+.article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+.article-content ol li { padding-left: 0.25rem; }
+.article-content a { color: #1e392a; text-decoration: underline; text-decoration-color: #c2a56c; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.article-content a:hover { color: #86683a; }
+/* "Na prática" / "Minha leitura" */
+.article-content .opiniao { border-left: 4px solid #c2a56c; padding: 0.25rem 0 0.25rem 1rem; margin-bottom: 1.5rem; line-height: 1.75; }
+.article-content .nota { font-size: 0.95rem; color: #4b5563; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem 1.25rem; }
+.article-content .fontes li { font-size: 0.95rem; word-break: break-word; }
+/* Tabelas (rolam para o lado no celular) */
+.article-content .tabela-rolagem { overflow-x: auto; margin: 0 0 1.75rem; -webkit-overflow-scrolling: touch; }
+.article-content table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 1rem; line-height: 1.5; }
+.article-content th, .article-content td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid #e5e7eb; }
+.article-content thead th { background: #f6f2e8; color: #1e392a; font-weight: 700; }
+.article-content tbody th { color: #1e392a; font-weight: 700; }
+/* Listas de verificação */
+.article-content .checklist, .article-content .checklist-risco { list-style: none; margin-left: 0; }
+.article-content .checklist li, .article-content .checklist-risco li { position: relative; padding-left: 2rem; }
+.article-content .checklist li::before {
+    content: ''; position: absolute; left: 0; top: 0.3em; width: 1.15rem; height: 1.15rem;
+    border: 2px solid #c2a56c; border-radius: 4px;
+}
+.article-content .checklist-risco li::before {
+    content: '!'; position: absolute; left: 0; top: 0.2em; width: 1.3rem; height: 1.3rem; border-radius: 9999px;
+    background: #fdf3df; color: #9a640b; font-weight: 700; font-size: 0.85rem; line-height: 1.3rem; text-align: center;
+}
 
 /* Botão flutuante do WhatsApp (inserido por assets/site.js em todas as páginas) */
 .whatsapp-float {
@@ -173,46 +200,53 @@ select.lp-input {
     font-weight: 700;
     font-size: 1.75rem;
     line-height: 1.25;
-    color: #c2a56c;
+    color: #86683a;
 }
 @media (min-width: 768px) { .sobre-citacao { font-size: 2.5rem; margin: 4.5rem auto; } }
 
-/* ===== Aviso de cookies (inserido por site.js até o visitante escolher) ===== */
+/* ===== Aviso de cookies (inserido por site.js até o visitante escolher) =====
+   Celular: faixa fina no rodapé da tela, para não cobrir a chamada principal.
+   Computador: caixa pequena no canto inferior esquerdo. */
 .aviso-cookies {
     position: fixed;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 45;                     /* acima do botão do WhatsApp, abaixo do cabeçalho */
+    display: flex;
+    align-items: center;
+    gap: 12px;
     background: #1e392a;
     color: #e5e7eb;
-    border: 1px solid rgba(194, 165, 108, 0.45);
-    border-radius: 10px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-    padding: 16px 18px;
-    font-size: 0.92rem;
-    line-height: 1.5;
-}
-.aviso-cookies-texto a { color: #c2a56c; text-decoration: underline; }
-.aviso-cookies-botoes { display: flex; gap: 10px; margin-top: 12px; }
-.aviso-cookies-botao {
-    flex: 1;                         /* "Recusar" e "Aceitar" com o mesmo tamanho e destaque */
+    border-top: 1px solid rgba(194, 165, 108, 0.45);
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.25);
     padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+.aviso-cookies-texto { flex: 1; min-width: 0; }
+.aviso-cookies-texto a { color: #c2a56c; text-decoration: underline; }
+.aviso-cookies-botoes { display: flex; gap: 8px; flex-shrink: 0; }
+.aviso-cookies-botao {
+    padding: 8px 14px;               /* "Recusar" e "Aceitar" com o mesmo tamanho e destaque */
     border-radius: 6px;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     border: 1px solid #c2a56c;
     transition: opacity 0.2s ease;
 }
 .aviso-cookies-recusar { background: transparent; color: #c2a56c; }
-.aviso-cookies-aceitar { background: #c2a56c; color: #fff; }
+.aviso-cookies-aceitar { background: #c2a56c; color: #1e392a; }
 .aviso-cookies-botao:hover { opacity: 0.85; }
 .aviso-cookies-botao:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
 /* enquanto o aviso está aberto, o botão do WhatsApp sobe para não ficar por baixo */
-.com-aviso-cookies .whatsapp-float { bottom: calc(var(--aviso-cookies-altura, 140px) + 24px + env(safe-area-inset-bottom, 0px)); }
+.com-aviso-cookies .whatsapp-float { bottom: calc(var(--aviso-cookies-altura, 64px) + 14px + env(safe-area-inset-bottom, 0px)); }
 @media (min-width: 768px) {
-    .aviso-cookies { right: auto; left: 20px; bottom: 20px; max-width: 460px; }
+    .aviso-cookies {
+        left: 20px; right: auto; bottom: 20px; max-width: 520px;
+        border: 1px solid rgba(194, 165, 108, 0.45); border-radius: 10px; padding: 12px 16px;
+    }
     .com-aviso-cookies .whatsapp-float { bottom: 20px; }   /* no computador o aviso fica à esquerda */
 }
 @media print { .aviso-cookies { display: none; } }
@@ -224,7 +258,7 @@ select.lp-input {
 .texto-legal p { margin-bottom: 1rem; }
 .texto-legal ul { list-style: disc; margin: 0 0 1rem 1.5rem; }
 .texto-legal li { margin-bottom: 0.4rem; }
-.texto-legal a { color: #9a7b3f; text-decoration: underline; }
+.texto-legal a { color: #86683a; text-decoration: underline; }
 .texto-legal table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.95rem; }
 .texto-legal th, .texto-legal td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; color: #374151; }
 .texto-legal th { color: #1e392a; font-weight: 700; background: #f9fafb; }
@@ -248,7 +282,7 @@ select.lp-input {
 .artigo-cta-titulo { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.75rem; line-height: 1.2; color: #fff; margin: 0 0 8px !important; }
 .artigo-cta-texto { color: #d1d5db; font-size: 1.05rem; line-height: 1.6; margin: 0 0 18px !important; }
 .artigo-cta-botao {
-    display: inline-block; background: #c2a56c; color: #fff; font-weight: 700;
+    display: inline-block; background: #c2a56c; color: #1e392a; font-weight: 700;
     padding: 12px 22px; border-radius: 6px; text-decoration: none; transition: opacity 0.2s ease;
 }
 .artigo-cta-botao:hover { opacity: 0.9; }
@@ -307,7 +341,7 @@ select.lp-input {
 .rx-termometro span { flex: 1; height: 8px; border-radius: 9999px; background: #e5e7eb; }
 .rx-termometro .rx-aceso { background: var(--rx); }
 .rx-nao-sei { margin-top: 10px; font-size: 0.92rem; font-style: italic; color: #9a640b; }
-.rx-link { margin-top: auto; padding-top: 16px; font-weight: 700; color: #c2a56c; }
+.rx-link { margin-top: auto; padding-top: 16px; font-weight: 700; color: #86683a; }
 .rx-link:hover { text-decoration: underline; }
 .rx-pdf-caixa { border-top: 1px solid rgba(255, 255, 255, 0.15); }
 
@@ -394,7 +428,7 @@ select.lp-input {
 .gl-indice-grade { columns: 2 160px; column-gap: 28px; padding: 4px 20px 20px; }
 @media (min-width: 768px) { .gl-indice-grade { columns: 4; } }
 .gl-indice-bloco { break-inside: avoid; margin-bottom: 14px; }
-.gl-indice-letra { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.4rem; color: #c2a56c; line-height: 1.2; }
+.gl-indice-letra { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.4rem; color: #86683a; line-height: 1.2; }
 .gl-indice-bloco a { display: inline-block; padding: 2px 0; color: #374151; font-size: 0.95rem; }
 .gl-indice-bloco a:hover { color: #1e392a; text-decoration: underline; }
 
@@ -424,9 +458,9 @@ select.lp-input {
 .gl-pratica { margin-top: 12px; padding: 10px 14px; background: #f6f2e8; border-left: 3px solid #c2a56c; border-radius: 0 8px 8px 0; color: #374151; line-height: 1.6; }
 .gl-pratica strong { color: #1e392a; }
 .gl-leia { margin-top: 12px; font-size: 0.95rem; color: #6b7280; line-height: 1.6; }
-.gl-leia a { color: #a8894f; font-weight: 700; }
+.gl-leia a { color: #86683a; font-weight: 700; }
 .gl-leia a:hover { text-decoration: underline; }
-.gl-area-link { display: inline-block; margin-top: 20px; font-weight: 700; color: #c2a56c; }
+.gl-area-link { display: inline-block; margin-top: 20px; font-weight: 700; color: #86683a; }
 .gl-area-link:hover { text-decoration: underline; }
 
 .gl-destaque { border-color: #c2a56c; box-shadow: 0 0 0 3px rgba(194, 165, 108, 0.35); }
@@ -440,5 +474,72 @@ select.lp-input {
 
 /* Nota no fim dos artigos (inserida por site.js) */
 .artigo-glossario { margin-top: 1.5rem; color: #6b7280; font-size: 1rem; }
-.artigo-glossario a { color: #a8894f; font-weight: 700; }
+.artigo-glossario a { color: #86683a; font-weight: 700; }
 .artigo-glossario a:hover { text-decoration: underline; }
+
+
+/* ===== Contraste (acessibilidade) =====
+   O dourado da marca (#c2a56c) tem contraste baixo sobre fundo claro (2,4:1). Em textos sobre fundos
+   claros usamos o dourado escuro (#86683a, 5,2:1); sobre o verde e o grafite, o dourado original continua.
+   Nos botões dourados, o texto passa a ser verde-escuro (5,3:1) em vez de branco. */
+body .text-brand-gold, body .hover\:text-brand-gold:hover { color: #86683a; }
+body .bg-brand-green .text-brand-gold, body .bg-brand-green .hover\:text-brand-gold:hover,
+body footer .text-brand-gold, body footer .hover\:text-brand-gold:hover,
+body .artigo-cta .text-brand-gold, body .article-hero .text-brand-gold { color: #c2a56c; }
+body .bg-brand-gold.text-white, body .hover\:bg-brand-gold:hover.hover\:text-white:hover { color: #1e392a; }
+
+/* ===== Autor no topo dos artigos (gerado pelo build) ===== */
+.artigo-autor { display: flex; align-items: center; gap: 12px; margin-top: 0.75rem; }
+.artigo-autor-foto { width: 48px; height: 48px; flex-shrink: 0; border-radius: 9999px; object-fit: cover; background: #24483a; border: 2px solid #c2a56c; }
+.artigo-autor-nome { font-size: 0.95rem; color: #374151; line-height: 1.4; }
+.artigo-autor-nome a { color: #1e392a; font-weight: 700; }
+.artigo-autor-nome a:hover { text-decoration: underline; }
+.artigo-autor-data { font-size: 0.9rem; color: #6b7280; line-height: 1.4; }
+.article-hero .artigo-autor-nome, .article-hero .artigo-autor-data { color: #d1d5db; }
+.article-hero .artigo-autor-nome a { color: #fff; }
+
+/* ===== Trilha de navegação (gerada pelo build) ===== */
+.trilha { font-size: 0.85rem; margin-bottom: 1rem; }
+.trilha ol { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; color: #6b7280; }
+.trilha li { display: flex; align-items: center; gap: 8px; min-width: 0; max-width: 100%; }
+.trilha li + li::before { content: '\203A'; color: #9ca3af; }
+.trilha a { color: #4b5563; }
+.trilha a:hover { color: #1e392a; text-decoration: underline; }
+.trilha [aria-current] { color: #6b7280; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 42ch; }
+.text-center .trilha ol { justify-content: center; }
+.bg-brand-green .trilha ol, .article-hero .trilha ol, .bg-brand-green .trilha [aria-current], .article-hero .trilha [aria-current] { color: #9ca3af; }
+.bg-brand-green .trilha a, .article-hero .trilha a { color: #d1d5db; }
+.bg-brand-green .trilha a:hover, .article-hero .trilha a:hover { color: #fff; }
+
+/* ===== Cards de artigos (gerados pelo build) ===== */
+.artigo-card {
+    display: flex; flex-direction: column; background: #fff; border-radius: 0.5rem; overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.artigo-card[hidden] { display: none; }
+.artigo-card:hover { transform: translateY(-6px); box-shadow: 0 14px 28px rgba(30, 57, 42, 0.12); }
+.artigo-card:focus-visible { outline: 3px solid #c2a56c; outline-offset: 3px; }
+.artigo-card-img { display: block; width: 100%; height: 12rem; object-fit: cover; }
+.artigo-card-corpo { display: flex; flex-direction: column; flex-grow: 1; padding: 1.5rem; }
+.artigo-card-categoria { font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem; letter-spacing: 0.02em; }
+.artigo-card-titulo { flex-grow: 1; margin-bottom: 1rem; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.4rem; line-height: 1.25; color: #1e392a; }
+.artigo-card-ler { font-weight: 700; color: #86683a; }
+.artigo-card:hover .artigo-card-ler { text-decoration: underline; }
+
+/* ===== Blog: filtros e paginação ===== */
+.blog-chip {
+    flex-shrink: 0; white-space: nowrap; padding: 8px 16px; border-radius: 9999px; font-size: 0.875rem;
+    border: 1px solid #d1d5db; background: #fff; color: #374151; transition: all 0.15s ease;
+}
+.blog-chip:hover { border-color: #c2a56c; color: #1e392a; }
+.blog-chip[aria-pressed="true"] { background: #1e392a; border-color: #1e392a; color: #fff; }
+.blog-pagina { padding: 8px 16px; border-radius: 6px; background: #e5e7eb; color: #374151; transition: background-color 0.15s ease; }
+.blog-pagina:hover { background: #d1d5db; }
+.blog-pagina-ativa, .blog-pagina-ativa:hover { background: #1e392a; color: #fff; }
+
+/* ===== Rodapé (inserido por site.js) ===== */
+.rodape-marca { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.5rem; line-height: 1.2; color: #fff; }
+.rodape-titulo { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #c2a56c; margin-bottom: 0.75rem; }
+.rodape-link { color: #d1d5db; }
+.rodape-link:hover { color: #c2a56c; text-decoration: underline; }

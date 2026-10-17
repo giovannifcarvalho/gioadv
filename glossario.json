@@ -6,7 +6,7 @@
       "id": "sociedade",
       "nome": "Sociedade e governança",
       "nome_curto": "Sociedade",
-      "landing": { "titulo": "Estruturação Societária", "link": "servicos-estruturacao-societaria.html" },
+      "landing": { "titulo": "Estruturação Societária", "link": "/servicos-estruturacao-societaria" },
       "termos": [
         {
           "id": "acordo-de-socios",
@@ -14,7 +14,7 @@
           "definicao": "Contrato entre os sócios que detalha o que o contrato social não trata: entrada e saída, venda de participação, impasse, dedicação e não concorrência.",
           "pratica": "É o documento que decide a briga antes de ela acontecer.",
           "outros_nomes": ["acordo de quotistas", "acordo de acionistas"],
-          "artigos": [{ "titulo": "Acordo de Sócios: por que sua empresa precisa de um?", "link": "artigo-acordo-de-socios.html" }]
+          "artigos": [{ "titulo": "Acordo de Sócios: por que sua empresa precisa de um?", "link": "/artigo-acordo-de-socios" }]
         },
         {
           "id": "contrato-social",
@@ -80,7 +80,7 @@
           "termo": "Quórum",
           "definicao": "Percentual de votos necessário para aprovar uma decisão.",
           "pratica": "Um quórum mal desenhado pode dar poder de veto a quem tem uma participação pequena.",
-          "artigos": [{ "titulo": "Uma cláusula de votação mal desenhada pode custar € 10 bilhões", "link": "artigo-ray-ban.html" }]
+          "artigos": [{ "titulo": "Uma cláusula de votação mal desenhada pode custar € 10 bilhões", "link": "/artigo-ray-ban" }]
         },
         {
           "id": "pro-labore",
@@ -104,7 +104,7 @@
       "id": "investimento",
       "nome": "Investimento e M&A",
       "nome_curto": "Investimento",
-      "landing": { "titulo": "Investimentos e M&A", "link": "servicos-investimentos-e-ma.html" },
+      "landing": { "titulo": "Investimentos e M&A", "link": "/servicos-investimentos-e-ma" },
       "termos": [
         {
           "id": "investidor-anjo",
@@ -117,7 +117,7 @@
           "termo": "Mútuo conversível",
           "definicao": "Empréstimo do investidor à empresa que pode virar participação societária num evento futuro, como uma rodada, uma venda ou o fim do prazo.",
           "outros_nomes": ["convertible note", "nota conversível"],
-          "artigos": [{ "titulo": "Mútuo Conversível: como captar investimento com segurança", "link": "artigo-mutuo-conversivel.html" }]
+          "artigos": [{ "titulo": "Mútuo Conversível: como captar investimento com segurança", "link": "/artigo-mutuo-conversivel" }]
         },
         {
           "id": "valuation",
@@ -196,14 +196,14 @@
       "id": "contratos",
       "nome": "Contratos de tecnologia",
       "nome_curto": "Contratos",
-      "landing": { "titulo": "Contratos de Tecnologia", "link": "servicos-contratos-de-tecnologia.html" },
+      "landing": { "titulo": "Contratos de Tecnologia", "link": "/servicos-contratos-de-tecnologia" },
       "termos": [
         {
           "id": "sla",
           "termo": "SLA (acordo de nível de serviço)",
           "definicao": "Define a disponibilidade garantida, os prazos de suporte e o que o cliente recebe se o nível prometido não for cumprido.",
           "outros_nomes": ["SLA", "nível de serviço", "uptime"],
-          "artigos": [{ "titulo": "Contrato de SaaS: cláusulas que não podem faltar", "link": "Contrato-de-SaaS.html" }]
+          "artigos": [{ "titulo": "Contrato de SaaS: cláusulas que não podem faltar", "link": "/artigo-contrato-de-saas" }]
         },
         {
           "id": "limitacao-de-responsabilidade",
@@ -255,7 +255,7 @@
       "id": "marca",
       "nome": "Marca e criações",
       "nome_curto": "Marca",
-      "landing": { "titulo": "Propriedade Intelectual", "link": "servicos-propriedade-intelectual.html" },
+      "landing": { "titulo": "Propriedade Intelectual", "link": "/servicos-propriedade-intelectual" },
       "termos": [
         {
           "id": "registro-de-marca",
@@ -264,8 +264,8 @@
           "pratica": "Quem registra primeiro costuma levar a marca, mesmo que outra empresa a use há mais tempo.",
           "outros_nomes": ["INPI", "marca registrada"],
           "artigos": [
-            { "titulo": "Registro de Marca: o ativo mais valioso do seu negócio", "link": "artigo-registro-de-marca.html" },
-            { "titulo": "A caneta brasileira que venceu a dona do Ozempic", "link": "artigo-ozivy-ozempic-inpi.html" }
+            { "titulo": "Registro de Marca: o ativo mais valioso do seu negócio", "link": "/artigo-registro-de-marca" },
+            { "titulo": "A caneta brasileira que venceu a dona do Ozempic", "link": "/artigo-ozivy-ozempic-inpi" }
           ]
         },
         {
@@ -310,7 +310,7 @@
       "id": "dados",
       "nome": "Dados pessoais e LGPD",
       "nome_curto": "LGPD",
-      "landing": { "titulo": "LGPD e Proteção de Dados", "link": "servicos-lgpd-e-protecao-de-dados.html" },
+      "landing": { "titulo": "LGPD e Proteção de Dados", "link": "/servicos-lgpd-e-protecao-de-dados" },
       "termos": [
         {
           "id": "dado-pessoal",
@@ -359,14 +359,14 @@
           "termo": "ANPD",
           "definicao": "Autoridade Nacional de Proteção de Dados, órgão que fiscaliza a LGPD. A multa pode chegar a 2% do faturamento, limitada a R$ 50 milhões por infração.",
           "outros_nomes": ["Autoridade Nacional de Proteção de Dados", "multa LGPD"],
-          "artigos": [{ "titulo": "5 passos essenciais para adequar sua empresa à LGPD", "link": "5-passos-LGPD.html" }]
+          "artigos": [{ "titulo": "5 passos essenciais para adequar sua empresa à LGPD", "link": "/artigo-adequacao-lgpd" }]
         },
         {
           "id": "politica-de-uso-de-ia",
           "termo": "Política de uso de IA",
           "definicao": "Regras internas sobre quais ferramentas de inteligência artificial a equipe pode usar e com quais dados.",
           "outros_nomes": ["inteligência artificial", "IA", "ChatGPT"],
-          "artigos": [{ "titulo": "Responsabilidade civil e IA: como criar uma política de uso", "link": "artigo-politica-ia.html" }]
+          "artigos": [{ "titulo": "Responsabilidade civil e IA: como criar uma política de uso", "link": "/artigo-politica-ia" }]
         }
       ]
     },
@@ -374,14 +374,14 @@
       "id": "equipe",
       "nome": "Equipe e rotina",
       "nome_curto": "Equipe",
-      "landing": { "titulo": "Consultoria Empresarial", "link": "servicos-consultoria-empresarial.html" },
+      "landing": { "titulo": "Consultoria Empresarial", "link": "/servicos-consultoria-empresarial" },
       "termos": [
         {
           "id": "vinculo-de-emprego",
           "termo": "Vínculo de emprego",
-          "definicao": "Existe quando há pessoalidade, habitualidade, remuneração e subordinação, independentemente do nome que o contrato recebe.",
+          "definicao": "Existe quando uma pessoa física presta serviços com pessoalidade, de forma não eventual, mediante remuneração e sob subordinação, independentemente do nome que o contrato recebe.",
           "outros_nomes": ["vínculo empregatício", "CLT"],
-          "artigos": [{ "titulo": "Contratar como PJ ou CLT? Riscos e benefícios", "link": "pj-ou-clt.html" }]
+          "artigos": [{ "titulo": "Contratar como PJ ou CLT? Riscos e benefícios", "link": "/pj-ou-clt" }]
         },
         {
           "id": "pejotizacao",
@@ -406,7 +406,7 @@
           "termo": "NR-1 e riscos psicossociais",
           "definicao": "Norma de segurança do trabalho que passou a exigir que as empresas identifiquem e gerenciem riscos como sobrecarga e assédio.",
           "outros_nomes": ["NR1", "saúde mental", "riscos psicossociais"],
-          "artigos": [{ "titulo": "A nova NR-1", "link": "NR1.html" }]
+          "artigos": [{ "titulo": "A nova NR-1", "link": "/artigo-nova-nr-1-riscos-psicossociais" }]
         }
       ]
     },

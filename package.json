@@ -4,7 +4,7 @@
   "description": "Site de Giovanni de Carvalho | Advocacia Empresarial",
   "scripts": {
     "build:css": "tailwindcss -c tailwind.config.js -i assets/tailwind.src.css -o assets/tailwind.css --minify",
-    "build": "python3 scripts/gerar-glossario.py && npm run build:css && python3 scripts/pos-build.py"
+    "build": "python3 scripts/gerar-glossario.py && python3 scripts/gerar-listas.py && npm run build:css && python3 scripts/pos-build.py"
   },
   "devDependencies": {
     "tailwindcss": "3.4.17"

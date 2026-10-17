@@ -1,21 +1,16 @@
-# Gera o glossario.html (a partir do glossario.json), recompila o CSS (assets/tailwind.css) e atualiza o sitemap.xml sempre que o site muda.
-# Roda sozinho a cada alteração na branch main; também pode ser disparado manualmente
-# em Actions → "Build do site" → Run workflow.
+# Build do site, a cada alteração na branch main (também pode ser disparado à mão em
+# Actions → "Build do site" → Run workflow):
+#   1. gera o glossário, as listas de artigos, as trilhas de navegação e os dados estruturados;
+#   2. recompila o CSS (assets/tailwind.css);
+#   3. carimba a versão dos arquivos, atualiza o sitemap.xml e o versao.json;
+#   4. salva o resultado na main (o Cloudflare Pages publica a partir dela);
+#   5. espera a nova versão entrar no ar e limpa o cache do Cloudflare
+#      (só se os segredos CLOUDFLARE_API_TOKEN e CLOUDFLARE_ZONE_ID estiverem cadastrados).
 name: Build do site
 
 on:
   push:
     branches: [main]
-    paths:
-      - '*.html'
-      - 'artigos.json'
-      - 'glossario.json'
-      - 'assets/*.js'
-      - 'assets/tailwind.src.css'
-      - 'tailwind.config.js'
-      - 'scripts/**'
-      - 'package.json'
-      - 'package-lock.json'
   workflow_dispatch:
 
 permissions:
@@ -36,10 +31,16 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Instalar dependências
-        run: npm ci
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
-      - name: Gerar CSS e sitemap
+      - name: Instalar dependências
+        run: |
+          npm ci
+          python -m pip install --quiet pillow
+
+      - name: Gerar páginas, CSS e sitemap
         run: npm run build
 
       - name: Salvar alterações (se houver)
@@ -48,8 +49,15 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add -A
-            git commit -m "Atualiza CSS e sitemap automaticamente"
+            git commit -m "Atualiza arquivos gerados automaticamente"
             git push
           else
-            echo "Nada mudou: CSS e sitemap já estavam atualizados."
+            echo "Nada mudou: os arquivos gerados já estavam atualizados."
           fi
+
+      - name: Limpar o cache do Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          SITE_URL: https://giovannidecarvalho.adv.br
+        run: python3 scripts/limpar-cache.py

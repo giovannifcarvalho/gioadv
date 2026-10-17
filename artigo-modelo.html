@@ -6,51 +6,110 @@
     <!--
         MODELO DE ARTIGO
         1. Duplique este arquivo e renomeie (ex.: artigo-novo-titulo.html): só letras minúsculas,
-           números e hífens, sem acentos nem espaços.
-        2. Troque, aqui no <head>: o título, a descrição (até ~155 caracteres) e, nas linhas
-           canonical e og:url, "artigo-modelo.html" pelo nome do novo arquivo.
-           Se o artigo tiver capa própria em assets/, troque também o og:image.
-        3. Troque, no <main>: categoria, título, data, capa, texto e a chamada final (passos 3 a 6 abaixo).
-        4. Adicione o artigo em artigos.json (é dali que a home e o blog listam os posts).
-           Preencha o campo "tema" com um dos temas já usados (ex.: "Contratos",
-           "Tributário", "LGPD e IA"): é ele que alimenta o filtro do blog. Um tema novo
-           vira um botão novo no filtro automaticamente.
-           O sitemap.xml é atualizado sozinho pelo GitHub depois do envio (não edite à mão).
+           números e hífens, sem acentos nem espaços. O endereço público fica sem ".html"
+           (ex.: https://giovannidecarvalho.adv.br/artigo-novo-titulo).
+        2. Troque, aqui no <head>: o título (assunto principal no começo, até ~55 caracteres antes
+           do " | Giovanni de Carvalho"), a descrição (até ~155 caracteres) e, nas linhas canonical
+           e og:url, "artigo-modelo" pelo nome do novo arquivo, sem ".html".
+           Troque também o og:image pelo endereço da capa do artigo.
+        3. Troque, no <main>: categoria, título, capa, texto e a chamada final (passos 3 a 6 abaixo).
+        4. Adicione o artigo em artigos.json, com:
+             "title"    o mesmo título do <h1>
+             "category" a categoria que aparece acima do título
+             "tema"     um dos temas já usados (ex.: "Contratos", "Tributário", "LGPD e IA"),
+                        que alimenta o filtro do blog; um tema novo vira um botão novo sozinho
+             "date"     a data de publicação, no formato AAAA-MM-DD
+             "atualizado" (opcional) a data da última revisão do conteúdo, no mesmo formato
+             "image"    "/assets/capas/nome-do-artigo.png"
+             "link"     "/nome-do-artigo" (sem ".html")
+        O GitHub faz o resto sozinho depois do envio: autor e datas no topo, trilha de navegação,
+        dados estruturados, card no blog e na home, versão WebP da capa, sitemap e versões dos
+        arquivos. Os trechos entre <!-- nome:inicio --> e <!-- nome:fim --> são gerados: não edite.
         Cabeçalho, rodapé, menu, cores, fontes e Google Analytics vêm de assets/ e NÃO
         precisam ser copiados para o artigo.
     -->
-    <title>Título do Artigo | Giovanni de Carvalho - Advocacia Empresarial</title>
+    <title>Título do Artigo | Giovanni de Carvalho</title>
     <meta name="description" content="Resumo do artigo em até 155 caracteres (aparece no Google e no WhatsApp).">
-    <link rel="canonical" href="https://giovannidecarvalho.adv.br/artigo-modelo.html">
+    <link rel="canonical" href="https://giovannidecarvalho.adv.br/artigo-modelo">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Giovanni de Carvalho - Advocacia Empresarial">
     <meta property="og:title" content="Título do Artigo">
     <meta property="og:description" content="Resumo do artigo em até 155 caracteres (aparece no Google e no WhatsApp).">
-    <meta property="og:url" content="https://giovannidecarvalho.adv.br/artigo-modelo.html">
+    <meta property="og:url" content="https://giovannidecarvalho.adv.br/artigo-modelo">
     <meta property="og:image" content="https://giovannidecarvalho.adv.br/assets/logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <script src="assets/head.js?v=2026-10-16b"></script>
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <script src="/assets/head.js?v=32011f5990"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css?v=2026-10-16b">
-    <link rel="stylesheet" href="assets/tailwind.css?v=8270e45deb">
+    <link rel="stylesheet" href="/assets/site.css?v=fd9bba8d96">
+    <link rel="stylesheet" href="/assets/tailwind.css?v=c80518578d">
+    <!-- dados-estruturados-artigo:inicio -->
+    <!-- dados-estruturados-artigo:fim -->
+    <!-- trilha-schema:inicio -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://giovannidecarvalho.adv.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://giovannidecarvalho.adv.br/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Título do artigo",
+          "item": "https://giovannidecarvalho.adv.br/artigo-modelo"
+        }
+      ]
+    }
+    </script>
+    <!-- trilha-schema:fim -->
 </head>
 <body class="bg-white text-gray-800" data-page="article">
-    <script src="assets/site.js?v=2026-10-16b"></script>
+    <script src="/assets/site.js?v=769de094b8"></script>
 
     <main>
         <article class="py-20">
             <div class="container mx-auto px-6 max-w-4xl">
-                <!-- PASSO 3: Altere a categoria, o título e a data -->
+                <!-- PASSO 3: Altere a categoria e o título (autor e datas são gerados a partir de artigos.json) -->
+                <!-- trilha:inicio -->
+                <nav class="trilha" aria-label="Você está em">
+                <ol>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><span aria-current="page">Título do artigo</span></li>
+                </ol>
+                </nav>
+                <!-- trilha:fim -->
                 <p class="text-sm text-gray-500 mb-2">CATEGORIA DO ARTIGO</p>
                 <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight mb-4">Título do Artigo Aparece Aqui</h1>
-                <p class="text-gray-600">Publicado em 28 de Agosto de 2025</p>
+                <!-- autor:inicio -->
+                <div class="artigo-autor">
+                    <img src="/assets/giovanni-avatar-96.webp?v=83cd3a3964" width="48" height="48" alt="" class="artigo-autor-foto">
+                    <div>
+                        <p class="artigo-autor-nome">Por <a href="/sobre">Giovanni de Carvalho</a> · Advogado · OAB/MG 243.837</p>
+                        <p class="artigo-autor-data">Publicado em <time datetime="2026-01-01">1º de janeiro de 2026</time></p>
+                    </div>
+                </div>
+                <!-- autor:fim -->
                 
-                <!-- PASSO 4: Use a capa do artigo (assets/capas/nome-do-artigo.png, 1200x600, no padrão das demais) e descreva-a no alt -->
-                <img src="https://placehold.co/1200x600/1e392a/c2a56c?text=IMAGEM+DO+ARTIGO" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Descrição da imagem do artigo">
+                <!-- PASSO 4: Use a capa do artigo (/assets/capas/nome-do-artigo.png, 1200x600, no padrão das demais) e descreva-a no alt.
+                     A versão WebP, mais leve, é criada pelo GitHub. -->
+                <img src="/assets/capas/pagina-blog.png?v=f76edb582f" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Descrição da imagem do artigo" width="1200" height="600">
 
                 <!-- PASSO 5: Adicione o conteúdo do artigo -->
                 <div class="article-content text-lg text-gray-800">
@@ -72,24 +131,21 @@
 
                 <!-- PASSO 6: Chamada para a área de atuação mais ligada ao tema do artigo.
                      Troque o link (href), a área, a pergunta, o texto e o botão. Páginas disponíveis:
-                     servicos-estruturacao-societaria.html · servicos-contratos-de-tecnologia.html
-                     servicos-propriedade-intelectual.html · servicos-lgpd-e-protecao-de-dados.html
-                     servicos-investimentos-e-ma.html · servicos-consultoria-empresarial.html -->
+                     /servicos-estruturacao-societaria · /servicos-contratos-de-tecnologia
+                     /servicos-propriedade-intelectual · /servicos-lgpd-e-protecao-de-dados
+                     /servicos-investimentos-e-ma · /servicos-consultoria-empresarial -->
                 <aside class="artigo-cta">
-                    <picture>
-                        <source srcset="assets/giovanni-retrato.webp?v=1" type="image/webp">
-                        <img src="assets/giovanni-retrato.png?v=1" alt="Giovanni de Carvalho" loading="lazy" class="artigo-cta-foto">
-                    </picture>
+                    <img src="/assets/giovanni-avatar-400.webp?v=6b3ff11231" width="104" height="104" alt="Giovanni de Carvalho" loading="lazy" class="artigo-cta-foto">
                     <div>
                         <p class="artigo-cta-area">Consultoria Empresarial</p>
                         <h2 class="artigo-cta-titulo">Quer um advogado por perto em decisões como essa?</h2>
                         <p class="artigo-cta-texto">Suporte jurídico recorrente para contratos, relações de trabalho e mudanças regulatórias.</p>
-                        <a href="servicos-consultoria-empresarial.html" class="artigo-cta-botao">Conhecer a consultoria empresarial &rarr;</a>
+                        <a href="/servicos-consultoria-empresarial" class="artigo-cta-botao">Conhecer a consultoria empresarial &rarr;</a>
                         <p class="artigo-cta-autor">Giovanni de Carvalho · Advogado · OAB/MG 243.837</p>
                     </div>
                 </aside>
                 <div class="mt-12 border-t pt-8">
-                    <a href="blog.html" class="font-bold text-brand-gold hover:underline">&larr; Voltar para todos os artigos</a>
+                    <a href="/blog" class="font-bold text-brand-gold hover:underline">&larr; Voltar para todos os artigos</a>
                 </div>
             </div>
         </article>

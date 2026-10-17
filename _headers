@@ -1,0 +1,10 @@
+# Cabeçalhos HTTP do Cloudflare Pages.
+# Os arquivos de assets/ são sempre referenciados com "?v=<hash do conteúdo>" (o build carimba),
+# então podem ficar guardados no navegador por um ano: quando mudam, o endereço muda junto.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
