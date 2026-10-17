@@ -1,4 +1,4 @@
-# Recompila o CSS (assets/tailwind.css) e atualiza o sitemap.xml sempre que o site muda.
+# Gera o glossario.html (a partir do glossario.json), recompila o CSS (assets/tailwind.css) e atualiza o sitemap.xml sempre que o site muda.
 # Roda sozinho a cada alteração na branch main; também pode ser disparado manualmente
 # em Actions → "Build do site" → Run workflow.
 name: Build do site
@@ -9,6 +9,7 @@ on:
     paths:
       - '*.html'
       - 'artigos.json'
+      - 'glossario.json'
       - 'assets/*.js'
       - 'assets/tailwind.src.css'
       - 'tailwind.config.js'

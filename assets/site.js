@@ -4,7 +4,7 @@
    Cada página carrega este script logo depois de abrir o <body>:
        <body class="bg-white text-gray-800" data-page="article">
            <script src="assets/site.js?v=2026-10-16b"></script>
-   data-page pode ser "home", "blog", "article", "servicos", "sobre", "legal" ou "landing".
+   data-page pode ser "home", "blog", "article", "servicos", "sobre", "legal", "glossario" ou "landing".
 
    Landing pages (data-page="landing"): cabeçalho só com o logo e um botão de contato,
    sem menu, e rodapé enxuto, para o visitante não sair da página.
@@ -35,6 +35,7 @@
     var NAV = [
         { label: 'Serviços', href: 'servicos.html', active: page === 'servicos' },
         { label: 'Raio-X', href: 'raio-x.html', active: false },
+        { label: 'Glossário', href: 'glossario.html', active: page === 'glossario' },
         { label: 'Sobre', href: 'sobre.html', active: page === 'sobre' },
         { label: 'Blog', href: 'blog.html', active: page === 'blog' || page === 'article' }
     ];
@@ -385,6 +386,13 @@
         document.body.insertAdjacentHTML('beforeend', onLanding ? landingFooter : footer);
         setupWhatsappForms();
         if (window.gcConsentimento && !window.gcConsentimento.valor()) abrirAvisoCookies();
+
+        // Fim dos artigos: lembrete do glossário, logo depois da chamada para a área de atuação
+        var ctaArtigo = page === 'article' && document.querySelector('.artigo-cta');
+        if (ctaArtigo) {
+            ctaArtigo.insertAdjacentHTML('afterend',
+                '<p class="artigo-glossario">Ficou com dúvida sobre algum termo? Consulte o <a href="glossario.html">Glossário Jurídico para Startups</a>.</p>');
+        }
 
         var latest = document.getElementById('latest-posts-container');
         if (latest) renderLatest(latest);
