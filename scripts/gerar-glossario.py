@@ -81,7 +81,7 @@ def indice_html(areas):
 
 
 def schema_json(areas):
-    url = f'{DOMINIO}/{PAGINA}'
+    url = f'{DOMINIO}/glossario'   # endereço público (o Cloudflare Pages serve as páginas sem .html)
     dados = {
         '@context': 'https://schema.org',
         '@type': 'DefinedTermSet',

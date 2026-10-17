@@ -1,0 +1,23 @@
+# Redirecionamentos permanentes do Cloudflare Pages (formato: origem destino código).
+# Endereços antigos dos artigos, renomeados em outubro de 2026 para endereços que descrevem o conteúdo.
+# Cada endereço antigo aparece com e sem ".html", porque o Cloudflare Pages já servia as páginas sem a extensão.
+/15.html  /artigo-tributacao-minima-global-15  301
+/15  /artigo-tributacao-minima-global-15  301
+/BRB.html  /artigo-brb-transparencia-governanca  301
+/BRB  /artigo-brb-transparencia-governanca  301
+/NR1.html  /artigo-nova-nr-1-riscos-psicossociais  301
+/NR1  /artigo-nova-nr-1-riscos-psicossociais  301
+/EVTL.html  /artigo-evtl-viabilidade-tecnica-e-legal  301
+/EVTL  /artigo-evtl-viabilidade-tecnica-e-legal  301
+/juros.html  /artigo-juros-altos-recuperacao-extrajudicial  301
+/juros  /artigo-juros-altos-recuperacao-extrajudicial  301
+/splitpayment.html  /artigo-split-payment-reforma-tributaria  301
+/splitpayment  /artigo-split-payment-reforma-tributaria  301
+/Risco-de-Imagem-e-Comercial.html  /artigo-publicidade-nativa-mercados-regulados  301
+/Risco-de-Imagem-e-Comercial  /artigo-publicidade-nativa-mercados-regulados  301
+/destituicao.html  /artigo-destituicao-presidente-conselho  301
+/destituicao  /artigo-destituicao-presidente-conselho  301
+/5-passos-LGPD.html  /artigo-adequacao-lgpd  301
+/5-passos-LGPD  /artigo-adequacao-lgpd  301
+/Contrato-de-SaaS.html  /artigo-contrato-de-saas  301
+/Contrato-de-SaaS  /artigo-contrato-de-saas  301

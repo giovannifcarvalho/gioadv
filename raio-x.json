@@ -23,7 +23,7 @@
       "id": "sociedade",
       "nome": "Sociedade",
       "area": "Estruturação Societária",
-      "landing": "servicos-estruturacao-societaria.html",
+      "landing": "/servicos-estruturacao-societaria",
       "pularSe": { "pergunta": "socios", "opcao": 0 },
       "perguntas": [
         {
@@ -55,7 +55,7 @@
       "id": "contratos",
       "nome": "Contratos",
       "area": "Contratos de Tecnologia",
-      "landing": "servicos-contratos-de-tecnologia.html",
+      "landing": "/servicos-contratos-de-tecnologia",
       "perguntas": [
         {
           "pergunta": "Como são formalizadas as vendas para os seus clientes?",
@@ -84,7 +84,7 @@
       "id": "marca",
       "nome": "Marca e criações",
       "area": "Propriedade Intelectual",
-      "landing": "servicos-propriedade-intelectual.html",
+      "landing": "/servicos-propriedade-intelectual",
       "perguntas": [
         {
           "pergunta": "A marca da empresa (nome e logo) está registrada no INPI?",
@@ -115,7 +115,7 @@
       "id": "dados",
       "nome": "Dados pessoais",
       "area": "LGPD e Proteção de Dados",
-      "landing": "servicos-lgpd-e-protecao-de-dados.html",
+      "landing": "/servicos-lgpd-e-protecao-de-dados",
       "perguntas": [
         {
           "pergunta": "A empresa tem política de privacidade que descreve os dados que ela realmente coleta?",
@@ -144,7 +144,7 @@
       "id": "investimento",
       "nome": "Investimento",
       "area": "Investimentos e M&A",
-      "landing": "servicos-investimentos-e-ma.html",
+      "landing": "/servicos-investimentos-e-ma",
       "perguntas": [
         {
           "pergunta": "A empresa já recebeu ou está negociando dinheiro de investidor (anjo, mútuo conversível, aceleradora, fundo)?",
@@ -174,7 +174,7 @@
       "id": "equipe",
       "nome": "Equipe e rotina",
       "area": "Consultoria Empresarial",
-      "landing": "servicos-consultoria-empresarial.html",
+      "landing": "/servicos-consultoria-empresarial",
       "perguntas": [
         {
           "pergunta": "Como está formada a equipe, além dos sócios?",

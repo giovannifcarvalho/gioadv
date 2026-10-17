@@ -3,44 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Giovanni de Carvalho - Advocacia Empresarial</title>
-    <meta name="description" content="Artigos e análises sobre direito empresarial para empresas de tecnologia, negócios digitais e o ecossistema de inovação.">
-    <link rel="canonical" href="https://giovannidecarvalho.adv.br/blog.html">
+    <title>Blog de direito para startups e negócios | Giovanni de Carvalho</title>
+    <meta name="description" content="Análises de leis, decisões e casos reais, e o que eles mudam para quem empreende: sócios, contratos, marca, LGPD, investimento, trabalhista e tributário.">
+    <link rel="canonical" href="https://giovannidecarvalho.adv.br/blog">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Giovanni de Carvalho - Advocacia Empresarial">
-    <meta property="og:title" content="Blog">
-    <meta property="og:description" content="Artigos e análises sobre direito empresarial para empresas de tecnologia, negócios digitais e o ecossistema de inovação.">
-    <meta property="og:url" content="https://giovannidecarvalho.adv.br/blog.html">
-    <meta property="og:image" content="https://giovannidecarvalho.adv.br/assets/logo.png">
+    <meta property="og:title" content="Blog | Giovanni de Carvalho">
+    <meta property="og:description" content="Análises de leis, decisões e casos reais, e o que eles mudam para quem empreende: sócios, contratos, marca, LGPD, investimento, trabalhista e tributário.">
+    <meta property="og:url" content="https://giovannidecarvalho.adv.br/blog">
+    <meta property="og:image" content="https://giovannidecarvalho.adv.br/assets/capas/pagina-blog.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <script src="assets/head.js?v=2026-10-16b"></script>
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <script src="/assets/head.js?v=32011f5990"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css?v=2026-10-16b">
-    <link rel="stylesheet" href="assets/tailwind.css?v=8270e45deb">
+    <link rel="stylesheet" href="/assets/site.css?v=fd9bba8d96">
+    <link rel="stylesheet" href="/assets/tailwind.css?v=c80518578d">
+    <!-- trilha-schema:inicio -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://giovannidecarvalho.adv.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://giovannidecarvalho.adv.br/blog"
+        }
+      ]
+    }
+    </script>
+    <!-- trilha-schema:fim -->
 </head>
 <body class="bg-white text-gray-800" data-page="blog">
-    <script src="assets/site.js?v=2026-10-16b"></script>
+    <script src="/assets/site.js?v=769de094b8"></script>
 
     <main>
         <!-- ===== Cabeçalho da Página do Blog ===== -->
         <section class="py-20 bg-gray-50">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight">Blog & Insights</h1>
-                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mt-4">Artigos e análises sobre o universo jurídico para empresas de tecnologia, negócios digitais e o ecossistema de inovação.</p>
+                <!-- trilha:inicio -->
+                <nav class="trilha" aria-label="Você está em">
+                <ol>
+                    <li><a href="/">Início</a></li>
+                    <li><span aria-current="page">Blog</span></li>
+                </ol>
+                </nav>
+                <!-- trilha:fim -->
+                <p class="text-sm text-brand-gold font-bold tracking-widest uppercase mb-3">Blog</p>
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight">Análises jurídicas para quem empreende</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mt-4">Leis, decisões e casos reais, e o que eles mudam para startups e empresas de tecnologia: sócios, contratos, marca, LGPD, investimento e mais.</p>
             </div>
         </section>
 
         <!-- ===== Grade de Artigos ===== -->
         <section class="py-20">
             <div class="container mx-auto px-6">
-                <!-- Filtro por tema: os botões são gerados por site.js a partir do campo "tema" de artigos.json -->
-                <div id="blog-filtros" class="flex gap-3 mb-12 overflow-x-auto pb-2 -mx-6 px-6 md:mx-0 md:px-0 md:flex-wrap md:justify-center md:overflow-visible" role="group" aria-label="Filtrar artigos por tema"></div>
+                <!-- Filtro por tema e lista de artigos: gerados pelo build a partir de artigos.json (scripts/gerar-listas.py) -->
+                <div id="blog-filtros" class="flex gap-3 mb-12 overflow-x-auto pb-2 -mx-6 px-6 md:mx-0 md:px-0 md:flex-wrap md:justify-center md:overflow-visible" role="group" aria-label="Filtrar artigos por tema">
+                    <!-- filtros-blog:inicio -->
+                    <button type="button" class="blog-chip" data-tema="" aria-pressed="true">Todos</button>
+                    <button type="button" class="blog-chip" data-tema="Contratos" aria-pressed="false">Contratos</button>
+                    <button type="button" class="blog-chip" data-tema="Gestão e negócios" aria-pressed="false">Gestão e negócios</button>
+                    <button type="button" class="blog-chip" data-tema="Investimentos" aria-pressed="false">Investimentos</button>
+                    <button type="button" class="blog-chip" data-tema="LGPD e IA" aria-pressed="false">LGPD e IA</button>
+                    <button type="button" class="blog-chip" data-tema="Propriedade intelectual" aria-pressed="false">Propriedade intelectual</button>
+                    <button type="button" class="blog-chip" data-tema="Societário e governança" aria-pressed="false">Societário e governança</button>
+                    <button type="button" class="blog-chip" data-tema="Trabalhista e compliance" aria-pressed="false">Trabalhista e compliance</button>
+                    <button type="button" class="blog-chip" data-tema="Tributário" aria-pressed="false">Tributário</button>
+                    <!-- filtros-blog:fim -->
+                </div>
 
                 <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- lista-artigos:inicio -->
+                    <a href="/artigo-decreto-marco-legal-games-2026" class="artigo-card" data-tema="Investimentos">
+                        <picture><source srcset="/assets/capas/artigo-decreto-marco-legal-games-2026.webp?v=b229f17874" type="image/webp"><img src="/assets/capas/artigo-decreto-marco-legal-games-2026.png?v=698f6b74d8" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">REGULAÇÃO · STARTUPS E TECNOLOGIA</p>
+                            <h2 class="artigo-card-titulo">Decreto dos Games (13.138/2026): o que muda e quem acessa o fomento</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-split-payment-reforma-tributaria" class="artigo-card" data-tema="Tributário">
+                        <picture><source srcset="/assets/capas/artigo-split-payment-reforma-tributaria.webp?v=dbe944c205" type="image/webp"><img src="/assets/capas/artigo-split-payment-reforma-tributaria.png?v=785c070b61" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">DIREITO TRIBUTÁRIO E EMPRESARIAL</p>
+                            <h2 class="artigo-card-titulo">O split payment da Reforma Tributária será cancelado?</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-juros-altos-recuperacao-extrajudicial" class="artigo-card" data-tema="Gestão e negócios">
+                        <picture><source srcset="/assets/capas/artigo-juros-altos-recuperacao-extrajudicial.webp?v=c8cc96f2fd" type="image/webp"><img src="/assets/capas/artigo-juros-altos-recuperacao-extrajudicial.png?v=3a2c5bf25e" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">DIREITO EMPRESARIAL &amp; REESTRUTURAÇÃO DE CRISE</p>
+                            <h2 class="artigo-card-titulo">A Pressão dos Juros Altos e a Recuperação Extrajudicial: Casas Bahia, Chilli Beans e Habib’s</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-ray-ban" class="artigo-card" data-tema="Societário e governança">
+                        <picture><source srcset="/assets/capas/artigo-ray-ban.webp?v=dcfc32f669" type="image/webp"><img src="/assets/capas/artigo-ray-ban.png?v=f646868299" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">DIREITO SOCIETÁRIO E GOVERNANÇA</p>
+                            <h2 class="artigo-card-titulo">Uma cláusula de votação mal desenhada pode custar € 10 bilhões: o Succession real da família dona da Ray-Ban</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-ozivy-ozempic-inpi" class="artigo-card" data-tema="Propriedade intelectual">
+                        <picture><source srcset="/assets/capas/artigo-ozivy-ozempic-inpi.webp?v=beee1257af" type="image/webp"><img src="/assets/capas/artigo-ozivy-ozempic-inpi.png?v=4e348ba273" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">CONCORRÊNCIA E PROPRIEDADE INDUSTRIAL</p>
+                            <h2 class="artigo-card-titulo">A caneta brasileira que venceu a dona do Ozempic duas vezes na mesma semana</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-brb-transparencia-governanca" class="artigo-card" data-tema="Societário e governança">
+                        <picture><source srcset="/assets/capas/artigo-brb-transparencia-governanca.webp?v=9139e9681f" type="image/webp"><img src="/assets/capas/artigo-brb-transparencia-governanca.png?v=25ca2ba0f1" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">Governança Corporativa &amp; Direito Bancário</p>
+                            <h2 class="artigo-card-titulo">O Custo Oculto do Silêncio: Transparência Como Pilar de Governança</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-publicidade-nativa-mercados-regulados" class="artigo-card" data-tema="Contratos">
+                        <picture><source srcset="/assets/capas/artigo-publicidade-nativa-mercados-regulados.webp?v=becc06614d" type="image/webp"><img src="/assets/capas/artigo-publicidade-nativa-mercados-regulados.png?v=860662ddca" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">DIREITO REGULATÓRIO E CONTRATUAL</p>
+                            <h2 class="artigo-card-titulo">Risco de Imagem e Comercial: Os Limites Legais da Publicidade Nativa</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-destituicao-presidente-conselho" class="artigo-card" data-tema="Societário e governança">
+                        <picture><source srcset="/assets/capas/artigo-destituicao-presidente-conselho.webp?v=d6197a564f" type="image/webp"><img src="/assets/capas/artigo-destituicao-presidente-conselho.png?v=4f8493935d" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">GOVERNANÇA CORPORATIVA</p>
+                            <h2 class="artigo-card-titulo">O Calcanhar de Aquiles do Board: Quando o Presidente do Conselho Preside Sua Própria Destituição</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-politica-ia" class="artigo-card" data-tema="LGPD e IA">
+                        <picture><source srcset="/assets/capas/artigo-politica-ia.webp?v=6e9db3c971" type="image/webp"><img src="/assets/capas/artigo-politica-ia.png?v=f33bbda769" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">Compliance · Tecnologia · Responsabilidade Civil</p>
+                            <h2 class="artigo-card-titulo">Responsabilidade Civil e IA: Como Criar uma Política de Uso de Inteligência Artificial para sua Empresa</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-tiradentes" class="artigo-card" data-tema="Gestão e negócios">
+                        <picture><source srcset="/assets/capas/artigo-tiradentes.webp?v=7e18034427" type="image/webp"><img src="/assets/capas/artigo-tiradentes.png?v=967fb4d999" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">TRIBUTÁRIO</p>
+                            <h2 class="artigo-card-titulo">Tiradentes e o Empreendedor Brasileiro: a Herança de Quem Ousou Construir</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-tributacao-minima-global-15" class="artigo-card" data-tema="Tributário">
+                        <picture><source srcset="/assets/capas/artigo-tributacao-minima-global-15.webp?v=d34dd7aac5" type="image/webp"><img src="/assets/capas/artigo-tributacao-minima-global-15.png?v=cf6a910d68" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">TRIBUTÁRIO</p>
+                            <h2 class="artigo-card-titulo">Tributação Mínima Global de 15%: O que Muda para a sua Empresa</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-nova-nr-1-riscos-psicossociais" class="artigo-card" data-tema="Trabalhista e compliance">
+                        <picture><source srcset="/assets/capas/artigo-nova-nr-1-riscos-psicossociais.webp?v=df9de33b9f" type="image/webp"><img src="/assets/capas/artigo-nova-nr-1-riscos-psicossociais.png?v=fe7fed5a3b" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">COMPLIANCE</p>
+                            <h2 class="artigo-card-titulo">A nova NR-1: riscos psicossociais e o que a sua empresa precisa fazer</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-evtl-viabilidade-tecnica-e-legal" class="artigo-card" data-tema="Gestão e negócios">
+                        <picture><source srcset="/assets/capas/artigo-evtl-viabilidade-tecnica-e-legal.webp?v=2972df9836" type="image/webp"><img src="/assets/capas/artigo-evtl-viabilidade-tecnica-e-legal.png?v=ff7643b42a" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">IMOBILIÁRIO EMPRESARIAL</p>
+                            <h2 class="artigo-card-titulo">O que é o EVTL, o estudo de viabilidade técnica e legal</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/pj-ou-clt" class="artigo-card" data-tema="Trabalhista e compliance">
+                        <picture><source srcset="/assets/capas/pj-ou-clt.webp?v=c29dd491a5" type="image/webp"><img src="/assets/capas/pj-ou-clt.png?v=85965c44d8" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">TRABALHISTA · GUIA</p>
+                            <h2 class="artigo-card-titulo">PJ ou CLT: quando cada contratação é segura e como evitar a pejotização</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-contrato-de-saas" class="artigo-card" data-tema="Contratos">
+                        <picture><source srcset="/assets/capas/artigo-contrato-de-saas.webp?v=0a3dc4eed8" type="image/webp"><img src="/assets/capas/artigo-contrato-de-saas.png?v=e546a0c711" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">CONTRATOS · GUIA</p>
+                            <h2 class="artigo-card-titulo">Contrato de SaaS: as cláusulas que não podem faltar</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-adequacao-lgpd" class="artigo-card" data-tema="LGPD e IA">
+                        <picture><source srcset="/assets/capas/artigo-adequacao-lgpd.webp?v=abb3ada44a" type="image/webp"><img src="/assets/capas/artigo-adequacao-lgpd.png?v=689f35c663" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">LGPD · GUIA</p>
+                            <h2 class="artigo-card-titulo">Adequação à LGPD: guia prático em 5 passos para empresas</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-registro-de-marca" class="artigo-card" data-tema="Propriedade intelectual">
+                        <picture><source srcset="/assets/capas/artigo-registro-de-marca.webp?v=0cacfb25ac" type="image/webp"><img src="/assets/capas/artigo-registro-de-marca.png?v=800d1696ae" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">PROPRIEDADE INTELECTUAL · GUIA</p>
+                            <h2 class="artigo-card-titulo">Registro de marca no INPI: passo a passo, prazos e erros comuns</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-mutuo-conversivel" class="artigo-card" data-tema="Investimentos">
+                        <picture><source srcset="/assets/capas/artigo-mutuo-conversivel.webp?v=092fbeb3fb" type="image/webp"><img src="/assets/capas/artigo-mutuo-conversivel.png?v=913bf10c67" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">INVESTIMENTOS · GUIA</p>
+                            <h2 class="artigo-card-titulo">Mútuo conversível: como funciona, cláusulas essenciais e cuidados na captação</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <a href="/artigo-acordo-de-socios" class="artigo-card" data-tema="Societário e governança">
+                        <picture><source srcset="/assets/capas/artigo-acordo-de-socios.webp?v=71d1eb430a" type="image/webp"><img src="/assets/capas/artigo-acordo-de-socios.png?v=909cc6aaef" width="1200" height="600" loading="lazy" alt="" class="artigo-card-img"></picture>
+                        <div class="artigo-card-corpo">
+                            <p class="artigo-card-categoria">SOCIETÁRIO · GUIA</p>
+                            <h2 class="artigo-card-titulo">Acordo de sócios: o que é, cláusulas essenciais e quando fazer</h2>
+                            <span class="artigo-card-ler">Ler artigo <span aria-hidden="true">&rarr;</span></span>
+                        </div>
+                    </a>
+                    <!-- lista-artigos:fim -->
                 </div>
 
                 <div id="pagination-container" class="flex justify-center items-center space-x-4 mt-16">
