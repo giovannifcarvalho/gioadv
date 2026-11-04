@@ -197,9 +197,16 @@
         document.body.classList.remove('com-aviso-cookies');
         document.body.style.removeProperty('--aviso-cookies-altura');
     }
+    // O botão do WhatsApp só sobe se o aviso estiver mesmo visível. Bloqueadores de anúncios
+    // (o Brave, por exemplo) escondem avisos de cookies depois que a página abre; sem esta
+    // checagem, o botão ficava alto até a tela mudar de tamanho (ao rolar, no celular).
     function ajustarAlturaAviso() {
         var aviso = document.getElementById('aviso-cookies');
-        if (aviso) document.body.style.setProperty('--aviso-cookies-altura', aviso.offsetHeight + 'px');
+        if (!aviso) return;
+        var altura = aviso.offsetHeight;
+        document.body.classList.toggle('com-aviso-cookies', altura > 0);
+        if (altura > 0) document.body.style.setProperty('--aviso-cookies-altura', altura + 'px');
+        else document.body.style.removeProperty('--aviso-cookies-altura');
     }
     function abrirAvisoCookies() {
         if (!window.gcConsentimento || document.getElementById('aviso-cookies')) return;
@@ -212,9 +219,11 @@
                     '<button type="button" data-cookies="aceitar" class="aviso-cookies-botao aviso-cookies-aceitar">Aceitar</button>' +
                 '</div>' +
             '</div>');
-        document.body.classList.add('com-aviso-cookies');
+        var aviso = document.getElementById('aviso-cookies');
         ajustarAlturaAviso();
-        document.getElementById('aviso-cookies').addEventListener('click', function (e) {
+        if (window.ResizeObserver) new ResizeObserver(ajustarAlturaAviso).observe(aviso);
+        else setTimeout(ajustarAlturaAviso, 1000);
+        aviso.addEventListener('click', function (e) {
             var acao = e.target.getAttribute('data-cookies');
             if (!acao) return;
             if (acao === 'aceitar') window.gcConsentimento.aceitar(); else window.gcConsentimento.recusar();
