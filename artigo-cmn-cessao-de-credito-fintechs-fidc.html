@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        MODELO DE ARTIGO
+        1. Duplique este arquivo e renomeie (ex.: artigo-novo-titulo.html): só letras minúsculas,
+           números e hífens, sem acentos nem espaços. O endereço público fica sem ".html"
+           (ex.: https://giovannidecarvalho.adv.br/artigo-novo-titulo).
+        2. Troque, aqui no <head>: o título (assunto principal no começo, até ~55 caracteres antes
+           do " | Giovanni de Carvalho"), a descrição (até ~155 caracteres) e, nas linhas canonical
+           e og:url, "artigo-modelo" pelo nome do novo arquivo, sem ".html".
+           Troque também o og:image pelo endereço da capa do artigo.
+        3. Troque, no <main>: categoria, título, capa, texto e a chamada final (passos 3 a 6 abaixo).
+        4. Adicione o artigo em artigos.json, com:
+             "title"    o mesmo título do <h1>
+             "category" a categoria que aparece acima do título
+             "tema"     um dos temas já usados (ex.: "Contratos", "Tributário", "LGPD e IA"),
+                        que alimenta o filtro do blog; um tema novo vira um botão novo sozinho
+             "date"     a data de publicação, no formato AAAA-MM-DD
+             "atualizado" (opcional) a data da última revisão do conteúdo, no mesmo formato
+             "image"    "/assets/capas/nome-do-artigo.png"
+             "link"     "/nome-do-artigo" (sem ".html")
+        O GitHub faz o resto sozinho depois do envio: autor e datas no topo, trilha de navegação,
+        dados estruturados, card no blog e na home, versão WebP da capa, sitemap e versões dos
+        arquivos. Os trechos entre <!-- nome:inicio -->
+    <title>Cessão de crédito para FIDC: novas regras do CMN | Giovanni de Carvalho</title>
+    <meta name="description" content="CMN e BC aprovaram retenção de risco e prazo mínimo na cessão de crédito para FIDC. Veja o que muda para fintechs de crédito e o que revisar até 2027.">
+    <link rel="canonical" href="https://giovannidecarvalho.adv.br/artigo-cmn-cessao-de-credito-fintechs-fidc">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Giovanni de Carvalho - Advocacia Empresarial">
+    <meta property="og:title" content="Cessão de crédito para FIDC: o que as novas regras do CMN e do Banco Central mudam para fintechs">
+    <meta property="og:description" content="CMN e BC aprovaram retenção de risco e prazo mínimo na cessão de crédito para FIDC. Veja o que muda para fintechs de crédito e o que revisar até 2027.">
+    <meta property="og:url" content="https://giovannidecarvalho.adv.br/artigo-cmn-cessao-de-credito-fintechs-fidc">
+    <meta property="og:image" content="https://giovannidecarvalho.adv.br/assets/capas/artigo-cmn-cessao-de-credito-fintechs-fidc.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <script src="/assets/head.js?v=32011f5990"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/site.css?v=fd9bba8d96">
+    <link rel="stylesheet" href="/assets/tailwind.css?v=9909146041">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quando as novas regras de crédito do CMN e do Banco Central começam a valer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A maior parte vale a partir de 1º de julho de 2027. As regras sobre venda de direitos creditórios para fora do Sistema Financeiro Nacional começam em 1º de novembro de 2027."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Minha fintech ainda vai poder ceder carteira para FIDC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A cessão continua permitida, mas a instituição que transfere terá de manter parte do risco e respeitar um prazo mínimo entre a concessão e a venda. Os números ainda serão definidos pelo Banco Central."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso continuar oferecendo empréstimo por WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A oferta, sim. A contratação deverá ser concluída nos canais eletrônicos da própria instituição, como app e internet banking, ou em atendimento presencial autorizado, com confirmação de identidade e registro do aceite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quem tem dívida atrasada há 90 dias fica sem crédito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fica sem novo crédito sem garantia. Consignado, crédito com garantia real suficiente, a modalidade especial prevista em lei e operações ligadas a recuperação judicial ou extrajudicial ficam de fora. Renegociação e portabilidade continuam permitidas."
+      }
+    }
+  ]
+}
+    </script>
+    <!-- dados-estruturados-artigo:inicio -->
+    <!-- dados-estruturados-artigo:fim -->
+    <!-- trilha-schema:inicio -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://giovannidecarvalho.adv.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://giovannidecarvalho.adv.br/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Título do artigo",
+          "item": "https://giovannidecarvalho.adv.br/artigo-modelo"
+        }
+      ]
+    }
+    </script>
+    <!-- trilha-schema:fim -->
+</head>
+<body class="bg-white text-gray-800" data-page="article">
+    <script src="/assets/site.js?v=cb26e86390"></script>
+
+    <main>
+        <article class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <!-- trilha:inicio -->
+                <nav class="trilha" aria-label="Você está em">
+                <ol>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><span aria-current="page">Título do artigo</span></li>
+                </ol>
+                </nav>
+                <!-- trilha:fim -->
+                <p class="text-sm text-gray-500 mb-2">REGULAÇÃO · FINTECHS E CRÉDITO</p>
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-green leading-tight mb-4">Cessão de crédito para FIDC: o que as novas regras do CMN e do Banco Central mudam para fintechs</h1>
+                <!-- autor:inicio -->
+                <div class="artigo-autor">
+                    <img src="/assets/giovanni-avatar-96.webp?v=83cd3a3964" width="48" height="48" alt="" class="artigo-autor-foto">
+                    <div>
+                        <p class="artigo-autor-nome">Por <a href="/sobre">Giovanni de Carvalho</a> · Advogado · OAB/MG 243.837</p>
+                        <p class="artigo-autor-data">Publicado em <time datetime="2026-01-01">1º de janeiro de 2026</time></p>
+                    </div>
+                </div>
+                <!-- autor:fim -->
+                
+                <img src="/assets/capas/artigo-cmn-cessao-de-credito-fintechs-fidc.png?v=0" class="w-full h-auto object-cover rounded-lg my-8 shadow-md" alt="Capa em fundo verde com o título "Vender a carteira não vai mais tirar todo o risco.", a categoria Regulação · Fintechs e crédito, a referência CMN e Banco Central · medidas de 25/11/2026 e o logo Giovanni de Carvalho Advocacia Empresarial." width="1200" height="600">
+
+                <div class="article-content text-lg text-gray-800">
+                    <p>Na noite de 25 de novembro de 2026, o Conselho Monetário Nacional (CMN) e o Banco Central aprovaram um pacote de regras de crédito para conter o endividamento. A manchete foi o corte do limite do cartão de quem vive no rotativo. Para quem constrói fintech de crédito, porém, a regra mais pesada está no fim da lista: a cessão de crédito para FIDCs e securitizadoras vai ter retenção de risco e prazo mínimo. O modelo "origina hoje, vende amanhã" muda.</p>
+
+                    <p>As medidas valem, em regra, a partir de 1º de julho de 2027. A parte da cessão de crédito começa em 1º de novembro de 2027. Parece longe. Não é, para quem está montando a estrutura de funding da próxima rodada agora.</p>
+
+                    <h2>O que o CMN e o Banco Central aprovaram</h2>
+                    <p>Pelo que foi divulgado, o pacote tem seis frentes:</p>
+                    <ul>
+                        <li><strong>Cartão:</strong> o emissor deve reduzir aos poucos o limite de quem deixou de pagar o total de três ou mais faturas, em meses diferentes, nos últimos seis meses, usando o rotativo. Os critérios vão no contrato e o cliente é avisado antes. A restrição acaba com seis faturas seguidas pagas por inteiro ou com a quitação do rotativo.</li>
+                        <li><strong>Atraso de 90 dias:</strong> a instituição não pode aumentar a exposição em crédito sem garantia para quem tem dívida sem garantia em atraso no sistema há 90 dias ou mais, ou mostra sinais claros de que não vai conseguir pagar. Ficam de fora consignado, crédito com garantia real suficiente, a modalidade especial de juros reduzidos prevista em lei e operações ligadas a recuperação judicial ou extrajudicial. Renegociar, portar e trocar por modalidade mais barata continua permitido.</li>
+                        <li><strong>Canal de contratação:</strong> a oferta pode seguir por telefone ou aplicativo de mensagens. A contratação, não. Ela só pode ser concluída nos canais eletrônicos da própria instituição (app, internet banking) ou em atendimento presencial autorizado, com confirmação de identidade e registro do aceite.</li>
+                        <li><strong>Cessão para fora do Sistema Financeiro Nacional:</strong> regras para quando o crédito vai para fundos, securitizadoras ou outros compradores que não são instituições financeiras.</li>
+                        <li><strong>FIDCs no balanço dos bancos:</strong> quem investe em securitização precisa conhecer os ativos do fundo como se estivessem no próprio balanço.</li>
+                        <li><strong>Gestão de risco:</strong> avaliar endividamento e capacidade de pagamento de pessoas físicas e jurídicas durante todo o ciclo do crédito. Duas consultas públicas de 90 dias foram abertas, uma delas sobre um índice padronizado de comprometimento de renda.</li>
+                    </ul>
+
+                    <h2>Cessão de crédito para FIDC: o que muda para fintechs</h2>
+                    <p>Muita fintech de crédito funciona assim: uma sociedade de crédito direto (SCD), ou um banco parceiro, origina o empréstimo e, logo em seguida, cede a carteira para um FIDC. O fundo tem cotas seniores, compradas por investidores e bancos, e cotas subordinadas, em geral da própria fintech ou do seu grupo. É o motor de crescimento de boa parte do setor.</p>
+                    <p>As novas regras mexem em três pontos desse motor.</p>
+                    <p><strong>1. Retenção de risco.</strong> A instituição que transfere o crédito para fora do sistema vai ter de manter parte da exposição ao risco. Os percentuais, as formas de retenção e as dispensas ainda serão definidos pelo Banco Central.</p>
+                    <p><strong>2. Prazo mínimo.</strong> Haverá um intervalo mínimo entre a concessão do crédito e a sua venda para fora do sistema. O tamanho do prazo também fica para a regulamentação.</p>
+                    <p><strong>3. A originadora continua respondendo ao cliente.</strong> A venda não pode reduzir os direitos do devedor. A instituição que originou o crédito segue responsável pelo atendimento e pelas informações sobre saldo, pagamentos, juros e encargos, quitação antecipada e portabilidade, mesmo depois da cessão, e precisa dar ao Banco Central dados que permitam rastrear o crédito ao longo da vida da operação, inclusive depois de vendas sucessivas.</p>
+                    <p class="opiniao"><strong>Minha leitura:</strong> o prazo mínimo é o ponto que mais pesa no caixa. Se a carteira precisa ficar um tempo no balanço da originadora antes de ir para o fundo, alguém tem de financiar esse intervalo. Para uma SCD, que não capta depósito do público, isso significa capital próprio ou uma linha de crédito ponte. Quanto maior o prazo, mais capital fica parado para cada real emprestado.</p>
+
+                    <h2>O ângulo que pouca gente viu: quem fica com o risco retido</h2>
+                    <p>A regra fala em "instituição transferidora". Em muitos modelos de crédito embutido (o chamado embedded finance), quem transfere não é a fintech que aparece para o cliente. É o banco ou a SCD parceira, que empresta a licença. A fintech é a dona do produto, da marca e do relacionamento, mas não é a instituição.</p>
+                    <p>Se a retenção recai sobre o parceiro licenciado, a pergunta prática é: ele vai aceitar ficar com esse risco de graça?</p>
+                    <p class="opiniao"><strong>Minha leitura:</strong> a tendência é que o risco retido volte para a fintech por contrato, via coobrigação, garantia, conta reserva ou preço do serviço. O risco regulatório fica com a instituição; o econômico, provavelmente, com quem originou o negócio. Isso muda a conversa de <a href="/glossario#limitacao-de-responsabilidade">limitação de responsabilidade</a> nos contratos de parceria e pode mudar o valor que um investidor enxerga no negócio.</p>
+                    <p>A regra sobre canais segue a mesma lógica. A contratação precisa terminar "nos canais eletrônicos da própria instituição". O texto divulgado não diz se o app de uma plataforma parceira, operando como correspondente ou por integração, conta como canal da instituição. Esse é um ponto que a regulamentação ou as perguntas e respostas do Banco Central precisam esclarecer. Até lá, jornadas de contratação que terminam dentro de um app de terceiro ou de uma conversa de WhatsApp merecem atenção.</p>
+                    <p>Do lado do funding, há um efeito em cadeia. O banco que compra cota sênior de FIDC terá de olhar através do fundo, ativo por ativo. Se não conseguir, a cota é deduzida do capital regulatório, o tratamento mais caro que existe. Na prática, a fintech que não entregar dados de carteira limpos e auditáveis vai pagar mais caro para captar, ou não vai captar. A <a href="/glossario#due-diligence">due diligence</a> de carteira deixa de ser evento de rodada e vira rotina.</p>
+
+                    <h2>Quem é afetado</h2>
+                    <ul>
+                        <li>SCDs, sociedades de empréstimo entre pessoas (SEP) e bancos digitais que cedem carteira para FIDC ou securitizadora.</li>
+                        <li>Plataformas de crédito embutido (SaaS, marketplaces, ERPs) que oferecem empréstimo por meio de instituição parceira.</li>
+                        <li>Fintechs de cartão, que vão precisar ajustar contrato, política de limite e comunicação ao cliente.</li>
+                        <li>Gestoras e estruturadores de FIDC, que terão de entregar informação mais granular aos cotistas.</li>
+                        <li>Empresas que dão crédito a outras empresas: a regra de gestão de risco cita pessoas jurídicas. Pelo que foi divulgado, não ficou claro se a trava dos 90 dias também alcança clientes PJ.</li>
+                    </ul>
+                    <p>Também não está claro, pelas notícias, como as regras alcançam instituições de pagamento que emitem cartão pós-pago. Só o texto oficial das resoluções resolve essa dúvida.</p>
+                    <p class="opiniao"><strong>Na prática:</strong> a trava dos 90 dias olha a dívida "no sistema", não só na sua casa. Isso exige consultar dados de outras instituições antes de ampliar limite. Modelos de crédito automatizados vão precisar dessa variável, e a decisão automatizada continua sujeita ao pedido de revisão do art. 20 da LGPD, tema que tratei no <a href="/artigo-politica-ia">artigo sobre política de uso de IA</a>.</p>
+
+                    <h2>O que revisar antes de julho de 2027</h2>
+                    <ul class="checklist">
+                        <li>Mapeie a cadeia de cessão: quem origina, quem cede, para quem e em quanto tempo. É esse fluxo que o prazo mínimo e a retenção vão atingir.</li>
+                        <li>Releia o contrato com a instituição parceira: quem arca com risco retido, coobrigação e custos de informação ao Banco Central depois da cessão.</li>
+                        <li>Revise a jornada de contratação. Se o "aceito" acontece fora do app ou do site da instituição, desenhe a migração.</li>
+                        <li>Prepare a base de dados da carteira para olhar ativo por ativo: saldo, atraso, renegociação e histórico de vendas.</li>
+                        <li>Acompanhe a regulamentação do Banco Central (percentual de retenção e prazo mínimo) e as duas consultas públicas abertas por 90 dias.</li>
+                    </ul>
+                    <p>Para um retrato geral dos pontos jurídicos da empresa, o <a href="/raio-x">Raio-X Jurídico da Startup</a> ajuda a organizar o que olhar primeiro.</p>
+
+                    <h2>Perguntas frequentes</h2>
+                    <h3>Quando as novas regras de crédito do CMN e do Banco Central começam a valer?</h3>
+                    <p>A maior parte vale a partir de 1º de julho de 2027. As regras sobre venda de direitos creditórios para fora do Sistema Financeiro Nacional começam em 1º de novembro de 2027.</p>
+                    <h3>Minha fintech ainda vai poder ceder carteira para FIDC?</h3>
+                    <p>Sim. A cessão continua permitida, mas a instituição que transfere terá de manter parte do risco e respeitar um prazo mínimo entre a concessão e a venda. Os números ainda serão definidos pelo Banco Central.</p>
+                    <h3>Posso continuar oferecendo empréstimo por WhatsApp?</h3>
+                    <p>A oferta, sim. A contratação deverá ser concluída nos canais eletrônicos da própria instituição, como app e internet banking, ou em atendimento presencial autorizado, com confirmação de identidade e registro do aceite.</p>
+                    <h3>Quem tem dívida atrasada há 90 dias fica sem crédito?</h3>
+                    <p>Fica sem novo crédito sem garantia. Consignado, crédito com garantia real suficiente, a modalidade especial prevista em lei e operações ligadas a recuperação judicial ou extrajudicial ficam de fora. Renegociação e portabilidade continuam permitidas.</p>
+
+                    <p class="nota"><strong>Nota informativa:</strong> este artigo tem caráter exclusivamente informativo e educativo, não constitui consultoria jurídica nem trata de caso concreto, e não sugere qualquer resultado. Os trechos marcados como "Minha leitura" são opinião do autor. Confira sempre o texto oficial das normas citadas.</p>
+
+                    <h2>Fontes</h2>
+                    <ul class="fontes">
+                        <li>Agência Brasil, via Money Times, <a href="https://www.moneytimes.com.br/cmn-e-bc-anunciam-novas-regras-para-conter-endividamento-das-familias-fets/" target="_blank" rel="noopener noreferrer">CMN e BC anunciam novas regras para conter endividamento das famílias</a>, 26/11/2026.</li>
+                        <li>Jornal do Comércio, <a href="https://www.jornaldocomercio.com/economia/2026/11/1271816-cmn-e-bc-aprovam-novas-medidas-sobre-concessao-de-credito-e-endividamento.html" target="_blank" rel="noopener noreferrer">CMN e BC aprovam novas medidas sobre concessão de crédito e endividamento</a>, 25/11/2026.</li>
+                        <li>Diário do Grande ABC, <a href="https://www.dgabc.com.br/Noticia/4370786/cmn-e-bc-aprovam-novas-medidas-sobre-concessao-de-credito-e-endividamento" target="_blank" rel="noopener noreferrer">CMN e BC aprovam novas medidas sobre concessão de crédito e endividamento</a>, 25/11/2026.</li>
+                        <li>Terra (Reuters), <a href="https://www.terra.com.br/economia/cmn-e-bc-aprovam-medidas-para-conter-riscos-do-endividamento,760a310e6a89278c4d50822198dd572butqfi6ht.html" target="_blank" rel="noopener noreferrer">CMN e BC aprovam medidas para conter riscos do endividamento</a>, 25/11/2026.</li>
+                        <li>Melhor Investimento, <a href="https://melhorinvestimento.net/noticias/limite-do-cartao-rotativo-cmn-bc" target="_blank" rel="noopener noreferrer">Limite do cartão será cortado para quem usar o rotativo em 3 faturas em 6 meses</a>, 25/11/2026.</li>
+                    </ul>
+                </div>
+
+                <aside class="artigo-cta">
+                    <img src="/assets/giovanni-avatar-400.webp?v=6b3ff11231" width="104" height="104" alt="Giovanni de Carvalho" loading="lazy" class="artigo-cta-foto">
+                    <div>
+                        <p class="artigo-cta-area">Consultoria Empresarial</p>
+                        <h2 class="artigo-cta-titulo">Sua operação de crédito está pronta para as novas regras?</h2>
+                        <p class="artigo-cta-texto">Acompanhamento jurídico recorrente de contratos com parceiros, estrutura de funding e mudanças regulatórias.</p>
+                        <a href="/servicos-consultoria-empresarial" class="artigo-cta-botao">Conhecer a consultoria empresarial &rarr;</a>
+                        <p class="artigo-cta-autor">Giovanni de Carvalho · Advogado · OAB/MG 243.837</p>
+                    </div>
+                </aside>
+                <div class="mt-12 border-t pt-8">
+                    <a href="/blog" class="font-bold text-brand-gold hover:underline">&larr; Voltar para todos os artigos</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
